@@ -1,0 +1,22 @@
+* Release Train Mechanics
+** High-level schema
+
+|--------------------------|
+| Train                    |
+|--------------------------|
+| name                     |
+| purpose                  |
+| start_time               |
+| end_time                 |
+| status (running, paused) |
+|--------------------------|
+
+|--------------------------|
+| Stop                     |
+|--------------------------|
+| repeat_after_interval    |
+| store_channel_config     |
+|--------------------------|
+
+** Configuring a new train
+** Following an existing train
