@@ -1,8 +1,8 @@
-* Release
+* Release Trains
 ** About
-   - Trains are the atomic abstraction that carry some release coordination context.
-   - Trains run on a fixed and/or reliable schedule, regardless of feature readiness in mainline.
-   - Trains can encompass all runtime dependencies for executing a release, for example,
+   - Trains are the atomic abstraction that carry some release coordination context
+   - Trains run on a fixed and/or reliable schedule, regardless of feature readiness in mainline
+   - Trains are an active artifact of automating various release-related runtime dependencies, for eg.
      - Branching
      - Tagging
      - Hotfixing
@@ -10,34 +10,55 @@
      - Quality checks
      - Halting
      - Pushing to store
+   - Trains help not only automate, but also visualize the release process under a systematic cadence
+   - Multiple trains can be active at the same time, depending on variations in the runtime deps
 ** Usefulness
-   - Forcing function to speed up slower teams; adding discipline
-   - Demoing and QAing is streamlined like clockwork
+   - Forcing function to speed up teams with slow or inconsistent delivery; adds discipline
+   - Demo-ing and QAing is streamlined like clockwork
    - Release / delivery performance can be measured against the train abstraction
+   - Esp useful as a process when a single binary package is distributed without rollback-ability (e.g. mobile apps)
 ** Downsides
-   - Adds temporal coupling around sequences of changes
+   - Adds temporal coupling around sequences of change
    - Can potentially degrade quality if changes are rushed so as to not miss the train
 ** High-level schema
 
-|--------------------------|
-| Train                    |
-|--------------------------|
-| name                     |
-| purpose                  |
-| start_time               |
-| end_time                 |
-| status (running, paused) |
-|--------------------------|
+|--------------------------+-------------------------------------------------------------|
+| Train                    | For                                                         |
+|--------------------------+-------------------------------------------------------------|
+| name                     | Uniquely refer to a train (nightly-release, demo-prod etc.) |
+| purpose                  | What is it for?                                             |
+| start_time               | When does it start?                                         |
+| end_time                 | When should it end?                                         |
+| status (running, paused) | What is it doing right now?                                 |
+|--------------------------+-------------------------------------------------------------|
 
-|--------------------------|
-| Stop                     |
-|--------------------------|
-| repeat_after_interval    |
-| store_channel_config     |
-|--------------------------|
+|-----------------------+------------------------------------------------------------------|
+| Stop / Station        | For                                                              |
+|-----------------------+------------------------------------------------------------------|
+| repeat_after_interval | This train should periodically repeat after some X time interval |
+| store_channel_config  | What channels can it push to? (play store production, beta etc.) |
+|-----------------------+------------------------------------------------------------------|
 
-** Configuring a new train
-** Following an existing train
+** Mechanics
+*** Configuring a new train
+**** Preliminary setup
+   - Some deets we'd require the user to configure:
+     - app name
+     - app package
+     - store platform
+       - to submit new releases
+       - to control staged rollout %
+       - to edit store listing data (release notes, screenshots etc.)
+     - code-source / vcs integration
+       - github
+       - bitbucket etc.
+     - hook to CI server
+       - jenkins
+       - github actions etc
+**** Setting up the train
+   -
+
+*** Working with a configured train(s)
 ** References
    - https://adventuresinqa.com/2017/03/06/the-mobile-release-train
    - https://blog.bitrise.io/post/5-ways-the-best-mobile-teams-use-release-trains-for-increased-speed-and-efficiency
