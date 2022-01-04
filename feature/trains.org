@@ -1,22 +1,22 @@
-* Release trains
+* Release
 ** About
-*** Trains are the atomic abstraction that carry some release coordination context.
-*** Trains run on a fixed and/or reliable schedule, regardless of feature readiness in mainline.
-*** Trains can encompass all runtime dependencies for executing a release, for example,
-**** Branching
-**** Tagging
-**** Hotfixing
-**** Beta testing
-**** Quality checks
-**** Halting
-**** Pushing to store
+   - Trains are the atomic abstraction that carry some release coordination context.
+   - Trains run on a fixed and/or reliable schedule, regardless of feature readiness in mainline.
+   - Trains can encompass all runtime dependencies for executing a release, for example,
+     - Branching
+     - Tagging
+     - Hotfixing
+     - Beta testing
+     - Quality checks
+     - Halting
+     - Pushing to store
 ** Usefulness
-*** Forcing function to speed up slower teams; adding discipline
-*** Demoing and QAing is streamlined like clockwork
-*** Release / delivery performance can be measured against the train abstraction
+   - Forcing function to speed up slower teams; adding discipline
+   - Demoing and QAing is streamlined like clockwork
+   - Release / delivery performance can be measured against the train abstraction
 ** Downsides
-*** Adds temporal coupling around sequences of changes
-*** Can potentially degrade quality if changes are rushed so as to not miss the train
+   - Adds temporal coupling around sequences of changes
+   - Can potentially degrade quality if changes are rushed so as to not miss the train
 ** High-level schema
 
 |--------------------------|
@@ -37,11 +37,9 @@
 |--------------------------|
 
 ** Configuring a new train
-***
 ** Following an existing train
-***
 ** References
-*** https://adventuresinqa.com/2017/03/06/the-mobile-release-train
-*** https://blog.bitrise.io/post/5-ways-the-best-mobile-teams-use-release-trains-for-increased-speed-and-efficiency
-*** https://www.thoughtworks.com/en-in/radar/techniques/release-train
-*** https://obvious.in/blog/from-feature-driven-delivery-to-timeline-driven-delivery
+   - https://adventuresinqa.com/2017/03/06/the-mobile-release-train
+   - https://blog.bitrise.io/post/5-ways-the-best-mobile-teams-use-release-trains-for-increased-speed-and-efficiency
+   - https://www.thoughtworks.com/en-in/radar/techniques/release-train
+   - https://obvious.in/blog/from-feature-driven-delivery-to-timeline-driven-delivery
