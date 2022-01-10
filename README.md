@@ -1,6 +1,6 @@
 # docs
 
-This repo exists as a meta-repo for all other tramline projects on Github. All ready to medium-ready documentation goes here. Keep links to services and any tramline-relevant documentation aggregated directly from this README.
+This repo exists as a meta-repo for all other tramline projects on Github. Additionally, all ready to medium-ready documentation goes here. Keep links to services and any tramline-relevant documentation aggregated directly from this README.
 
 ## Getting Started
 
@@ -11,6 +11,13 @@ This repo exists as a meta-repo for all other tramline projects on Github. All r
 
 1. [Front page](https://github.com/tramlinehq/page)
 2. [Primary app portal](https://github.com/tramlinehq/site)
+
+## Tools or Services
+
+* Roam
+* Bitwarden
+* Hubspot
+* Zoom
 
 ## Format
 
