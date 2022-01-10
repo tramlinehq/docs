@@ -28,36 +28,41 @@
 | name                     | Uniquely refer to a train (nightly-release, demo-prod etc.) |
 | purpose                  | What is it for?                                             |
 | start_time               | When does it start?                                         |
-| end_time                 | When should it end?                                         |
+| interval                 | Repeat after x hours, days etc.                             |
 | status (running, paused) | What is it doing right now?                                 |
 |--------------------------+-------------------------------------------------------------|
 
-|-----------------------+------------------------------------------------------------------|
-| Stop / Station        | For                                                              |
-|-----------------------+------------------------------------------------------------------|
-| repeat_after_interval | This train should periodically repeat after some X time interval |
-| store_channel_config  | What channels can it push to? (play store production, beta etc.) |
-|-----------------------+------------------------------------------------------------------|
+|----------------------+----------------------------------------------------------------------------------------|
+| Stop / Station       | For                                                                                    |
+|----------------------+----------------------------------------------------------------------------------------|
+| start_time           | This stop/station is run at this time, it must be before the train's computed end time |
+| store_channel_config | What channels can it push to? (play store production, beta etc.)                       |
+|----------------------+----------------------------------------------------------------------------------------|
 
-** Mechanics
+** Potential mechanics
 *** Configuring a new train
 **** Preliminary setup
-   - Some deets we'd require the user to configure:
-     - app name
-     - app package
-     - store platform
-       - to submit new releases
-       - to control staged rollout %
-       - to edit store listing data (release notes, screenshots etc.)
-     - code-source / vcs integration
-       - github
-       - bitbucket etc.
-     - hook to CI server
-       - jenkins
-       - github actions etc
+   - Things we'd require the user to configure:
+     - App name
+     - App package
+     - Store platform
+       - To submit new releases
+       - To control staged rollout %
+       - To edit store listing data (release notes, screenshots etc.)
+     - Code source / VCS integration
+       - Github
+       - Bitbucket etc.
+     - Hook to CI server
+       - Jenkins
+       - Github actions etc.
 **** Setting up the train
-   -
-
+   - Specify name, purpose, kickoff date/time, repeat interval (every day, hours etc.)
+   - An initial (mandatory) station is created that needs to be configured that runs on kickoff date/time
+     - Configure store channels (if any). For eg. push beta build to beta channel.
+     -
+   - More stations can be added
+     - Repeat steps above to configure a station
+     - Their start time must be before the end time of the next train's kickoff
 *** Working with a configured train(s)
 ** References
    - https://adventuresinqa.com/2017/03/06/the-mobile-release-train
