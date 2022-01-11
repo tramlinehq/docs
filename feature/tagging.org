@@ -3,7 +3,7 @@
    - Release tags mark the exact commit that can ship to users.
    - They can be named generally in some version of the following: ~v-{build-version}~, ~v-{release-branch}-{build-version}~. These names should be lexographically sortable.
    - They can co-exist with Release Branches. That is, the commit that was tagged can also be the release branch itself.
-** Usefuleness
+** Usefulness
    - Since a release tag only represents a potential well-known build, there can be multiple release tags which can allow one to track all the fixes for a particular changeset of features.
 ** Downsides
    - No obvious downsides tagging your release commits. You should!
