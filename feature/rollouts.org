@@ -1,0 +1,14 @@
+* Staged Rollouts
+** About
+   - For slowly releasing apps to users.
+   - Typically only segmented by % of users.
+   - Both Google Play Store (staged rollout) and Apple App Store (phased releases) have a form of staged rollout.
+** Usefulness
+   - Mobile app releases, like desktop software and unlike the web, do not inherently have a simple way to rollback changes.
+   - Mobile app releases, unlike the web, have binaries individually distributed to each person by various playstores across different devices.
+   - Slowly phasing out a rollout is highly prudent for reducing impact surface area in the mobile engineering space (it is arguably true for most software engineering though).
+** Downsides
+   - Staged rollouts can cause scheduling hell when releases need to be kept on time. See [[./trains.org][Release Trains]].
+     - It's tricky to determine when a next release will go out if the current release is still rolling out and it overlaps to the next release cycle.
+   - Staged rollouts are state that one has to remember. It becomes especially more complicated when the staged rollout is across multiple channels.
+   - Staged rollout can give a false sense of security (like any partial rollout) when critical mass isn't reached yet.

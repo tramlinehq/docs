@@ -8,5 +8,5 @@
     - Release branches also avoid code-freezing the mainline due to any defects or bugs found during soak.
 ** Downsides
   - If we're practicing true continous releasing and feature-flagging, then release branches aren't quite necessary.
-    - Since one will rely heavily on feature-flagging, automated (and fast) testing and QA.
+    - Since one will rely heavily on feature-flagging and automated (and fast) testing.
     - Hotfixes will simply land on the mainline and no code-freezes will purportedly ever happen.
