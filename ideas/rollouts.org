@@ -9,6 +9,6 @@
    - Slowly phasing out a rollout is highly prudent for reducing impact surface area in the mobile engineering space (it is arguably true for most software engineering though).
 ** Downsides
    - Staged rollouts can cause scheduling hell when releases need to be kept on time. See [[./trains.org][Release Trains]].
-     - It's tricky to determine when a next release will go out if the current release is still rolling out and it overlaps to the next release cycle.
+     - It's tricky to determine when the next release will go out if the current release is still rolling out and it overlaps to the next release cycle.
    - Staged rollouts are state that one has to remember. It becomes especially more complicated when the staged rollout is across multiple channels.
-   - Staged rollout can give a false sense of security (like any partial rollout) when critical mass isn't reached yet.
+   - Staged rollouts can give a false sense of security (like any partial rollout) when critical mass isn't reached yet.
