@@ -1,0 +1,14 @@
+* Release Branches
+** About
+  - Release branches mark a feature-freeze (a proposed changeset, not a code-freeze) and signify the end-of-line for a particular deployment
+  - They are named generally in some version of the following styles: `release-{version}`, `rel-{date/time}`. These names should be time or lexographically sortable.
+** Usefuleness
+- In mobile releases, delivery cycles are longer and hence branching out can be sensible
+  - Hotfixes can be deployed on to the proposed changeset (on the release branch) after soak period
+- If one does not have release branches, then delivery happens via mainline
+  - If delivery happens via mainline, then we have much less time to soak and test
+  - Reducing soak time is not always feasible and blocking mainline (code-freeze) is backwards
+  - Hence, release branches are a good middle-ground to keep
+** Downsides
+- If we're practicing true continous releasing and feature-flagging, then release branches aren't quite necessary.
+  - Since one will rely heavily on feature-flagging, automated (and fast) testing and QA
