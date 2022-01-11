@@ -1,7 +1,7 @@
 * Release Trains
 ** About
-   - Trains are the atomic abstraction that carry some release coordination context
-   - Trains run on a fixed and/or reliable schedule, regardless of feature readiness in mainline
+   - Trains are the atomic abstraction that carry some release coordination context.
+   - Trains run on a fixed and/or reliable schedule, regardless of feature readiness in mainline.
    - Trains are an active artifact of automating various release-related runtime dependencies, for eg.
      - Branching
      - Tagging
@@ -10,16 +10,16 @@
      - Quality checks
      - Halting
      - Pushing to store
-   - Trains help not only automate, but also visualize the release process under a systematic cadence
-   - Multiple trains can be active at the same time, depending on variations in the runtime deps
+   - Trains help not only automate, but also visualize the release process under a systematic cadence.
+   - Multiple trains can be active at the same time, depending on variations in the runtime deps.
 ** Usefulness
-   - Forcing function to speed up teams with slow or inconsistent delivery; adds discipline
-   - Demo-ing and QAing is streamlined like clockwork
-   - Release / delivery performance can be measured against the train abstraction
-   - Esp useful as a process when a single binary package is distributed without rollback-ability (e.g. mobile apps)
+   - Forcing function to speed up teams with slow or inconsistent delivery; adds discipline.
+   - Demo-ing and QAing is streamlined like clockwork.
+   - Release / delivery performance can be measured against the train abstraction.
+   - Esp useful as a process when a single binary package is distributed without rollback-ability (e.g. mobile apps).
 ** Downsides
-   - Adds temporal coupling around sequences of change
-   - Can potentially degrade quality if changes are rushed so as to not miss the train
+   - Adds temporal coupling around sequences of change.
+   - Can potentially degrade quality if changes are rushed so as to not miss the train.
 ** High-level schema
 
 |--------------------------+-------------------------------------------------------------|
