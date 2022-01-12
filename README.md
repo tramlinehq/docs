@@ -18,6 +18,9 @@ This repo exists as a meta-repo for all other tramline projects on Github. Addit
 * Bitwarden
 * Hubspot
 * Zoom
+* Calendly
+* Namecheap
+* Slack
 
 ## Format
 
