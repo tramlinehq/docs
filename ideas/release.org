@@ -3,11 +3,11 @@
    - A change that represents business value, an upgrade to existing values. It's the artifact that the business continues to run on.
    - Various stakeholders can be involved in making a release happen, from engineers, leads, EMs, PMs, to CTOs and even founders.
    - Releases should be repeatable, error-free and predictable. See [[https://www.splunk.com/en_us/blog/devops/devops-release-management-best-practices.html][Devops Release Management]].
-** Usefulesness
+** Usefulness
    - Releasing often reduces the amount of change per atomic release unit; hence decreases surface area of failure.
    - Well oiled releases become part and parcel of engineering, rather than milestones.
 ** Downsides
    - If not repeatable and error-free can be quite mentally taxing and disruptive to everyone in the team.
    - Frequent front-facing releases can be janky to users, constantly changing UIs for example.
    - Frequent releases can be data hogs for regions with data-sensitive users.
-   - With frequent releases, already functional things have higher probability of breakages if good automated tests and QA are not in place.
+   - With frequent releases, already functional things have higher probability of breakages if complete QA/tests are not in place.

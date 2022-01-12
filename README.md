@@ -5,7 +5,7 @@ This repo exists as a meta-repo for all other tramline projects on Github. Addit
 ## Getting Started
 
 1. Unstructured notes with a helpful sidebar sit in this [Roam](https://roamresearch.com/#/app/tarmac/page/lBTiwRnXX) graph.
-2. Potential features and rough ideas go in [feature](feature/).
+2. Potential features and rough ideas go in [ideas](ideas/).
 
 ## Child Repositories
 
