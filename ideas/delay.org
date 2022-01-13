@@ -11,3 +11,9 @@
 ** Downsides
    - Can cause major indeterminism in the scheduling of the [[./trains.org][release train]].
    - Increases lead times on bug fixes, features, config changes, pretty much everything.
+** Potential mechanics
+   - A [[./trains.org][train]], can be automatically delayed by the following events:
+     - The next train is about to set off (next release cycle), but the previous one has *not*:
+       - Had hotfixes merged back to mainline.
+       - Completed its staged rollout fully (optional).
+   - A train, can be manually paused (indefinite delay) and the subsequent trains are paused as a result until manually unpaused.
