@@ -1,0 +1,20 @@
+* Release Versioning
+** About
+   - What we show to the users and refer to internally (~versionName~, integer)
+   - What we identify our builds with uniquely, for play stores and build systems (~versionCode~, string)
+   - More on this here: https://developer.android.com/guide/topics/manifest/manifest-element.html
+** Potential Mechanics
+   - We need to seed both the ~versionCode~ and the ~versionName~ via the user, since we don't know anything about their app upfront.
+     - ~versionCode~ can potentially be pulled from the APK easily.
+   - Force semver as the default ~versionName~ scheme.
+     - In ~x.y.z~,
+       - bump up ~z~ for hotfixes
+       - bump up ~y~ for new releases
+       - bump up ~x~ manually only
+   - If we have control over passing custom data to a CI workflow,
+     - Keep a track of both ~versionCode~ and ~versionName~ internally in Tramline.
+     - Send the data over whilst triggering the CI build.
+     - This requires modifying the build step in CI to attach outside data (env variables?).
+   - If we don't have control over passing custom data to a CI workflow,
+     - Keep a track of both ~versionCode~ and ~versionName~ in a text file in the code repository itself.
+     - Modify the build step to read from the text file.
