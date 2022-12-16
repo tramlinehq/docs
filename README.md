@@ -1,27 +1,41 @@
-# docs
+# Website
 
-This repo exists as a meta-repo for all other tramline projects on Github. Additionally, all ready to medium-ready documentation goes here. Keep links to services and any tramline-relevant documentation aggregated directly from this README.
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## Getting Started
+### Installation
 
-1. Unstructured notes with a helpful sidebar sit in this [Roam](https://roamresearch.com/#/app/tarmac/page/lBTiwRnXX) graph.
-2. Potential features and rough ideas go in [ideas](ideas/).
+```
+$ yarn
+```
 
-## Child Repositories
+### Local Development
 
-1. [Front page](https://github.com/tramlinehq/page)
-2. [Primary app portal](https://github.com/tramlinehq/site)
+```
+$ yarn start
+```
 
-## Tools or Services
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-* Roam
-* Bitwarden
-* Hubspot
-* Zoom
-* Calendly
-* Namecheap
-* Slack
+### Build
 
-## Format
+```
+$ yarn build
+```
 
-Please stick to using markdown and/or org-mode only.
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
