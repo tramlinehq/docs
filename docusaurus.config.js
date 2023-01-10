@@ -52,18 +52,12 @@ const config = {
         },
       },
       navbar: {
-        title: 'Docs',
+        title: 'Tramline Docs',
         logo: {
           alt: 'Logo',
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
           {
             href: 'https://github.com/tramlinehq/docs',
             label: 'GitHub',
@@ -75,33 +69,28 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
                 label: 'Discord',
                 href: 'https://discord.com/invite/u7VwyvBV2Z',
               },
+            ],
+          },
+          {
+            title: 'Tramline',
+            items: [
+              {
+                label: 'Home',
+                href: 'https://tramline.app',
+              },
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/tramlinehq',
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/tramlinehq/site',
+                label: 'LinkedIn',
+                href: 'https://linkedin.com/in/tramline',
               },
             ],
           },
