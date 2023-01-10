@@ -52,7 +52,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Tramline Docs',
+        title: 'Docs',
         logo: {
           alt: 'Logo',
           src: 'img/logo.svg',
@@ -64,7 +64,6 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/tramlinehq/docs',
             label: 'GitHub',
@@ -88,12 +87,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/tramline',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discord.gg/GzrgZKkg',
+                href: 'https://discord.com/invite/u7VwyvBV2Z',
               },
               {
                 label: 'Twitter',
@@ -105,12 +100,8 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/tramlinehq/docs',
+                href: 'https://github.com/tramlinehq/site',
               },
             ],
           },
