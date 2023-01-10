@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Tramline docs',
-  tagline: 'releases are for children',
+  title: 'Tramline Documentation',
+  tagline: 'Release engineering for mobile apps.',
   url: 'https://docs.tramline.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -115,7 +115,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tramline, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tramline Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
