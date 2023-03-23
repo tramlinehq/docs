@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Tramline Docs',
+  title: 'Tramline Documentation',
   tagline: 'Release engineering for mobile apps.',
   url: 'https://docs.tramline.app',
   baseUrl: '/',
@@ -34,8 +34,6 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/tramlinehq/docs/tree/main',
         },
@@ -52,18 +50,18 @@ const config = {
     ({
       docs: {
         sidebar: {
-          hideable: true
+          hideable: false
         },
       },
       navbar: {
-        title: 'Tramline Docs',
+        title: 'Tramline Documentation',
         logo: {
           alt: 'Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            href: 'https://github.com/tramlinehq/docs',
+            href: 'https://github.com/tramlinehq/tramline',
             label: 'GitHub',
             position: 'right',
           },
@@ -71,6 +69,12 @@ const config = {
       },
       footer: {
         style: 'dark',
+        logo: {
+          alt: 'Meta Open Source Logo',
+          src: 'img/logo.svg',
+          href: 'https://opensource.fb.com',
+          width: 100
+        },
         links: [
           {
             title: 'Community',
@@ -98,8 +102,25 @@ const config = {
               },
             ],
           },
+          {
+            title: 'Tramline',
+            items: [
+              {
+                label: 'Home',
+                href: 'https://tramline.app',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/tramlinehq',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://linkedin.com/in/tramline',
+              },
+            ],
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tramline Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tramline Inc.`,
       },
       prism: {
         theme: lightCodeTheme,

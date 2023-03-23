@@ -6,14 +6,15 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #1a9c1d;
+  --ifm-color-primary-dark: #0f6b10;
+  --ifm-color-primary-darker: #0a4e0b;
+  --ifm-color-primary-darkest: #07380a;
+  --ifm-color-primary-light: #4cb152;
+  --ifm-color-primary-lighter: #80c585;
+  --ifm-color-primary-lightest: #f6ffdb;
+  --ifm-code-font-size: 90%;
+  --ifm-font-size-base: 15px;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -27,4 +28,43 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.banner {
+  padding: 4rem;
+}
+
+/*  */
+.footer .container {
+  max-width: calc(var(--ifm-container-width-xl) * 0.5);
+}
+
+/* page-toc has the same color as base color */
+.table-of-contents__left-border {
+  border-left: 1px solid var(--ifm-color-primary);
+}
+
+/* adjust overall spacing between things */
+@media screen and (min-width: 996px) {
+  :root {
+    --ifm-spacing-horizontal: 25px;
+  }
+
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+/* reduce container width for large screens */
+@media (min-width:1416px) {
+  .main-wrapper {
+    align-self: center;
+    max-width: 1400px;
+    width: 1400px
+  }
+
+  .navbar .navbar__inner {
+    margin: 0 auto;
+    max-width: 1360px;
+  }
 }
