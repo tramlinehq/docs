@@ -6,65 +6,130 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #1a9c1d;
-  --ifm-color-primary-dark: #0f6b10;
-  --ifm-color-primary-darker: #0a4e0b;
-  --ifm-color-primary-darkest: #07380a;
-  --ifm-color-primary-light: #4cb152;
-  --ifm-color-primary-lighter: #80c585;
-  --ifm-color-primary-lightest: #f6ffdb;
-  --ifm-code-font-size: 90%;
-  --ifm-font-size-base: 15px;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --ifm-color-primary: #1a9c1d;
+    --ifm-color-primary-dark: #0f6b10;
+    --ifm-color-primary-darker: #0a4e0b;
+    --ifm-color-primary-darkest: #07380a;
+    --ifm-color-primary-light: #4cb152;
+    --ifm-color-primary-lighter: #80c585;
+    --ifm-color-primary-lightest: #f6ffdb;
+    --ifm-code-font-size: 90%;
+    --ifm-font-size-base: 15px;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --ifm-font-family-base: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    --ifm-color-primary-light: #29d5b0;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.banner {
-  padding: 4rem;
+/* add font families here */
+@font-face {
+    font-family: "Inter";
+    src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap") format("woff2");
+    font-weight: 300;
+    font-style: normal;
 }
 
-/*  */
+/* fix the footer */
 .footer .container {
-  max-width: calc(var(--ifm-container-width-xl) * 0.5);
+    max-width: 768px;
+}
+
+.footer .text--center {
+    color: #858a96;
+    font-size: 13px;
+}
+
+.footer .footer__item {
+    font-size: 14px;
+    padding: 8px 0 0;
+    min-height: 30px;
+}
+
+.footer .footer__title {
+    color: #858a96;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.footer .footer__col {
+    margin: 5px 0 12px 12%;
+    padding-left: 0 !important;
+}
+
+.footer .footer__link-item {
+    line-height: 1.44;
+    display: inline-block;
+}
+
+.footer .footer__links {
+    margin-bottom: 8px;
+}
+
+.footer .footer__logo {
+    height: 64px;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 996px) {
+    .footer .footer__col {
+        text-align: center;
+        flex-basis: 48% !important;
+        max-width: 48% !important;
+        margin-bottom: 28px;
+    }
+
+    .footer .footer__links {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer .footer__col {
+        flex-basis: 99% !important;
+        max-width: 99% !important;
+        text-align: center;
+        margin: 5px 0 24px 5%;
+    }
 }
 
 /* page-toc has the same color as base color */
 .table-of-contents__left-border {
-  border-left: 1px solid var(--ifm-color-primary);
+    border-left: 1px solid var(--ifm-color-primary);
 }
 
 /* adjust overall spacing between things */
 @media screen and (min-width: 996px) {
-  :root {
-    --ifm-spacing-horizontal: 25px;
-  }
+    :root {
+        --ifm-spacing-horizontal: 25px;
+    }
 
-  .heroBanner {
-    padding: 2rem;
-  }
+    .heroBanner {
+        padding: 2rem;
+    }
 }
 
 /* reduce container width for large screens */
-@media (min-width:1416px) {
-  .main-wrapper {
-    align-self: center;
-    max-width: 1400px;
-    width: 1400px
-  }
+@media (min-width: 1416px) {
+    .main-wrapper {
+        max-width: 1400px;
+        width: 1400px;
+        align-self: center;
+    }
 
-  .navbar .navbar__inner {
-    margin: 0 auto;
-    max-width: 1360px;
-  }
+    .navbar .navbar__inner {
+        margin: 0 auto;
+        max-width: 1360px;
+    }
 }

@@ -80,47 +80,56 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'GitHub',
+                href: 'https://github.com/tramlinehq',
+              },
+               {
                 label: 'Discord',
                 href: 'https://discord.com/invite/u7VwyvBV2Z',
               },
+               {
+                label: 'Newsletter',
+                href: 'https://tramline.substack.com',
+              },
+
             ],
           },
           {
-            title: 'Tramline',
+            title: 'Company',
             items: [
               {
-                label: 'Home',
-                href: 'https://tramline.app',
+                label: 'About',
+                href: 'https://www.tramline.app/about',
+              },
+              {
+                label: 'Security',
+                href: 'https://github.com/tramlinehq/tramline/security/policy',
+              },
+              {
+                label: 'Privacy Policy',
+                href: 'https://www.tramline.app/privacy',
+              }
+            ],
+          },
+          {
+            title: 'Contact',
+            items: [
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/tramline',
               },
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/tramlinehq',
               },
               {
-                label: 'LinkedIn',
-                href: 'https://linkedin.com/in/tramline',
-              },
+                label: 'Mastodon',
+                href: 'https://fosstodon.org/@tramline',
+              }
             ],
-          },
-          {
-            title: 'Tramline',
-            items: [
-              {
-                label: 'Home',
-                href: 'https://tramline.app',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/tramlinehq',
-              },
-              {
-                label: 'LinkedIn',
-                href: 'https://linkedin.com/in/tramline',
-              },
-            ],
-          },
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tramline Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tramline Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
