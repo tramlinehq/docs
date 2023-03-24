@@ -57,7 +57,8 @@ const config = {
         title: 'Tramline Documentation',
         logo: {
           alt: 'Logo',
-          src: 'img/logo.svg',
+          src: 'img/tramline-logo-light-mode.png',
+          srcDark: 'img/tramline-logo-dark-mode.png'
         },
         items: [
           {
@@ -70,10 +71,9 @@ const config = {
       footer: {
         style: 'dark',
         logo: {
-          alt: 'Meta Open Source Logo',
-          src: 'img/logo.svg',
-          href: 'https://opensource.fb.com',
-          width: 100
+          alt: 'Tramline Logo',
+          src: 'img/tramline-logo-dark-mode.png',
+          href: 'https://tramline.app',
         },
         links: [
           {
