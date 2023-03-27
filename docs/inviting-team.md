@@ -23,3 +23,8 @@ This page lists all your active and invited users. You can add a team member fro
 Enter the email address, select the role, and you're done!
 
 ![](/img/add-member.png)
+
+Additionally, you can be a part of multiple organizations, and switch between them,
+
+![](/img/memberships.png)
+>>>>>>> 9d341af (Add docs for team page)
