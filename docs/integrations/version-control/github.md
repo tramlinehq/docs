@@ -15,4 +15,4 @@ Navigate to the integrations page for your app and select __GitHub__ under the _
 
 When you click the __Connect__ button, you'll be taken through a standard OAuth flow for [GitHub App](https://docs.github.com/en/apps). During this process, you can select one or multiple repositories to grant access to.
 
-![](/img/connect-github-flow.png)
+<img height="500" src="/img/connect-github-flow.png" width="500"/>
