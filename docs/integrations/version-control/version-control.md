@@ -1,3 +1,7 @@
+---
+sidebar_position: 0
+---
+
 # Version Control
 
 List of supported integrations:
