@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Add your app
 
-To kick things off, add your app,
+To kick things off, add your app.
 
 ![](/img/create-new-app.png)
 
