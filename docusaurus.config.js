@@ -115,12 +115,12 @@ const config = {
             title: 'Contact',
             items: [
               {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/company/tramline',
-              },
-              {
                 label: 'Twitter',
                 href: 'https://twitter.com/tramlinehq',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/tramline',
               },
               {
                 label: 'Mastodon',
