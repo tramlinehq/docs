@@ -3,46 +3,27 @@ slug: '/'
 sidebar_position: 0
 ---
 
-# 👋 Introduction 
+# Welcome! 👋
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Tramline is a release coordination and deployment platform, designed especially for mobile app teams.
 
-## Getting Started
+- It **reduces the manual effort** involved in running release cycles for app.
+- It **improves visibility** into the release process, even for non-technical stakeholders.
+- It **reduces context switching** by supporting iOS and Android apps from a single place.
+- It **increases confidence** in releases by letting teams codify their release policy in a release train.
+- It **saves time** for teams by automating tasks — big and small — across the release process.
+- It **adds auditability** to releases by centralizing sign-offs and approvals.
 
-Get started by **creating a new site**.
+:::tip
+Head to our website to read more [about the larger context](https://tramline.app/why) of mobile release engineering and why we're building Tramline.
+:::
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Tramline is a **central dashboard** for the mobile DevOps process: it brings together build servers and distribution channels and notifications and approvals in one single place. It goes beyond app releases by including release analytics, build storage, post-release monitoring, and more.
 
-### What you'll need
+## Next steps
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Want to get started immediately? Sign up [on our website](https://tramline.dev/users/sign_up) and get the first 10 releases for free.
 
-## Generate a new site
+Want a demo instead? [Pick a time slot here](https://calendly.com/tramline/45/) and our founding team will walk you through the system and answer all questions.
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+🚃
