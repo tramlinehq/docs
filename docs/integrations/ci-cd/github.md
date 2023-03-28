@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# GitHub
+# GitHub Actions
 
 :::caution
 In order to connect this integration, you'll need to be logged in to GitHub as an admin/owner of the organization where your repository is located.

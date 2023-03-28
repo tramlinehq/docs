@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# GitLab
+# GitLab CI/CD
 
 :::note
 Coming Soon
