@@ -4,7 +4,7 @@ sidebar_position: 0.5
 
 # Configure your app
 
-Set up all the necessary integrations for your app. See the [integrations section](/integrations) for details.s
+Set up all the necessary integrations for your app. See the [integrations section](/integrations) for details.
 
 After the integrations are setup, you can configure the following settings for your app.
 
