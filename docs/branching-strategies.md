@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 8
 ---
 
-# Branching Strategies
+# ⽊ Branching Strategies
 
 We support 3 types of branching strategies when setting up a [release train](setup).
 
