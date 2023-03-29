@@ -14,9 +14,9 @@
     --ifm-color-primary-lighter: #80c585;
     --ifm-color-primary-lightest: #f6ffdb;
     --ifm-code-font-size: 90%;
-    --ifm-font-size-base: 16px;
+    --ifm-font-size-base: 15px;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-    --ifm-font-family-base: "Inter", system-ui, -apple-system, sans-serif;
+    --ifm-font-family-base: objektiv-mk1, sans-serif;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -29,14 +29,6 @@
     --ifm-color-primary-lighter: #32d8b4;
     --ifm-color-primary-lightest: #4fddbf;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
-
-/* add font families here */
-@font-face {
-    font-family: "Inter";
-    src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap") format("woff2");
-    font-weight: 300;
-    font-style: normal;
 }
 
 /* fix the footer */
