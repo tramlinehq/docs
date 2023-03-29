@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Live release
+# Live Release
 
 When you start a new release, this page is your control panel. Everything about the current release is controlled from right here. You will likely spend most of your time here.
 
@@ -14,7 +14,7 @@ The all commits section of the page will show all new commits that land on the r
 
 ## Moving across steps
 
-This section shows the current status of the _latest_ commit that has landed in the release branch. As a principle tramline will,
+This section shows the current status of the _latest_ commit that has landed in the release branch. As a principle Tramline will,
 
 #### Run the first step of the train automatically, subsequent steps are triggered manually
 
@@ -30,8 +30,7 @@ If you're on step 2 of a 3 step train, landing a new commit to the release branc
 
 #### Release steps must be triggered manually
 
-Since release steps _may_ have production deployments, tramline plays it safe and does not auto-trigger this step regardless of new commits landing.q
-
+Since release steps _may_ have production deployments, Tramline plays it safe and does not auto-trigger this step regardless of new commits landing.q
 
 ### Controlling rollouts
 

@@ -6,9 +6,13 @@ sidebar_position: 2
 
 Tramline's primary building block is a release train. They are designed such that it's easier to mimic the release process that you follow to ship apps.
 
-Once you have added an app and configured all the integrations, you can add a new release train with the following configuration,
+Once you have added an app and configured all the integrations, you can add a new release train with the following configuration.
 
 ![](/img/new-train.png)
+
+```
+Release Train = Branching Strategy + Release Cadence
+```
 
 ## Steps
 
@@ -18,7 +22,7 @@ Steps, as the name suggests, are tasks that a train does. Steps run a build work
 Step = CI Build workflow + Distribution Channel(s)
 ```
 
-There is no limit to the number of steps a train can have, but a typical process might look something like this,
+There is no limit to the number of steps a train can have, but a typical process might look something like this.
 
 ![](/img/standard-steps.png)
 
@@ -62,7 +66,7 @@ The steps within a train and the distributions within a step are order dependent
 
 ## Mental model
 
-In summary, tramline attempts to structure the parts of a release flow into adaptable processes. For example, you could have two different trains operating on two different release schedules,
+In summary, Tramline attempts to structure the parts of a release flow into adaptable processes. For example, you could have two different trains operating on two different release cadences.
 
 ```
 Nightly Train (every night)
@@ -81,4 +85,4 @@ And so on.
 
 Release trains currently do not have [automations](/automations) that schedule releases, but this is something that will come in the near future and will easily fit into existing trains you have.
 
-Configuring this is more or less a one-time setup. After this we can actually start making releases.
+Configuring this is a one-time setup. After this we can actually start making releases.

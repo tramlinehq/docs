@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# Add your app
+# Adding Apps
 
 To kick things off, add your app.
 
