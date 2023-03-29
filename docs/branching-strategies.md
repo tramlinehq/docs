@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # ⽊ Branching Strategies
 
-We support 3 types of branching strategies when setting up a [release train](setup).
+We support 3 types of branching strategies when setting up a [release train](using-tramline/release-trains).
 
 :::note
 Tramline creates [release branches](docs/automations.mdx#cutting-a-release-branch) and appropriate [pull requests](docs/automations.mdx#creating-and-merging-pull-requests) automatically across all branching strategies.
