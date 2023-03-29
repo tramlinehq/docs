@@ -26,4 +26,6 @@ Want to get started immediately? Sign up [on our website](https://tramline.dev/u
 
 Want a demo instead? [Pick a time slot here](https://calendly.com/tramline/45/) and our founding team will walk you through the system and answer all questions.
 
+Want full control? Tramline is open source under the Apache License! Read our guide on [getting started with self-hosting](https://github.com/tramlinehq/tramline#how-to-self-host-%EF%B8%8F).
+
 🚃
