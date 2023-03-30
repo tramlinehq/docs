@@ -5,7 +5,7 @@ sidebar_position: 1
 # Build Servers (CI/CD)
 
 :::tip
-[Contact us](mailto:hello@tramline.app?subject=%5Bvia%20docs%5D) and we'll help you get setup, including your Continuous Integration (CI) workflow.
+[Contact us](/getting-support) and we'll help you get setup, including your Continuous Integration (CI) workflow.
 :::
 
 Tramline simplifies [version name and build number management](docs/automations.mdx#managing-version-names-and-build-numbers) across all your app releases. To achieve this, it requires that your build server accepts the version name and build number provided by Tramline when generating the binary for your app. To learn how to configure your workflows for Android and iOS, please refer to the sections below.

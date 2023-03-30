@@ -3,7 +3,11 @@
 
 # Using Tramline
 
-Once you are signed up, get your first release up and going.
+:::tip
+[Contact us](/getting-support) and we'll help you get setup with your release process.
+:::
+
+Once you are signed up, here's how you make your first release.
 
 ## Add your app(s)
 
@@ -62,7 +66,3 @@ Once you've reached the last step of the train, you'd be able to finalize the re
 You'd be able to see all your releases in a single place on the release train page:
 
 ![](/img/previous-release.png)
-
-:::tip
-[Contact us](mailto:hello@tramline.app?subject=%5Bvia%20docs%5D) and we'll help you get setup with your release process.
-:::
