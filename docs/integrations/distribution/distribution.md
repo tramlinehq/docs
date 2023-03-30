@@ -8,7 +8,7 @@ Tramline distributes your app to the distribution channels you have configured. 
 
 ## Android
 
-For android apps, Tramline keeps a copy your release build in its system. It uploads and promotes that build to the relevant distribution channels during the release cycle as per the release train configuration.
+For Android apps, Tramline keeps a copy your release build in its system. It uploads and promotes that build to the relevant distribution channels during the release cycle as per the release train configuration.
 
 ### Supported integrations
 
@@ -17,7 +17,7 @@ For android apps, Tramline keeps a copy your release build in its system. It upl
 
 ## iOS
 
-For iOS apps, Tramline currently expects the build to be present in App Store Connect. It then releases that build to beta groups and app store as per the release train configuration.
+For iOS apps, Tramline currently expects the build to be present in App Store Connect. It then releases that build to TestFlight beta groups and App Store as per the release train configuration.
 
 ### Supported integrations
 

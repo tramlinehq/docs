@@ -31,7 +31,7 @@ For Bitrise, the accepted environment variables for the workflow are currently `
 - [GitHub Actions](github)
 - [Bitrise](bitrise)
 
-A sample workflow for android apps can be generated using our [Mobile App CI workflow GEnerator](https://macige.tramline.app/). Please check the checkbox to include support for `versionCode` and `versionName`.
+A sample workflow for Android apps can be generated using our [Mobile App CI workflow GEnerator](https://macige.tramline.app/). Please check the checkbox to include support for `versionCode` and `versionName`.
 
 ![](/img/macige.png)
 

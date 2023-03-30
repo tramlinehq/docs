@@ -28,6 +28,6 @@ Enter the email address, select the role, and you're done!
 
 ## View memberships
 
-Additionally, you can be a part of multiple organizations, and switch between them,
+Additionally, you can be a part of multiple organizations and switch between them:
 
 ![](/img/memberships.png)

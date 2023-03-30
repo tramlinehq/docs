@@ -8,7 +8,7 @@ Navigate to the integrations page for your app and select __Google Play Store__ 
 
 ![](/img/build-integration.png)
 
-To automate the release of your android app to the Play Store using Tramline, you'll need to grant it access to your Google Play Console account by providing a Service Account JSON key file.
+To automate the release of your Android app to the Play Store using Tramline, you'll need to grant it access to your Google Play Console account by providing a Service Account JSON key file.
 
 <img height="500" src="/img/play-store-connect.png" width="500"/>
 

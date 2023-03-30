@@ -67,7 +67,7 @@ On this page, you can stabilize and oversee the release, manage phased rollouts,
 
 ## Finish up
 
-Once you've reached the last step of the train, you'd be able to finalize the release. This would typically tag the reponsible commit and depending on the branching strategy, it will also automatically create and merge necessary pull requests.
+Once you've reached the last step of the train, you'd be able to finalize the release. This would typically tag the responsible commit and depending on the branching strategy, it will also automatically create and merge necessary pull requests.
 
 You'd be able to see all your releases in a single place on the release train page:
 

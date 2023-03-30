@@ -29,7 +29,7 @@ It's common to add bug fixes and sometimes even small new features to a release 
 
 When a new commit lands on the release branch of your app, Tramline will restart the release train from step one with the latest commit on the release branch.
 
-If you're on step number 2 of a 3-step train, landing a new commit to the release branch will retrigger step 1 & 2 automatically. This is so that the stakeholders of those steps are informed of the updates made to the release.
+If you're on step number 2 of a 3-step train, landing a new commit to the release branch will re-trigger step 1 & 2 automatically. This is so that the stakeholders of those steps are informed of the updates made to the release.
 
 Since release steps _may_ have production deployments, Tramline plays it safe and does not auto-trigger this step for subsequent commits.
 
@@ -100,7 +100,7 @@ If there is no staged rollout enabled, your release is **complete**! 🎉
 
 #### Staged rollout
 
-If you have a production release with staged rollout, you will be presented with controls to navigate your staged rolout.
+If you have a production release with staged rollout, you will be presented with controls to navigate your staged rollout.
 
 ![](/img/android-staged-rollout-not-started.png)
 
@@ -110,11 +110,11 @@ Once the rollout is started, you can **increase** the rollout, **halt** it, or, 
 
 ## Finishing up
 
-Once the build has been sucecssfully distributed to all channels in the release step, you can finalize your release.
+Once the build has been successfully distributed to all channels in the release step, you can finalize your release.
 
 ![](/img/finish-release.png)
 
-This would typically tag the corect release commit, and depending on the branching strategy, it will also automatically create and merge necessary pull requests.
+This would typically tag the correct release commit, and depending on the branching strategy, it will also automatically create and merge necessary pull requests.
 
 Once a release is finalized, it becomes locked and is unable to accept any further patches or commits.
 

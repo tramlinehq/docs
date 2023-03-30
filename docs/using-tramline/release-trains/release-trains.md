@@ -16,7 +16,7 @@ The way to think about a release train is this encapsulation.
 Release Train = Branching Strategy + Release Cadence
 ```
 
-Most teams would typically have a maximum of two release trains (although tramline imposes no such limit) depending on the frequency of the release, the testing cycles and the audience for that release.
+Most teams would typically have a maximum of two release trains (although Tramline imposes no such limit) depending on the frequency of the release, the testing cycles and the audience for that release.
 
 ## Steps
 
