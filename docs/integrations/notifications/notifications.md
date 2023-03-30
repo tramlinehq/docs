@@ -2,11 +2,11 @@
 sidebar_position: 2
 ---
 
-# Notification
+# Notifications
 
 Tramline sends significant events in your release lifecycle to your configured notification channel.
 
-## List of supported integrations:
+## Supported integrations:
 
 - [Slack](slack)
 
