@@ -66,8 +66,13 @@ const config = {
                 },
                 items: [
                     {
-                        href: 'https://github.com/tramlinehq/tramline',
-                        label: 'GitHub',
+                        href: 'https://tramline.app',
+                        label: 'Tramline.app',
+                        position: 'right',
+                    },
+                    {
+                        href: 'https://tramline.dev',
+                        label: 'Dashboard',
                         position: 'right',
                     },
                 ],
