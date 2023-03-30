@@ -18,14 +18,20 @@ Tramline is a release coordination and deployment platform, designed especially 
 Head to our website to read more [about the larger context](https://tramline.app/why) of mobile release engineering and why we're building Tramline.
 :::
 
-Tramline is a **central dashboard** for the mobile DevOps process: it brings together build servers and distribution channels and notifications and approvals in one single place. It goes beyond app releases by including release analytics, build storage, post-release monitoring, and more.
+Tramline gives you a **central dashboard** for the mobile DevOps process: it brings together build servers and distribution channels and notifications and approvals in one single place. It goes beyond app releases by including release analytics, build storage, post-release monitoring, and more.
 
 ## Next steps
 
-Want to get started immediately? Sign up [on our website](https://tramline.dev/users/sign_up) and get the first 10 releases for free.
+**Want to get started immediately?**
 
-Want a demo instead? [Pick a time slot here](https://calendly.com/tramline/45/) and our founding team will walk you through the system and answer all questions.
+Sign up [on our website](https://tramline.dev/users/sign_up) and get the first 10 releases for free.
 
-Want full control? Tramline is open source under the Apache License! Read our guide on [getting started with self-hosting](https://github.com/tramlinehq/tramline#how-to-self-host-%EF%B8%8F).
+**Want a demo instead?**
+
+[Pick a time slot here](https://calendly.com/tramline/45/) and our founding team will walk you through the system and answer all questions.
+
+**Want full control?**
+
+Tramline is open source under the Apache License! Read our guide on [getting started with self-hosting](https://github.com/tramlinehq/tramline#how-to-self-host-%EF%B8%8F).
 
 🚃

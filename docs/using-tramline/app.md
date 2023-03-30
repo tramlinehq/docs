@@ -4,6 +4,8 @@ sidebar_position: 0
 
 # Adding Apps
 
+![](/img/add-new-app.png)
+
 To kick things off, add your app.
 
 ![](/img/create-new-app.png)

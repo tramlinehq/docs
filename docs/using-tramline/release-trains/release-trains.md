@@ -6,13 +6,17 @@ sidebar_position: 2
 
 Tramline's primary building block is a release train. They are designed such that it's easier to mimic the release process that you follow to ship apps.
 
-Once you have added an app and configured all the integrations, you can add a new release train with the following configuration.
+Once you have added an app and configured all the integrations, you can add a new release train by providing the following configuration.
 
 ![](/img/new-train.png)
+
+The way to think about a release train is this encapsulation.
 
 ```
 Release Train = Branching Strategy + Release Cadence
 ```
+
+Most teams would probably have a maximum of two release trains (although tramline imposes no such limit) depending on the frequency of the release, the testing cycles and the audience for the release.
 
 ## Steps
 
@@ -56,7 +60,7 @@ There is no limit to the number of distributions you can add per step. But most 
 They are made up of two parts:
 
 1. The service / provider name
-2. The channel for the service
+2. The channel name for the service
 
 ![](/img/distributions.png)
 
@@ -64,16 +68,20 @@ They are made up of two parts:
 The steps within a train and the distributions within a step are order dependent. The train always follows the order you pick.
 :::
 
+For **iOS**, make sure your CI workflow can push your builds to TestFlight.<br />For **Android**, make sure your CI workflow creates a valid `aab` file.
+
+Read more about configuring this in the [Build Servers](/integrations/ci-cd/) section.
+
 ## Mental model
 
 In summary, Tramline attempts to structure the parts of a release flow into adaptable processes. For example, you could have two different trains operating on two different release cadences.
 
 ```
-Nightly Train (every night)
+Debug Builds Train (every night)
      → Step: Debug Build
              → Firebase App Distribution
 
-Fornightly Train (every 14 days)
+Staging + Production Builds Train (every 14 days)
      → Step: Staging Build
              → Slack: #builds
              → Google Play Store: Internal Testing
