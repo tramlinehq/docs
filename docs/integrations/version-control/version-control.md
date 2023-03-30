@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Version Control
 
-## Supported integrations
+### Supported integrations
 
 - [GitHub](github)
 

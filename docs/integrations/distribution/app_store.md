@@ -5,7 +5,7 @@ sidebar_position: 0
 # App Store Connect
 
 :::note
-You need to add only one integration to use both TestFlight and App Store.
+For both TestFlight and App Store, you only need to add the integration once.
 :::
 
 Navigate to the integrations page for your app and select __App Store Connect & TestFlight__ under the __Distributions__ section on the page.
