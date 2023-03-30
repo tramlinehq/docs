@@ -3,7 +3,7 @@ slug: '/'
 sidebar_position: 0
 ---
 
-# Welcome! 👋
+# 👋 Welcome!
 
 Tramline is a release coordination and deployment platform, designed especially for mobile app teams.
 
