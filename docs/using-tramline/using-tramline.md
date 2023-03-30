@@ -73,6 +73,6 @@ You'd be able to see all your releases in a single place on the release train pa
 
 ![](/img/previous-release.png)
 
-:::note
+:::info
 Feel free to continue over to the next few sections to understand the release process in detail. [Contact us](/getting-support) if you need any help.
 :::

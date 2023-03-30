@@ -70,7 +70,7 @@ Once you have submitted the app for review, you can track its progress on the ri
 
 ![](/img/submitted-for-review-2.png)
 
-:::note
+:::info
 This widget above will always show the latest status of of the release on TestFlight or App Store.
 :::
 

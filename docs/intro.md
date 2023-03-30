@@ -14,7 +14,7 @@ Tramline is a release coordination and deployment platform, designed especially 
 - It **saves time** for teams by automating tasks — big and small — across the release process.
 - It **adds auditability** to releases by centralizing sign-offs and approvals.
 
-:::note
+:::info
 Head to our website to read more [about the larger context](https://tramline.app/why) of mobile release engineering and why we're building Tramline.
 :::
 

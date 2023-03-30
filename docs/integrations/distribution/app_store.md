@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # App Store Connect
 
-:::note
+:::info
 For both TestFlight and App Store, you only need to add the integration once.
 :::
 

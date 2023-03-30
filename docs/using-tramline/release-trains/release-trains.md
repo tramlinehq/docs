@@ -83,7 +83,7 @@ There is no limit to the number of distributions you can add per step. But most 
 
 You can only add a production distribution channel during the Release step, not during the Review step, as previously mentioned.
 
-:::note
+:::info
 The steps within a train and the distributions within a step are order dependent. The train always follows the order you pick.
 :::
 

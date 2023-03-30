@@ -18,6 +18,6 @@ When you click the __Connect__ button, you'll be taken through a standard OAuth 
 
 The Tramline app will be added to your workspace after the connection is successful.
 
-:::note
-If you want notifications to be sent to your private channel, you'll need to invite the Tramline app to the private channel.
+:::caution
+If you want notifications to be sent to a private channel, you'll need to invite the Tramline app to that private channel.
 :::
