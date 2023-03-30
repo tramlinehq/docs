@@ -138,7 +138,18 @@ const config = {
             prism: {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme,
-            }
+            },
+            algolia: {
+                // The application ID provided by Algolia
+                appId: '888WUN47GN',
+
+                // Public API key: it is safe to commit it
+                apiKey: '5bc99c8530cbba38f870e2488575a154',
+
+                indexName: 'tramline',
+
+                contextualSearch: true,
+              },
         }),
 };
 
