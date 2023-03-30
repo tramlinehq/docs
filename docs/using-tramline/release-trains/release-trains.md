@@ -60,7 +60,7 @@ There is no limit to the number of distributions you can add per step. But most 
 They are made up of two parts:
 
 1. The service / provider name
-2. The channel name for the service
+2. The channel name within the service
 
 ![](/img/distributions.png)
 

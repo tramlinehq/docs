@@ -12,7 +12,7 @@ Tramline currently supports inviting new users as either developers or viewers. 
 | Developer | ✅                | ✅          | ✅             | ✅                 | ✅                | ❌              |
 | Viewer    | ✅                | ❌          | ❌             | ❌                 | ❌                | ❌              |
 
-### Invite a new user
+## Invite a new user
 
 To invite a new user, click on the dropdown in the top-right and select Team.
 
@@ -26,7 +26,7 @@ Enter the email address, select the role, and you're done!
 
 ![](/img/add-member.png)
 
-### View memberships
+## View memberships
 
 Additionally, you can be a part of multiple organizations, and switch between them,
 

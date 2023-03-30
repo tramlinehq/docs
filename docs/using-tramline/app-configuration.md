@@ -8,12 +8,13 @@ Set up all the necessary integrations for your app. See the [integrations sectio
 
 After the integrations are setup, you can configure the following settings for your app. Click on the __Configure__ button in the top-right of your app page to get to the app configuration.
 
-### Repository
-Choose from the list of repositories you have connected via your [VCS integration](/integrations/version-control)
+## Repository
 
-### Notifications
+Choose from the list of repositories you have connected via your [VCS integration](/integrations/version-control).
 
-Choose from the list of channels you have available via your [Notification integration](/integrations/notifications)
+## Notifications
+
+Choose from the list of channels you have available via your [Notification integration](/integrations/notifications):
 
 ![](/img/app-config.png)
 
