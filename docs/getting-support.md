@@ -18,6 +18,6 @@ If you're a customer — in trial or paid — you can use one of the following s
 
 ## Open Source Community
 
-- Join our Discord server here: https://discord.gg/u7VwyvBV2Z
+- Join our [Discord server](https://discord.gg/u7VwyvBV2Z).
 
 - Create a new issue in our [GitHub issue queue](https://github.com/tramlinehq/tramline/issues).

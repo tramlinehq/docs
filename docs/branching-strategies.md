@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# ⽊ Branching Strategies
+# 🌳 Branching Strategies
 
 We support 3 types of branching strategies when setting up a [release train](using-tramline/release-trains).
 
