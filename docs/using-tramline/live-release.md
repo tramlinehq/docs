@@ -30,7 +30,7 @@ If you're on step 2 of a 3 step train, landing a new commit to the release branc
 
 #### Release steps must be triggered manually
 
-Since release steps _may_ have production deployments, Tramline plays it safe and does not auto-trigger this step regardless of new commits landing.q
+Since release steps _may_ have production deployments, Tramline plays it safe and does not auto-trigger this step regardless of new commits landing.
 
 ### Controlling rollouts
 
