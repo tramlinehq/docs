@@ -49,11 +49,13 @@ In this example, we add two steps. One creates a staging build and deploys it to
 
 ## Start a release
 
-For your created release train, start a release. This will cut a release branch from your working branch.
+For your created release train, start a release.
 
 ![](/img/start-release.png)
 
-Here, you will stabilize and monitor the release, manage phased rollouts, submit the app for review, distribute builds to beta users and land any additional bug fixes or changes before finally releasing to the production track on Play Store or to the App Store.
+The live release page will show you the release branch that was cut from the working branch.
+
+From here, you will be able to stabilize and monitor the release, manage phased rollouts, submit the app for review, distribute builds to beta users and land any additional bug fixes or changes before finally releasing to the production track on the store.
 
 ![](/img/live-release.png)
 
