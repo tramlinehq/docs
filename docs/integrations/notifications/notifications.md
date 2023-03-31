@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Notifications
 
-Tramline sends significant events in your release lifecycle to your configured notification channel.
+Tramline sends significant events in your release life cycle to your configured notification channel.
 
 ### Supported integrations
 
