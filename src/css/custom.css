@@ -13,6 +13,7 @@
   --ifm-color-primary-light: #4cb152;
   --ifm-color-primary-lighter: #80c585;
   --ifm-color-primary-lightest: #f6ffdb;
+  --ifm-breadcrumb-item-background-active: #f4f4f4;
   --ifm-code-font-size: 90%;
   --ifm-font-size-base: 16px;
   --ifm-font-family-base: objektiv-mk1, sans-serif;
@@ -33,6 +34,8 @@
 
 .breadcrumbs__link {
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* fix the footer */
@@ -91,6 +94,7 @@
 
 /* smaller screens */
 @media only screen and (max-width: 996px) {
+
   /* fix the navbar */
   .navbar .navbar__title {
     font-size: 12px;
@@ -119,6 +123,7 @@
 
 /* adjust overall spacing between things */
 @media screen and (min-width: 780px) {
+
   /* fix the navbar */
   .navbar .navbar__title {
     font-size: 15px;
@@ -147,6 +152,7 @@
 
 /* for large screens */
 @media (min-width: 1416px) {
+
   /* reduce container width */
   .main-wrapper {
     max-width: 1400px;
