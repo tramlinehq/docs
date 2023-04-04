@@ -67,7 +67,7 @@ const config = {
                 items: [
                     {
                         href: 'https://tramline.app',
-                        label: 'Tramline.app',
+                        label: 'Website',
                         position: 'right',
                     },
                     {
