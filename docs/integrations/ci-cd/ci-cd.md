@@ -46,7 +46,9 @@ For iOS apps, [contact us](/getting-support) and we will help you set up workflo
 
 ### Supported integrations
 
+- [GitHub Actions](github)
 - [Bitrise](bitrise)
+
 
 Here is a sample Bitrise workflow which uses Fastlane plugin for Bitrise to upload a signed build to the App Store.
 
@@ -97,3 +99,66 @@ app:
 ```
 
 You can see a working iOS workflow for a Flutter app [here](https://github.com/tramlinehq/ueno/blob/main-ios/bitrise.yml).
+
+Here is a sample Github Actions workflow which uses Fastlane to upload a signed build to the App Store.
+
+```yaml
+name: iOS Fastlane Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      versionName:
+        description: 'User-facing release version name'
+        required: true
+        default: "1.0.0"
+      versionCode:
+        description: 'versionCode or build number'
+        required: true
+        default: '1'
+
+jobs:
+  deploy:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up ruby env
+        uses: ruby/setup-ruby@v1.138.0
+        with:
+          ruby-version: 3.2.1
+          bundler-cache: true
+
+      - name: Decode signing certificate into a file
+        env:
+          CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+        run: |
+          echo $CERTIFICATE_BASE64 | base64 --decode > signing-cert.p12
+
+      - name: Setup the flutter environment
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Get flutter dependencies
+        run: flutter pub get
+
+      - name: Build the app
+        run: |
+          flutter build ipa --release --build-number=${{ github.event.inputs.versionCode }} --build-name=${{ github.event.inputs.versionName }} --no-codesign
+
+      - name: Sign and ship the build
+        working-directory: ios
+        run: bundle install && bundle exec fastlane ios ship_to_testflight
+        env:
+          ASC_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+          ASC_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+          SIGNING_KEY_PASSWORD: ${{ secrets.P12_PASSWORD }}
+          SIGNING_KEY_FILE_PATH: ../signing-cert.p12
+```
+
+The workflow requires setting up correct [distribution certificate](https://developer.apple.com/help/account/create-certificates/certificates-overview) and [API key](https://developer.apple.com/help/account/manage-keys/create-a-private-key) for App Store Connect and storing them in the Github Action secrets. 
+You can see a working iOS workflow for a Flutter app [here](https://github.com/tramlinehq/ueno/blob/main/.github/workflows/ios-fastlane-release.yml).
