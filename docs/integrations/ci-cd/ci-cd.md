@@ -49,7 +49,6 @@ For iOS apps, [contact us](/getting-support) and we will help you set up workflo
 - [GitHub Actions](github)
 - [Bitrise](bitrise)
 
-
 Here is a sample Bitrise workflow which uses Fastlane plugin for Bitrise to upload a signed build to the App Store.
 
 ```yaml
@@ -160,5 +159,8 @@ jobs:
           SIGNING_KEY_FILE_PATH: ../signing-cert.p12
 ```
 
-The workflow requires setting up correct [distribution certificate](https://developer.apple.com/help/account/create-certificates/certificates-overview) and [API key](https://developer.apple.com/help/account/manage-keys/create-a-private-key) for App Store Connect and storing them in the Github Action secrets. 
+The workflow requires setting up correct [distribution certificate](https://developer.apple.com/help/account/create-certificates/certificates-overview) and [API key](https://developer.apple.com/help/account/manage-keys/create-a-private-key) for App Store Connect and storing them in the Github Action secrets.
+
+![](/img/gh-actions-secrets.png)
+
 You can see a working iOS workflow for a Flutter app [here](https://github.com/tramlinehq/ueno/blob/main/.github/workflows/ios-fastlane-release.yml).
