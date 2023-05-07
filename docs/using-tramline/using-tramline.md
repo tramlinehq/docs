@@ -57,7 +57,7 @@ For your created release train, start a release.
 
 ![](/img/start-release.png)
 
-:::note:::
+:::note
 You need at least one release step to be able to start a new release.
 :::
 
