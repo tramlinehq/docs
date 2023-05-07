@@ -57,6 +57,10 @@ For your created release train, start a release.
 
 ![](/img/start-release.png)
 
+:::note:::
+You need at least one release step to be able to start a new release.
+:::
+
 The live release page displays the release branch created from the working branch.
 
 On this page, you can stabilize and oversee the release, manage phased rollouts, submit the app for review, distribute builds to beta users, and implement any extra bug fixes or modifications before eventually launching the production track in the store.
