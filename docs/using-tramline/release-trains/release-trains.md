@@ -53,6 +53,10 @@ Here's an example of a couple of review steps:
 
 A release step can only be one, and would typically be used to release to the production track on Play Store or to App Store. This is not mandatory though, the release step can also distribute to a non-production channel.
 
+:::info
+It is mandatory to add a Release Step before you can start a release for the train. If you only require one step, just simply add a release step.
+:::
+
 Since a release step allows adding production channels, this is where you would configure phased releases.
 
 ![](/img/ios-staged-rollout.png)
