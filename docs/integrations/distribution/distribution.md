@@ -13,6 +13,7 @@ For Android apps, Tramline keeps a copy your release build in its system. It upl
 ### Supported integrations
 
 - [Google Play Console](play_store)
+- [Firebase App Distribution](firebase)
 - [Slack](slack)
 
 ## iOS
@@ -23,3 +24,4 @@ For iOS apps, Tramline currently expects the build to be present in App Store Co
 
 - [TestFlight](testflight)
 - [App Store](app_store)
+- [Firebase App Distribution](firebase)
