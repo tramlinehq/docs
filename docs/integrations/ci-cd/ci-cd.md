@@ -8,7 +8,7 @@ sidebar_position: 1
 [Contact us](/getting-support) and we'll help you get setup, including your Continuous Integration (CI) workflow.
 :::
 
-Tramline simplifies [version name and build number management](docs/automations.mdx#managing-version-names-and-build-numbers) across all your app releases. To achieve this, it requires that your build server accepts the version name and build number provided by Tramline when generating the binary for your app. To learn how to configure your workflows for Android and iOS, please refer to the sections below.
+Tramline automatically triggers your CI/CD workflows and tracks the latest build artifacts generated. It also simplifies [version name and build number management](docs/automations.mdx#managing-version-names-and-build-numbers) across all your app releases. To achieve this, it requires that your build server accepts the version name and build number provided by Tramline when generating the binary for your app. To learn how to configure your workflows for Android and iOS, please refer to the sections below.
 
 :::info
 After setting up all the required integrations, you can configure your app to use the correct CI/CD workflow from the list of available workflows.
