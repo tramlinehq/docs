@@ -49,7 +49,7 @@ const config = {
         'https://use.typekit.net/jke0quu.css',
     ],
     markdown: {
-        mermaid: true,
+        mermaid: true
     },
 
     themes: ['@docusaurus/theme-mermaid'],
@@ -83,6 +83,9 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            mermaid: {
+                theme: { light: 'neutral', dark: 'dark' },
+            },
             docs: {
                 sidebar: {
                     hideable: false
