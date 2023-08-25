@@ -49,6 +49,32 @@ const config = {
         'https://use.typekit.net/jke0quu.css',
     ],
 
+    plugins: [
+      [
+        require.resolve('./src/plugins/changelog/index.js'),
+        {
+          blogTitle: 'The latest from Tramline',
+          blogDescription:
+            'Keep yourself up-to-date about new features in every release',
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'Changelog',
+          routeBasePath: '/changelog',
+          showReadingTime: false,
+          postsPerPage: 20,
+          archiveBasePath: null,
+          authorsMapPath: 'authors.json',
+          feedOptions: {
+            type: 'all',
+            title: 'Tramline Changelog',
+            description:
+              'Keep yourself up-to-date about new features in every release',
+            copyright: `Copyright © ${new Date().getFullYear()} Tramline, Inc.`,
+            language: "en-US",
+          },
+        },
+      ],
+],
+
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
@@ -65,6 +91,11 @@ const config = {
                     srcDark: 'img/tramline-logo-dark-mode.png'
                 },
                 items: [
+                    // {
+                    //     href: 'https://docs.tramline.app/changelog',
+                    //     label: 'Changelog',
+                    //     position: 'right',
+                    // },
                     {
                         href: 'https://tramline.app',
                         label: 'Website',

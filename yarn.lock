@@ -1351,7 +1351,7 @@
     react-helmet-async "*"
     react-loadable "npm:@docusaurus/react-loadable@5.5.2"
 
-"@docusaurus/plugin-content-blog@2.4.1":
+"@docusaurus/plugin-content-blog@^2.4.1", "@docusaurus/plugin-content-blog@2.4.1":
   version "2.4.1"
   resolved "https://registry.npmjs.org/@docusaurus/plugin-content-blog/-/plugin-content-blog-2.4.1.tgz"
   integrity sha512-E2i7Knz5YIbE1XELI6RlTnZnGgS52cUO4BlCiCUCvQHbR+s1xeIWz4C6BtaVnlug0Ccz7nFSksfwDpVlkujg5Q==
