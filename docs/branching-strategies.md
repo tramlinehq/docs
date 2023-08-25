@@ -17,6 +17,24 @@ For every release, we create a new release branch from the `HEAD` of the working
 
 ![](/img/branching-atrunk.png)
 
+
+```mermaid
+---
+title: Almost Trunk
+---
+gitGraph
+   commit
+   commit
+   branch r/release/2-08-2023
+   checkout r/release/2-08-2023
+   commit
+   commit
+   checkout main
+   merge r/release/2-08-2023
+   commit
+   commit
+```
+
 ## Release with Backmerge
 
 Release with Backmerge creates a new release branch from the `HEAD` of the working branch, for every release. Once the release is finalized, two things happen:

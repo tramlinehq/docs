@@ -23,7 +23,7 @@ const config = {
     },
 
     scripts: [
-        {src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'docs.tramline.app'}
+        { src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'docs.tramline.app' }
     ],
 
     presets: [
@@ -48,35 +48,40 @@ const config = {
     stylesheets: [
         'https://use.typekit.net/jke0quu.css',
     ],
+    markdown: {
+        mermaid: true,
+    },
+
+    themes: ['@docusaurus/theme-mermaid'],
 
     plugins: [
-      [
-        require.resolve('./src/plugins/changelog/index.js'),
-        {
-          blogTitle: 'The latest from Tramline',
-          blogDescription:
-            'Keep yourself up-to-date about new features in every release',
-          blogSidebarCount: 'ALL',
-          blogSidebarTitle: 'Changelog',
-          routeBasePath: '/changelog',
-          showReadingTime: false,
-          postsPerPage: 20,
-          archiveBasePath: null,
-          authorsMapPath: 'authors.json',
-          feedOptions: {
-            type: 'all',
-            title: 'Tramline Changelog',
-            description:
-              'Keep yourself up-to-date about new features in every release',
-            copyright: `Copyright © ${new Date().getFullYear()} Tramline, Inc.`,
-            language: "en-US",
-          },
-        },
-      ],
-],
+        [
+            require.resolve('./src/plugins/changelog/index.js'),
+            {
+                blogTitle: 'The latest from Tramline',
+                blogDescription:
+                    'Keep yourself up-to-date about new features in every release',
+                blogSidebarCount: 'ALL',
+                blogSidebarTitle: 'Changelog',
+                routeBasePath: '/changelog',
+                showReadingTime: false,
+                postsPerPage: 20,
+                archiveBasePath: null,
+                authorsMapPath: 'authors.json',
+                feedOptions: {
+                    type: 'all',
+                    title: 'Tramline Changelog',
+                    description:
+                        'Keep yourself up-to-date about new features in every release',
+                    copyright: `Copyright © ${new Date().getFullYear()} Tramline, Inc.`,
+                    language: "en-US",
+                },
+            },
+        ],
+    ],
 
     themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+        /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             docs: {
                 sidebar: {
@@ -185,7 +190,7 @@ const config = {
                 indexName: 'tramline',
 
                 contextualSearch: true,
-              },
+            },
         }),
 };
 
