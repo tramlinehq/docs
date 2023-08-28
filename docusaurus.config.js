@@ -53,7 +53,7 @@ const config = {
       [
         require.resolve('./src/plugins/changelog/index.js'),
         {
-          blogTitle: 'The latest from Tramline',
+          blogTitle: 'Changelog',
           blogDescription:
             'Keep yourself up-to-date about new features in every release',
           blogSidebarCount: 'ALL',
@@ -92,9 +92,9 @@ const config = {
                 },
                 items: [
                     {
-                        href: 'https://docs.tramline.app/changelog',
+                        to: 'changelog',
                         label: 'Changelog',
-                        position: 'right',
+                        position: 'right'
                     },
                     {
                         href: 'https://tramline.app',
