@@ -91,11 +91,11 @@ const config = {
                     srcDark: 'img/tramline-logo-dark-mode.png'
                 },
                 items: [
-                    // {
-                    //     href: 'https://docs.tramline.app/changelog',
-                    //     label: 'Changelog',
-                    //     position: 'right',
-                    // },
+                    {
+                        href: 'https://docs.tramline.app/changelog',
+                        label: 'Changelog',
+                        position: 'right',
+                    },
                     {
                         href: 'https://tramline.app',
                         label: 'Website',

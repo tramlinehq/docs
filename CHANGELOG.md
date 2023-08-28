@@ -10,13 +10,13 @@ For large teams, the process of release stabilization often extends over several
 
 For better control over build generation, you can now configure triggers that will batch commits based on time and volume before triggering new builds from Tramline.
 
-You can do this under the <mark>Settings</mark> page of your release train.
+You can do this under the **Settings** page of your release train.
 
 ### Support draft apps in Play Store
 
 Users shipping brand new apps to Play Store for the very first time often face issues releasing to public channels. This is because the Play Store requires one to make an initial deploy manually before using the APIs.
 
-To avoid having the releases fail late after everything is set up, we now detect apps that are in <mark>Draft</mark> mode on the Play Store and disallow making new releases until a manual public release is made from the Play Console.
+To avoid having the releases fail late after everything is set up, we now detect apps that are in **Draft** mode on the Play Store and disallow making new releases until a manual public release is made from the Play Console.
 
 ![](../../static/img/changelog/draft-mode.png)
 
@@ -49,35 +49,117 @@ Bitrise is now also supported as another CI/CD provider. For an example on how t
 
 <endcommiters/>
 
-## 0.0.3 (2023-07-27)
+## 0.0.3 (2023-08-09)
 
-### 🗒️ Live release now has a changelog since the last release
+![](../../static/img/changelog/release-schedule.png)
+
+### Scheduled releases
+
+Releases can now be configured to run on a pre-defined schedule. You can configure this on the **Settings** page of a release train. 
+
+A great use-case for this is to set-up nightly trains that automatically trigger latest dev builds and send them to internal teams on a consistent cadence.
+
+### Deep links in notifications
+
+Notifications now have deep links to both Firebase App Distribution and TestFlight builds, so you don't have to go hunting when a new RC build is available for testing.
+
+<details>
+<summary>Improvements and fixes</summary>
+
+- Support for selecting Internal Groups as a distribution channel in TestFlight
+- Release tags are now guaranteed to be unique. If a tag clashes with a previous one, we append the commit SHA to the tag!
+
+</details>
+
+#### Committers: 3
+
+- Nivedita Priyadarshini ([@nid90](https://github.com/nid90))
+- Akshay Gupta ([@kitallis](https://github.com/kitallis))
+- Pratul Kalia ([@pratul](https://github.com/pratul))
+
+<endcommiters/>
+
+## 0.0.2 (2023-07-27)
+
+![](../../static/img/changelog/cross-platform.png)
+
+### Synchronized releases for cross-platform apps
+
+
+For teams with apps built in cross-platform stacks like ReactNative and Flutter, we now support synchronized release trains across both platforms.
+
+- This allows teams to run their releases from a single branch.
+- You get centralized control over both the stores.
+- This also ensures all changes get applied to both platforms, but also have the nuance to make selective changes to each when needed.
+
+Since there can be cases where there is a drift between what is shipped to one store over another, we also cut platform-specific tags to disambiguate the commits.
+
+### Changes since last release
+
+The changes in your app since the last release are now visible on the live release page to provide context on what all is getting shipped in the current release.
 
 ![](../../static/img/changelog/changes-since-last.png)
 
+
+### Build notes
+
+Well-formed, sanitized commit messages since the last good build are now available as test notes in Slack, Firebase App Distribution and TestFlight.
+
+![](../../static/img/changelog/build-notes-deep-link.png)
+
+<details>
+<summary>Improvements and fixes</summary>
+
 - Release suffixes are now optional for steps
 - We now fetch latest build numbers from stores to reduce probability of version clashes
+- Previous running steps are cancelled (both in Tramline and in CI) when a new commit lands
 - All non-production deployments are now triggered automatically to allow fully automated releases (this paves way for automatic scheduled releases!)
-- Previous runs are cancelled (both in Tramline and in CI) when new commits land
-- Commits since the last build in a release are now available as test notes in Slack, FAD and TestFlight
-- Improved Slack notifications
 
-## 0.0.2 (2023-01-26)
+</details>
 
-⏳ Automatic scheduled release trains that kickoff like clockwork on specified times
+#### Committers: 3
 
-🔗 Slack notifications with deep links to both Firebase App Distribution and TestFlight builds, so you don't have to go hunting
+- Nivedita Priyadarshini ([@nid90](https://github.com/nid90))
+- Akshay Gupta ([@kitallis](https://github.com/kitallis))
+- Pratul Kalia ([@pratul](https://github.com/pratul))
 
-🍏 Support for selecting Internal Groups as a distribution channel in TestFlight
+<endcommiters/>
 
-🦄 Release tags which are guaranteed to be unique. If a tag clashes with a previous one, we append the commit SHA to the tag!
+## 0.0.1 (2023-06-03)
 
-## 0.0.1 (2023-06-06)
+![](../../static/img/changelog/train-wizard.png)
 
-- Automatically finish the release when the release step is successful.
-- Do not bump up patch version for every commit. Only do so for hotfixes, i.e. commits that are landed during a production rollout.
-- A quick wizard to guide you through your first train + step creation process.
-- Show details about your integration in the integrations page (bundle id, connection info, project info etc.).
-- Create PRs at the end of almost trunk branching strategy to merge from release branch into working branch.
-- Add an option to manually refresh Slack channels, incase the list is stale.
-- Allow partial semver versioning scheme like MAJOR.MINOR along with MAJOR.MINOR.PATCH.
+### Train setup wizard
+
+We know how setting up the integrations and release trains can be a bit tricky to navigate. So we now have a quick wizard that helps you get started on your very first release train.
+
+### Automatic finalization
+
+We have couple of enhacements towards the end of a release.
+
+1. Tramline automatically starts wrapping up the release and starts the finalization process (cutting tags, creating PRs, locking the release etc.) as soon as the release step finishes.
+2. For the Almost Trunk branching strategy, we create and merge a PR at the end to get all your release branch fixes back to the working branch.
+
+![](../../static/img/changelog/post-release-merge.png)
+
+### Versioning changes
+
+We now support a partial SemVer scheme like `MAJOR.MINOR` along with `MAJOR.MINOR.PATCH`. Additionally, Tramline used to bump up versions for every commit that would land on the release branch. This has now changed to bump up versions (either minor or patch, depending on your strategy) **only** during hotfixes, i.e. commits that are landed during a production rollout.
+
+![](../../static/img/changelog/versioning-tactics-1.png)
+
+<details>
+<summary>Improvements and fixes</summary>
+
+- Show details about your integration in the integrations page (bundle id, connection info, project info etc.)
+- Add an option to manually refresh Slack channels, in case the list is stale
+
+</details>
+
+#### Committers: 3
+
+- Nivedita Priyadarshini ([@nid90](https://github.com/nid90))
+- Akshay Gupta ([@kitallis](https://github.com/kitallis))
+- Pratul Kalia ([@pratul](https://github.com/pratul))
+
+<endcommiters/>
