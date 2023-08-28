@@ -93,7 +93,7 @@ ${authors.map((author) => `  - '${author.alias}'`).join('\n')}`
 
 # ${formattedDate}
 
-${content.replace(/####/g, '##')}`,};
+${content.replace(/#### Committers: \d[\s\S]*?<endcommiters\/>/g, '')}`,};
 
 <!-- truncate -->
 }

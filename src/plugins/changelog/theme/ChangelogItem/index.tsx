@@ -15,7 +15,7 @@ import styles from './styles.module.css';
 
 export default function ChangelogItem({children}: Props): JSX.Element {
   return (
-    <BlogPostItemContainer className={styles.changelogItemContainer}>
+    <BlogPostItemContainer className={styles.changelogItemContainer + " changelog-item-override"}>
       <ChangelogItemHeader />
       <BlogPostItemContent>{children}</BlogPostItemContent>
     </BlogPostItemContainer>
