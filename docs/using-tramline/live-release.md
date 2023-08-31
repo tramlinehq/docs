@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Live Release
+# Ongoing Release
 
 When you start a new release, this page is your control panel. Everything about the current release is controlled from right here. You will likely spend most of your time in Tramline here.
 
