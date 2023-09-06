@@ -26,8 +26,8 @@ When we introduced cross-platform apps in Tramline a couple of months back, the 
 
 Bitrise is now also supported as another CI/CD provider. For an example on how to configure a multi-platform (and stack) Bitrise pipeline, check out this workflow on our test bunny flutter app – [Ueno](https://github.com/tramlinehq/ueno/blob/main/bitrise.yml).
 
-<details>
-<summary>Improvements and fixes</summary>
+<details open>
+<summary>Improvements and Fixes</summary>
 
 - Check for presence of the working branch on the git repo when creating a new release train
 - Show all commits in a single push on the live release page, not just the `HEAD`
@@ -55,7 +55,7 @@ Bitrise is now also supported as another CI/CD provider. For an example on how t
 
 ### Scheduled releases
 
-Releases can now be configured to run on a pre-defined schedule. You can configure this on the **Settings** page of a release train. 
+Releases can now be configured to run on a pre-defined schedule. You can configure this on the **Settings** page of a release train.
 
 A great use-case for this is to set-up nightly trains that automatically trigger latest dev builds and send them to internal teams on a consistent cadence.
 
@@ -63,8 +63,8 @@ A great use-case for this is to set-up nightly trains that automatically trigger
 
 Notifications now have deep links to both Firebase App Distribution and TestFlight builds, so you don't have to go hunting when a new RC build is available for testing.
 
-<details>
-<summary>Improvements and fixes</summary>
+<details open>
+<summary>Improvements and Fixes</summary>
 
 - Support for selecting Internal Groups as a distribution channel in TestFlight
 - Release tags are now guaranteed to be unique. If a tag clashes with a previous one, we append the commit SHA to the tag!
@@ -107,8 +107,8 @@ Well-formed, sanitized commit messages since the last good build are now availab
 
 ![](../../static/img/changelog/build-notes-deep-link.png)
 
-<details>
-<summary>Improvements and fixes</summary>
+<details open>
+<summary>Improvements and Fixes</summary>
 
 - Release suffixes are now optional for steps
 - We now fetch latest build numbers from stores to reduce probability of version clashes
@@ -148,8 +148,8 @@ We now support a partial SemVer scheme like `MAJOR.MINOR` along with `MAJOR.MINO
 
 ![](../../static/img/changelog/versioning-tactics-1.png)
 
-<details>
-<summary>Improvements and fixes</summary>
+<details open>
+<summary>Improvements and Fixes</summary>
 
 - Show details about your integration in the integrations page (bundle id, connection info, project info etc.)
 - Add an option to manually refresh Slack channels, in case the list is stale
