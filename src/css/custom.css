@@ -189,6 +189,6 @@
   padding-left: 22px;
 }
 
-.sidebarItemList_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module {
+[class^="sidebarItemList"] {
   text-align: right;
 }
