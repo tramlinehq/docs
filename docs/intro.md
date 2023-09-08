@@ -24,11 +24,7 @@ Tramline gives you a **central dashboard** for the mobile DevOps process: it bri
 
 **Want to get started immediately?**
 
-Sign up [on our website](https://tramline.dev/users/sign_up) and get the first 10 releases for free.
-
-**Want a demo instead?**
-
-[Pick a time slot here](https://calendly.com/tramline/45/) and our founding team will walk you through the system and answer all questions.
+Sign up [on our website](https://tramline.dev/users/sign_up) for free!
 
 **Want full control?**
 
