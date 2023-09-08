@@ -57,7 +57,7 @@ const config = {
           blogDescription:
             'Keep yourself up-to-date about new features in every release',
           blogSidebarCount: 'ALL',
-          blogSidebarTitle: '',
+          blogSidebarTitle: ' ',
           routeBasePath: '/changelog',
           showReadingTime: false,
           postsPerPage: 20,
