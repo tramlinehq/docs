@@ -169,7 +169,7 @@
 .changelog-item-override {
   border-bottom: 1px dashed lightgrey;
   margin-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 
 .changelog-item-override:first-of-type {
