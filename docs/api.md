@@ -3,9 +3,9 @@
 
 # 🧪 API
 
-Tramline currently exposes two API endpoints for fetch release information.
+Tramline currently exposes two API endpoints to fetch release information.
 
-You need your `Acccount ID` and `API Key` before you can make any requests. To get these click on **Settings** in the dropdown on the top-right:
+You need your `Account ID` and `API Key` before you can make any requests. To get these click on **Settings** in the dropdown on the top-right:
 
 ![](/img/org-settings.png)
 
