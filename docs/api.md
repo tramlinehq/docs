@@ -1,7 +1,8 @@
 ---
+sidebar_position: 8
 ---
 
-# 🧪 API
+# 🧪 APIs to fetch release data
 
 Tramline currently exposes two API endpoints to fetch release information.
 
