@@ -22,20 +22,20 @@ This significantly reduces the burden on the release pilot wrangling backmerges 
 
 ![](../../static/img/changelog/backmerge-failure.png)
 
-Tramline generally still recommends an "almost trunk" strategy – wherein one cherry-picks commits from the working branch **to** the release branch. This of course, has many adoption constraints and isn't always organizationally feasible.
+Tramline generally still recommends an "almost trunk" strategy – wherein one cherry-picks commits from the working branch **to** the release branch. But this of course, has many adoption constraints and isn't always organizationally feasible.
 
 ### Prepare an upcoming release
 
-You can now start ramping up a new release before your current release finishes. This allows you to cut back on the additional time spent waiting for a full phased rollout to complete in the ongoing release and start stabalizing new features on the working branch.
+You can now start ramping up a new release before your current release finishes. This allows you to cut back on the additional time spent waiting for a full phased rollout to complete in the current release and start stabalizing new features on the working branch.
 
 ![](../../static/img/changelog/upcoming-release.png)
 
-This feature is available when you have a multi-step train (RC and production both) and you have phased rollouts enabled on your production step.
+This feature is available when you have a multi-step train (RC and production both) and you have a production channel in your release step.
 
 <details open>
 <summary>Improvements and Fixes</summary>
 
-- The build queue commits are reverse chronologically order
+- The build queue commits are reverse chronologically ordered
 - We now have formatted and mobile-friendly emails
 - Build notes sent on TestFlight are size-truncated to the App Store limit
 - You can edit release schedules as long as there isn't an active ongoing release
