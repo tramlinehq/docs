@@ -14,7 +14,7 @@ We now recommend using the [deploy-action](https://github.com/tramlinehq/deploy-
 
 GitHub currently does not support triggering CI workflows for a particular commit SHA and can only activate the HEAD of a branch. This restriction can lead to race-conditions within Tramline, potentially triggering workflows for an incorrect commit if it has been superseded by a new commit.
 
-This action fixes that problem by checking out your repo to the correct commit ref.
+This action also fixes that problem by checking out your repo to the correct commit ref.
 
 ### New Train configurations
 
@@ -22,9 +22,9 @@ This action fixes that problem by checking out your repo to the correct commit r
 
 You can now setup a couple of new configurations on your release train:
 
-1. Tramline has been automatically triggering the release step if it's reached it before in a prior commit. Now, you have the ability to customize this - you can elect to manually approve before the release step is triggered.
+1. Tramline has been automatically triggering the release step if it has reached it before in a prior commit. Now, you have the ability to customize this – you can elect to manually approve before the release step is triggered.
 
-2. For cross-platform apps, Tramline has been adding platform-specific tags to the last commit SHA that was deployed successfully to production. We've expanded this to now optionally add platform-specific tags to all commit SHAs that were even partially deployed to production, like in a staged rollout scenario.
+2. For cross-platform apps, Tramline has been adding platform-specific tags to the last commit SHA that was deployed successfully to production. We've expanded this to now optionally add platform-specific tags to all commit SHAs that were even partially deployed to production, like in a phased release → hotfix commit → phased release scenario.
 
 ### Tramline API
 
