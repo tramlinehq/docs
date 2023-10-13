@@ -14,6 +14,8 @@ Tramline automatically triggers your CI/CD workflows and tracks the latest build
 After setting up all the required integrations, you can configure your app to use the correct CI/CD workflow from the list of available workflows.
 :::
 
+## Build Artifact Selection
+
 ## Android
 
 Tramline requires that your configured workflow accepts the `versionCode` and `versionName` as environment variables and uses them to generate the build that will be uploaded to the distribution channels. You should create separate workflows to generate debug (unsigned) and production (signed) builds. Debug builds are not mandatory, but they can be helpful for testing purposes.
