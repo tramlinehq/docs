@@ -16,6 +16,16 @@ After setting up all the required integrations, you can configure your app to us
 
 ## Build Artifact Selection
 
+Tramline currently works on the following setup:
+
+```
+A single step --> configures a single CI workflow --> expects a single build artifact as output
+```
+
+By default, we pick up the largest artifact generated from your CI workflow. But you can override this behavior by specifying a file pattern in the Step configuration.
+
+This setting will substring match `tramline-release` and ignore the rest.
+
 ## Android
 
 Tramline requires that your configured workflow accepts the `versionCode` and `versionName` as environment variables and uses them to generate the build that will be uploaded to the distribution channels. You should create separate workflows to generate debug (unsigned) and production (signed) builds. Debug builds are not mandatory, but they can be helpful for testing purposes.
