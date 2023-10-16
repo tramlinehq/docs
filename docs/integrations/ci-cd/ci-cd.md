@@ -19,12 +19,18 @@ After setting up all the required integrations, you can configure your app to us
 Tramline currently works on the following setup:
 
 ```
-A single step --> configures a single CI workflow --> expects a single build artifact as output
+A single step --> configures a single CI workflow --> expects a single output build
 ```
 
-By default, we pick up the largest artifact generated from your CI workflow. But you can override this behavior by specifying a file pattern in the Step configuration.
+By default, we pick up the largest build generated from your CI workflow. But you can override this behavior by specifying a file pattern in the Step configuration.
 
-This setting will substring match `tramline-release` and ignore the rest.
+![](/img/build-artifact-name.png)
+
+For an example on GitHub actions, if you have a bunch of generated artifacts.
+
+![](/img/github-artifacts.png)
+
+This setting will do a substring match for `tramline-release` and ignore the rest.
 
 ## Android
 
