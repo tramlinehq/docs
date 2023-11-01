@@ -4,11 +4,11 @@
 
 ![](../../static/img/changelog/mobile-devops-charts.png)
 
-### Mobile DevOps Reports
+### Release Overview
 
 We now generate a high-level view of aggregated statistics across your releases. You can use these metrics to draw insights on the overall health of your release process.
 
-This includes important DORA metrics like Release Frequency and Fixes During Release (number of store versions generated).
+This includes important [DORA](https://dora.dev/research/) metrics like Release Frequency and Fixes During Release (number of store versions generated).
 
 ![](../../static/img/changelog/hotfixes-chart.png)
 
