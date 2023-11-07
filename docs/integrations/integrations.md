@@ -4,13 +4,13 @@ Tramline is designed to seamlessly integrate with the services you already use t
 
 The current set of integrations supported by Tramline can be broken down into four categories:
 
-| Type                  | Description                                                          | Required for core functionality |
-|-----------------------|----------------------------------------------------------------------|---------------------------------|
-| Version Control       | where your app code lives                                            | ✅                               |
-| Build Servers (CI/CD) | where your app build is generated                                    | ✅                               |
-| Notification          | where do you want to be notified about events in your release trains | ❌                               |
-| Build Distribution    | where do you to want to distribute your app                          | ✅                               |
-
+| Type                     | Description                                                          | Required for core functionality |
+|--------------------------|----------------------------------------------------------------------|--------------------------------|
+| Version Control          | where your app code lives                                            | ✅                              |
+| Build Servers (CI/CD)    | where your app build is generated                                    | ✅                              |
+| Notification             | where do you want to be notified about events in your release trains | ❌                              |
+| Build Distribution       | where do you to want to distribute your app                          | ✅                              |
+| Monitoring and Analytics | where do get your app health data from                               | ❌                              |
 
 When you add your app for the first time, Tramline will guide you in setting up the necessary integrations.
 

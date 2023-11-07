@@ -32,7 +32,7 @@ We've made some improvements in build (tester) notes that are sent to all non-pr
 
 - The first build generated for the release now has all changes since the last release as build notes.
 - Previously, Tramline automatically picked up the entire commit message when generating build notes. Now, you can elect to generate more compact build notes by picking just the title of the commit and ignore the multi-line description. This is especially useful for PR merge commits. This configuration can be found in the train **Settings** page.
-- The build notes in the notifcations are now sent as threaded messages to keep the primary post focussed and compact.
+- The build notes in the notifications are now sent as threaded messages to keep the primary post focussed and compact.
 
 ### Advanced Notification Settings
 
