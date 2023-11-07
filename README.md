@@ -26,9 +26,9 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Changelog Gotchas
-
-Changelogs at https://docs.tramline.app/changelog are populated from a [custom plugin](https://github.com/facebook/docusaurus/blob/da85e227784960d1ad099483e632f8fd548a0907/website/src/plugins/changelog/index.js#L120) sourced from docusaurus's own website. The plugin is pretty hacky so there are a few gotchas to keep in mind. 
+<details>
+<summary><h3>Changelog Gotchas</h3></summary>
+<p>Changelogs at <a href="https://docs.tramline.app/changelog">https://docs.tramline.app/changelog</a> are populated from a <a href="https://github.com/facebook/docusaurus/blob/da85e227784960d1ad099483e632f8fd548a0907/website/src/plugins/changelog/index.js#L120">custom plugin</a> sourced from docusaurus's own website. The plugin is pretty hacky, so there are a few gotchas to keep in mind.</p>
 
 Most of these are taken care of, but knowing how it works can come in handy later.
 
@@ -37,3 +37,6 @@ Most of these are taken care of, but knowing how it works can come in handy late
 - The `### Committers` section is what populates the authors+icons on the top. But we don't show the committers themselves in text, so there’s code to remove that section. But to make that work, there's a made-up tag called `<endcommiters/>` that you must terminate the changelog section with.
 - The images are sourced a bit awkwardly, assume the path of the images to be relative from the output directory which is `$ROOT/changelog/*.md` rather than `$ROOT/changelog.md`. In other words, assume you are inside `$ROOT/changelog/foo.md` and then source the image.
 - If anything seems weird just bust `$ROOT/changelog` it can always be regen’d from `CHANGELOG.md`
+  
+</details>
+
