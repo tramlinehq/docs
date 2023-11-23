@@ -1,12 +1,12 @@
 ---
-date: 2023-11-16T20:00
+date: 2023-11-23T20:00
 authors:
   - 'kitallis'
   - 'nid90'
   - 'pratul'
 ---
 
-# November 16, 2023
+# November 23, 2023
 
 ### Hotfix Releases 🤕
 

@@ -1,6 +1,6 @@
 # Tramline Changelog
 
-## 0.0.9 (2023-11-16)
+## 0.0.9 (2023-11-23)
 
 ### Hotfix Releases 🤕
 
