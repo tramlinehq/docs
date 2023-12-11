@@ -124,16 +124,28 @@ jq '.releases.android | map(.build_version)'
 
 You can send custom metadata to be displayed on Tramline dashboard about your build. Each metadata should have a unique identifier, and its value can be numerical or textual. The trend of all numeric metadata will be shown on Tramline dashboard.
 
-Eg of metadata: app launch time, unit test coverage etc.
+Examples of metadata: app launch time, unit test coverage etc.
 
 For a valid build, identified by `version-name` and `version-code`, Tramline will create or update the custom build metadata.
 
 ```bash
-curl -H "Authorization: Bearer your-api-key" \
+curl -X PATCH \
+     -H "Authorization: Bearer your-api-key" \
      -H "X-TRAMLINE-ACCOUNT-ID: your-account-id" \
      -H "Accept: application/json" \
-     -XPATCH https://tramline.dev/api/v1/apps/<app-id>/builds/<version-name>/<version-code>/external_metadata
-     -d '{"external_metadata": [{"identifier": "app_launch_time", "name": "App Launch Time", "description": "This is the time in seconds for the app to start", "value": 0.6, "type": "number", "unit": "seconds"}]}'
+     -d '{
+        "external_metadata": [
+            {
+                "identifier": "app_launch_time",
+                "name": "App Launch Time",
+                "description": "This is the time in seconds for the app to start",
+                "value": 0.6,
+                "type": "number",
+                "unit": "seconds"
+            }
+        ]
+    }' \
+     https://tramline.dev/api/v1/apps/<app-id>/builds/<version-name>/<version-code>/external_metadata
 ```
 
 The `external_metadata` in the request body should adhere to the following schema:
