@@ -132,7 +132,7 @@ For a valid build, identified by `version-name` and `version-code`, Tramline wil
 curl -X PATCH \
      -H "Authorization: Bearer your-api-key" \
      -H "X-TRAMLINE-ACCOUNT-ID: your-account-id" \
-     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
      -d '{
         "external_metadata": [
             {
