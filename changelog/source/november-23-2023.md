@@ -8,9 +8,9 @@ authors:
 
 # November 23, 2023
 
-### Hotfix Releases 🤕
-
 ![](../../static/img/changelog/hotfix-release.png)
+
+### Hotfix Releases 🤕
 
 Most people want to avoid hotfixes entirely, but when push comes to shove, you don't want your regular release processes to become shackles. 
 
