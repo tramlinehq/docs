@@ -16,8 +16,6 @@ We now track all the PRs that you create against the release branch during a rel
 
 Currently, we display all PRs (along with their labels), emphasizing those that haven't been merged yet. With this system in place, we can soon start gathering information, such as PRs that caused delays in a release or the size of commit diffs that were shipped after a release had already commenced.
 
-**Note**: This is distinct from backmerge PRs, as those are created by Tramline back to your working branch (in the opposite direction)."
-
 ### Release notes across both platforms
 
 In a cross-platform release, previously, the release metadata was common across both platforms. Although simpler, it can be quite limiting. We now support adding release metadata to individual platforms for a cross-platform release. The metadata is tuned to the details the particular store expects.
