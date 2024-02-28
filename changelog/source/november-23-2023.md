@@ -12,7 +12,7 @@ authors:
 
 ### Hotfix Releases 🤕
 
-Most people want to avoid hotfixes entirely, but when push comes to shove, you don't want your regular release processes to become shackles. 
+Most people want to avoid hotfixes entirely, but when push comes to shove, you don't want your regular release processes to become shackles.
 
 This is where hotfix releases come in. By starting a hotfix release, Tramline will:
 
@@ -30,7 +30,7 @@ For [synchronized releases](/changelog/july-27-2023#synchronized-releases-for-cr
 
 #### Caveat
 
-Stores can only have a **single** live build, which means penultimate releases can be hotfixed as long as the latest release hasn't started rolling out. 
+Stores can only have a **single** live build, which means penultimate releases can be hotfixed as long as the latest release hasn't started rolling out.
 
 In essence, hotfixes are a _conceptual_ abstraction. You are creating a new release instead of directly fixing the previous one, which might still be live.
 

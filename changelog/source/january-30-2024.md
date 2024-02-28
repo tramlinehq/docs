@@ -6,7 +6,7 @@ authors:
   - 'pratul'
 ---
 
-# January 29, 2024
+# January 30, 2024
 
 ![](../../static/img/changelog/mid-release-prs.png)
 
@@ -26,7 +26,7 @@ We will soon launch a full-fledged marketing and release metadata management sys
 
 ### Optionally select auto-generated build notes
 
-Earlier last year, we added support for [auto-generated build notes](http://localhost:3000/changelog/july-26-2023#build-notes). Our users find this feature useful, but sometimes it can become spammy to send these notes to everyone; as they are generated and sent for all distribution channels that are non-prod.
+Earlier last year, we added support for [auto-generated build notes](http://docs.tramline.app/changelog/july-27-2023#build-notes). Our users find this feature useful, but sometimes it can become spammy to send these notes to everyone; as they are generated and sent for all distribution channels that are non-prod.
 
 ![](../../static/img/changelog/build-notes.png)
 

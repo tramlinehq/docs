@@ -1,5 +1,62 @@
 # Tramline Changelog
 
+## 0.0.12 (2024-02-29)
+
+![](../../static/img/changelog/team.png)
+
+### Team-level analysis
+
+Tramline, now supports adding your organization's team structure to the platform. This opens up a lot of possiblity around correlating team performance metrics with release dynamics.
+
+We're kicking things off with release stability & contribution analysis across teams.
+
+What, or rather, who is holding up your releases? We break down which team has contributed the most to the stability of releases.
+
+The flip side of this analysis is equally interesting. Instead of who is holding things up, you get rough indicators on who is contributing the most to a release.
+
+![](../../static/img/changelog/team-contribution.png)
+
+Since this data is also available in real-time for ongoing releases, it complements the insights provided in the [Ongoing Work](https://docs.tramline.app/changelog#mid-release-pull-requests) section. Release managers now get a pretty good sense of what (and who) is holding up the release from moving ahead.
+
+![](../../static/img/changelog/ongoing-work.png)
+
+This is one of our first organizational-performance related features, and we're very excited to see what more we can do in this direction :rocket:
+
+### Resume a halted rollout
+
+![](../../static/img/changelog/resume-halted.png)
+
+Previously, halting a staged rollout on Play Store through Tramline meant that your release was essentially **stopped**. But now halting a rollout can be **undone** and you can resume the next stages of your rollout. This behaviour is now in parity with what the Play Store Console allows you to do.
+
+### More customization for tester notes
+
+Backed by popular demand, we now support [even more](https://docs.tramline.app/changelog#optionally-select-auto-generated-build-notes) loaded configuration options around distributing build notes. For every distribution channel you select, you can now pick out of any of the three choices:
+
+1. Send auto-generated notes from Tramline
+2. Custom release notes
+3. No notes
+
+![](../../static/img/changelog/configurable-notes.png)
+
+<details open>
+<summary>Improvements and Fixes</summary>
+
+- Add additional commit info to the step failure notification
+- Add automatic retries when fetching artifacts from GitHub workflows
+- API to fetch releases for a branch now accounts for multiple releases
+- Bump version only when new changes have come since the last submission
+
+
+</details>
+
+#### Committers: 3
+
+- Akshay Gupta ([@kitallis](https://github.com/kitallis))
+- Nivedita Priyadarshini ([@nid90](https://github.com/nid90))
+- Pratul Kalia ([@pratul](https://github.com/pratul))
+
+<endcommiters/>
+
 ## 0.0.11 (2024-01-30)
 
 ![](../../static/img/changelog/mid-release-prs.png)
@@ -20,7 +77,7 @@ We will soon launch a full-fledged marketing and release metadata management sys
 
 ### Optionally select auto-generated build notes
 
-Earlier last year, we added support for [auto-generated build notes](http://localhost:3000/changelog/july-26-2023#build-notes). Our users find this feature useful, but sometimes it can become spammy to send these notes to everyone; as they are generated and sent for all distribution channels that are non-prod.
+Earlier last year, we added support for [auto-generated build notes](http://docs.tramline.app/changelog/july-27-2023#build-notes). Our users find this feature useful, but sometimes it can become spammy to send these notes to everyone; as they are generated and sent for all distribution channels that are non-prod.
 
 ![](../../static/img/changelog/build-notes.png)
 

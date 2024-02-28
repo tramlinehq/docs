@@ -39,7 +39,7 @@ By connecting your error and metric tracking system, you can now monitor release
 
 We currently support [Bugsnag](https://bugsnag.com/) only, but more integrations are coming soon.
 
-### More Train Configurations 
+### More Train Configurations
 
 We have added two more configurations to your release train:
 
@@ -51,7 +51,7 @@ These can be set in the train **Settings** page.
 <details open>
 <summary>Improvements and Fixes</summary>
 
-- Handle degraded AppStore Connect APIs gracefully 
+- Handle degraded AppStore Connect APIs gracefully
 - Fix all builds page to be accessible by viewers
 - Fix scheduled release notification to show the correct release version
 - Override manual trigger config for a single step train
