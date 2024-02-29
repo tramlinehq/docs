@@ -26,7 +26,7 @@ Since this data is also available in real-time for ongoing releases, it compleme
 
 ![](../../static/img/changelog/ongoing-work.png)
 
-This is one of our first organizational-performance related features, and we're very excited to see what more we can do in this direction :rocket:
+This is one of our first organizational performance-related features, and we're very excited to see what more we can do in this direction :rocket:
 
 ### Resume a halted rollout
 
@@ -34,7 +34,7 @@ This is one of our first organizational-performance related features, and we're 
 
 Previously, halting a staged rollout on Play Store through Tramline meant that your release was essentially **stopped**. But now halting a rollout can be **undone** and you can resume the next stages of your rollout. This behaviour is now in parity with what the Play Store Console allows you to do.
 
-### More customization for tester notes
+### More customizations for tester notes
 
 Backed by popular demand, we now support [even more](https://docs.tramline.app/changelog#optionally-select-auto-generated-build-notes) loaded configuration options around distributing build notes. For every distribution channel you select, you can now pick out of any of the three choices:
 
