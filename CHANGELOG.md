@@ -43,13 +43,13 @@ All builds or versions making their way to the store are prominently featured on
 
 ![](../../static/img/changelog/changes-since-last-submission-2.png)
 
-It's best to avoid partially releasing multiple versions to the store for the same release. But when it does happen, it's helpful to know precisely what changed between the two. This changeset of course also naturally ties your changes (commits) with the specific teams, if teams are configured.
+Sometimes bug fixes during a rollout are unavoidable, and when it does happen, it's helpful to know precisely what changed between them. This changeset of course also naturally ties your changes (commits) with the specific teams, if teams are configured.
 
 ### Scheduled release view
 
 ![](../../static/img/changelog/scheduled-train.png)
 
-We've added a small dynamic widget that displays both the recent history and upcoming runtime of a scheduled release train. This view adapts according to the schedule set. Think of it as a compact, calendar-style glance into your recent progress and an indication of when the next release is scheduled to occur.
+We've added a small dynamic widget that displays both the recent history and upcoming runtime of a scheduled release train. This view adapts according to the schedule set. Think of it as a compact, calendar-style glance into the scheduling status and an indication of when the next release is scheduled to occur.
 
 ### Disconnect integrations
 
