@@ -126,7 +126,7 @@ const config = {
                             },
                             {
                                 label: 'Discord',
-                                href: 'https://discord.com/invite/u7VwyvBV2Z',
+                                href: 'https://go.tramline.app/discord',
                             },
                             {
                                 label: 'Newsletter',
