@@ -4,11 +4,11 @@ sidebar_position: 5
 
 # Release Health Monitoring
 
-During the deployment of a release, it's crucial to ensure its health is continuously monitored. This monitoring process involves observing various metrics tracked by a dedicated monitoring tool.
+During the distribution of a release, it's crucial to ensure its health is continuously monitored. This monitoring process involves observing various metrics tracked by a dedicated monitoring tool.
 
 With Tramline, you can configure health rules to check if these tracked metrics cross certain thresholds.
 
-Tramline polls the latest metrics from your [monitoring integration](/integrations/monitoring) every 5 minutes. If any of the metrics fall outside their configured thresholds, Tramline marks the release as unhealthy and sends alert notifications.
+Tramline polls the latest metrics from your [monitoring integration](/integrations/monitoring) every 5 minutes. If any of the metrics fall outside their configured thresholds, Tramline marks the release as unhealthy and sends alert notifications to your Slack channel(s).
 
 These configured health rules help you give an immediate, at-a-glance understanding of how your release is fairing with the users as it is being rolled out.
 
