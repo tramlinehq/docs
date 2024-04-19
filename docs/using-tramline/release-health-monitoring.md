@@ -51,7 +51,7 @@ If the filter conditions are not matched, the rule is not evaluated and does not
 
 4. **New error count**: Number of errors introduced in this release
 
-### Supported Filter Metrics
+### Supported Filter Conditions
 
 1. **Staged rollout**: Percentage of users your release has been rollout out to
 
