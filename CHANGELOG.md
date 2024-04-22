@@ -10,7 +10,7 @@ We have introduced release health definitions to the Tramline release workflow. 
 
 Choose from a set of available health metrics and set thresholds for their healthiness per your own release quality benchmarks and historical data.
 
-![](../../static/img/changelog/release-health-rules.png)
+<img src="/img/changelog/release-health-rules.png" width="400"/>
 
 Once you define what makes your release healthy, Tramline will continuously monitor the health status of your release and notify you as it changes so you can take immediate action.
 
@@ -26,13 +26,13 @@ When a new build is available to download from Tramline, we now attach the build
 
 ### User settings page
 
-![](../../static/img/changelog/user-settings.png)
+<img src="/img/changelog/user-settings.png" width="600"/>
 
-We have added a basic user settings page to give users control over their basic details. They can set the team they belong to in an organization, add/update their GitHub login so their work is correctly attributed for a release, and change their name as well as their preferred name.
+In the user settings page, users can set the team they belong to in an organization, add/update their GitHub login so their work is correctly attributed for a release, and change their name as well as their preferred name.
 
 ### Handle resubmission of build for review from the app store dashboard
 
-When your Apple review gets rejected, Tramline now continues to poll and sync the status of the store version to ensure that the rest of the team is aware of the changes in review status happening outside of Tramline due to resubmission of the same build or messages back and forth with the review team.
+When your Apple review gets rejected, Tramline now continues to poll and sync the status of the store version to ensure that the release dashboard shows the changes in review status happening outside of Tramline due to resubmission of the same build or messages back and forth with the review team.
 
 <details open>
 <summary>Improvements and Fixes</summary>
