@@ -9,6 +9,10 @@ Like [Apdex](https://en.wikipedia.org/wiki/Apdex), it breaks down various measur
 
 The final reldex score in and of itself is not particularly meaningful. Its value is in measuring it over time and looking at trends.
 
+:::info
+Reldex is not a proxy for “release health” or “product health” – those are best measured via APMs and other observability tooling.
+:::
+
 ## Breakdown
 
 The release workflow process is broken down into several action components where the process can bottleneck. Examples of such action components are listed in the table:
