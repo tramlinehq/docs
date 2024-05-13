@@ -1,10 +1,61 @@
 # Tramline Changelog
 
+## 0.0.15 (2024-05-12)
+
+<img src="/img/changelog/reldex-breakdown.png" width="500"/>
+
+### Introducing Reldex (release process index) 📊
+
+We are excited to introduce Reldex, a new metric and scoring mechanism that helps you understand the efficacy of your release process.
+
+It combines various signals like release duration, hotfixes, time taken to rollout, and fixes during stabilization to give you a single score (between 0 and 1) that represents an overall quality of the delivery process.
+
+This is different from the post-release [monitoring of the health](http://localhost:3001/changelog#release-health-rules-and-alerts) of a release based on signals from APM and monitoring tools. Reldex measures everything before or during delivery, rather than the stuff after the release has been rolled out.
+
+<p>
+  <img src="/img/changelog/reldex-trend.png" width="600"/>
+</p>
+
+Reldex is enabled by default and available to all users, both free and paid. You should already be seeing this score show up on your dashboard. It comes pre-configured with some sensible defaults, but you can fine-tune it based on how you want to weigh and prioritize the importance of each of the signals. Read more about Reldex → [here](https://docs.tramline.app/reldex).
+
+### Allow continuous scheduling despite previous failures 🚲
+
+<p>
+  <img src="/img/changelog/auto-stop-scheduled-release.png" width="400"/>
+</p>
+
+Tramline currently halts the scheduling of an automatic train if the last release failed, but was not explicitly stopped. This is a safety mechanism to prevent a series of failures.
+
+With the new option of **Automatic stop on failure** under scheduled releases, Tramline will automatically stop a failed release so that a new one can be scheduled and kicked off. This is useful when you're confident that the failure was a one-off and/or you don't want to handhold scheduled releases.
+
+### Less noise when generating automatic tester notes 🎧
+
+When generating automatic commit-based tester notes, we now only consider the first parent when encountering a merge commit. Since Tramline doesn't actually checkout code, we manually [simulate](https://git-scm.com/docs/git-log#Documentation/git-log.txt---first-parent) `git log [range] --first-parent` to get the correct set of commits needed to generate the appropriate notes.
+
+<details open>
+<summary>Improvements and Fixes</summary>
+
+- Auto-populate release notes from previous release for a new release
+- Add a note about Slack file upload requiring Tramline to be invited to channel
+- Ensure that GitHub integration exists with a mandatory `installation_id`
+- Show the last 15 releases on the team page instead of 10
+- Add checks for duplicate-actions for all phased rollout related triggers
+
+</details>
+
+#### Committers: 3
+
+- Akshay Gupta ([@kitallis](https://github.com/kitallis))
+- Nivedita Priyadarshini ([@nid90](https://github.com/nid90))
+- Pratul Kalia ([@pratul](https://github.com/pratul))
+
+<endcommiters/>
+
 ## 0.0.14 (2024-04-22)
 
 ![](../../static/img/changelog/unhealthy-release-slack.png)
 
-###  Release health rules and alerts
+### Release health rules and alerts
 
 We have introduced release health definitions to the Tramline release workflow. You can now configure multiple rules to monitor the health of your release as it gets rolled out to users.
 
@@ -65,7 +116,7 @@ Over the past few months, we've been steadily improving our user experience and 
 
 Tramline is an interaction-heavy, information-dense, multi-stakeholder system with entirely novel abstractions. Keeping that in mind, our decisions, in summary, were guided by the following principles:
 
-1. A design system with as *few* foundational components as possible
+1. A design system with as _few_ foundational components as possible
 2. Minimal navigational overhead containing users into only two "work" related pages
 3. Well-defined color palette, but with judicious use of colors
 4. Consistent typography, iconography, borders and spaces
@@ -138,7 +189,6 @@ In the future, we can port over a similar idea to allow changing distribution ch
 
 <endcommiters/>
 
-
 ## 0.0.12 (2024-02-29)
 
 ![](../../static/img/changelog/team.png)
@@ -184,7 +234,6 @@ Backed by popular demand, we now support [even more](https://docs.tramline.app/c
 - Add automatic retries when fetching artifacts from GitHub workflows
 - API to fetch releases for a branch now accounts for multiple releases
 - Bump version only when new changes have come since the last submission
-
 
 </details>
 
@@ -288,7 +337,6 @@ Once you resolve the issue by submitting the new build for review manually from 
 Tramline will verify the correct status, sync the changes made on the Console UI, and continue with the release as configured.
 
 ![](../../static/img/changelog/play-store-review-failure-activity.png)
-
 
 ### App variants
 
@@ -548,7 +596,6 @@ See API docs [here](https://docs.tramline.app/api).
 - Scheduled release trains now have a log of all scheduling attempts made (successful or otherwise), including the reasons for skipping them
 - Allow collapsing the entire pane that lists all commits in a release to reclaim space and focus on the current build
 
-
 </details>
 
 #### Committers: 3
@@ -691,7 +738,6 @@ Notifications now have deep links to both Firebase App Distribution and TestFlig
 
 ### Synchronized releases for cross-platform apps
 
-
 For teams with apps built in cross-platform stacks like ReactNative and Flutter, we now support synchronized release trains across both platforms.
 
 - This allows teams to run their releases from a single branch.
@@ -705,7 +751,6 @@ Since there can be cases where there is a drift between what is shipped to one s
 The changes in your app since the last release are now visible on the live release page to provide context on what all is getting shipped in the current release.
 
 ![](../../static/img/changelog/changes-since-last.png)
-
 
 ### Build notes
 
