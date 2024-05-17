@@ -10,7 +10,7 @@ We are excited to introduce Reldex, a new metric and scoring mechanism that help
 
 It combines various signals like release duration, hotfixes, time taken to rollout, and fixes during stabilization to give you a single score (between 0 and 1) that represents an overall quality of the delivery process.
 
-This is different from the post-release [monitoring of the health](http://localhost:3001/changelog#release-health-rules-and-alerts) of a release based on signals from APM and monitoring tools. Reldex measures everything before or during delivery, rather than the stuff after the release has been rolled out.
+This is different from the post-release [monitoring of the health](/changelog/april-22-2024#release-health-rules-and-alerts) of a release based on signals from APM and monitoring tools. Reldex measures everything before or during delivery, rather than the stuff after the release has been rolled out.
 
 <p>
   <img src="/img/changelog/reldex-trend.png" width="600"/>

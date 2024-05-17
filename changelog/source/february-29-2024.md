@@ -52,6 +52,5 @@ Backed by popular demand, we now support [even more](https://docs.tramline.app/c
 - API to fetch releases for a branch now accounts for multiple releases
 - Bump version only when new changes have come since the last submission
 
-
 </details>
 

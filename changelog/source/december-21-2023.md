@@ -49,7 +49,6 @@ Tramline will verify the correct status, sync the changes made on the Console UI
 
 ![](../../static/img/changelog/play-store-review-failure-activity.png)
 
-
 ### App variants
 
 Tramline now supports App Variants which are akin to product flavors or build variants, but with an explicit requirement of having a different bundle identifier.

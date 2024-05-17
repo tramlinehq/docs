@@ -46,6 +46,5 @@ See API docs [here](https://docs.tramline.app/api).
 - Scheduled release trains now have a log of all scheduling attempts made (successful or otherwise), including the reasons for skipping them
 - Allow collapsing the entire pane that lists all commits in a release to reclaim space and focus on the current build
 
-
 </details>
 
