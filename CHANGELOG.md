@@ -14,7 +14,7 @@ This is a big step for Tramline towards supporting enterprise organizations!
 
 ### New Reldex components 📊
 
-We [rolled out Reldex](https://docs.tramline.app/changelog#introducing-reldex-release-process-index-) to all users in our last major release. We have since added a few more optional components to the Reldex score:
+We [rolled out Reldex](/changelog#introducing-reldex-release-process-index-) to all users in our last major release. We have since added a few more optional components to the Reldex score:
 
 #### Days since the last release
 
