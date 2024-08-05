@@ -10,7 +10,7 @@ SSO (via SAML) is now available as an authentication method in Tramline. Once en
 
 To simplify the setup and management of SSO, we use a third-party auth service provider. However, we continue to maintain our existing email/password login natively, i.e, without relying on any third-party dependencies. This allows open-source users to self-host Tramline without the need for setting up additional accounts outside.
 
-This is a big step for Tramline towards supporting enterprise organizations!
+With this, the user access management to Tramline can be centrally managed by companies and their IT teams. This is a big step for Tramline towards supporting enterprise organizations!
 
 ### New Reldex components 📊
 
@@ -18,9 +18,9 @@ We [rolled out Reldex](/changelog#introducing-reldex-release-process-index-) to 
 
 #### Days since the last release
 
-The number of days since the last release to production was made. This is a good indicator of how frequently you are shipping to production and will eventually feed into a standalone MTTR-esque metric within Tramline.
+The number of days since the last release to production was made. This is a good indicator of how much you are sticking to your regular release cadence. This is an indirect measure of drops in your deployment frequency.
 
-#### Number of rollout changes
+#### Number of rollout changes / patch fixes
 
 Tramline classifies changes in the following ways:
 
@@ -36,13 +36,16 @@ You can now configure your release train to only bump the patch version across n
 
 ![](../../static/img/changelog/patch-only.png)
 
+### Upcoming release without internal builds 🚂
+
+The [upcoming release feature](/changelog/september-8-2023#prepare-an-upcoming-release) is now available for release trains that directly ship to beta/production (without any internal builds). This allows you to prepare the next release while the current one is still in progress. This is especially useful for teams that have a long beta period and want to get a head start on the next release.
+
 <details open>
 <summary>Improvements and Fixes</summary>
 
 - Add Indian+Indonesian languages to list of locales for release notes
 - Gracefully handle lack of apps in iOS or Android projects on Firebase
 - Handle double-quotes inside build notes when distributing
-- Disallow starting a production rollout of an upcoming release
 
 </details>
 
