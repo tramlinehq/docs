@@ -1,5 +1,49 @@
 # Tramline Changelog
 
+## 0.0.17 (2024-09-17)
+
+### New working pane (live release UI)
+
+We are introducing a new working pane for running releases. This page auto-structures your release process in four main sections:
+- Overview
+- Stability
+- Metadata
+- Store Release
+
+
+
+
+### Support for multi-language release metadata
+- Allow non-latin characters in release metadata
+
+### Improved UX around app submission
+- Cancel a review in progress
+- Replace the build on an existing review with a new one
+
+### SSO improvements
+- Allow un-invited users to join as viewers
+- Disallow email login for SSO organizations after onboarding
+
+<details open>
+<summary>Improvements and Fixes</summary>
+
+- Handle new Play Store errors - foreground services permissions and account issues
+- Handle unauthorized errors from App Store properly
+- Improve integration/config onboarding wizard
+- Allow hotfix for a cross-platform app even when one platform has started rollout
+- Allow internal testing releases when app is in draft mode
+- Add a banner to prompt users to complete their profile (team settings and VCS usernames)
+
+</details>
+
+#### Committers: 3
+
+- Akshay Gupta ([@kitallis](https://github.com/kitallis))
+- Nivedita Priyadarshini ([@nid90](https://github.com/nid90))
+
+<endcommiters/>
+
+
 ## 0.0.16 (2024-08-03)
 
 ![](../../static/img/changelog/sso.png)
