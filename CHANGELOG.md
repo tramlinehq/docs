@@ -1,38 +1,57 @@
 # Tramline Changelog
 
-## 0.0.17 (2024-09-17)
+## 0.0.18 (2024-09-24)
 
-### New working pane (live release UI)
+### The work pane (live release page)
 
-We are introducing a new working pane for running releases. This page auto-structures your release process in four main sections:
-- Overview
-- Stability
-- Metadata
-- Store Release
+Tramline is conceptually a relatively rare paradigm of DevTools. Even other "release management" DevTools on the server-side like Heroku can operate more or less solely through a CLI. For bigger teams, Tramline is a high-touch tool where a lot of people end up collaborating. It is as much a GitHub as it is a Heroku.
 
+This is why UX for Tramline is important. We can't just throw together some UI components and expect things to be useful. IA is important so that people can learn the "right flow" for releasing apps.
 
+From this lens, we've made two broad changes.
 
+1. Porting our [design system](/changelog/march-25-2024) over to the "work pane"
+2. Simplifying the building blocks for configuring a release
 
-### Support for multi-language release metadata
-- Allow non-latin characters in release metadata
+#### Layout & design
+
+The work pane is auto-structured into four main sections:
+
+**Overview:** Issue tracking, changeset tracking and the homepage for the Release Captain.
+
+**Stability:** Internal builds, Release Candidates, Testing.
+
+**Metadata:** Dedicated space for updating notes, store metadata and screenshots.
+
+**Store Release:** Managing reviews and rolling out to production.
+
+Each of these categories have natural blocking
+
+#### Configuring the release
 
 ### Improved UX around app submission
-- Cancel a review in progress
-- Replace the build on an existing review with a new one
 
-### SSO improvements
-- Allow un-invited users to join as viewers
-- Disallow email login for SSO organizations after onboarding
+Because the design allows for more breathing room, we can focus on individual aspects of the release a bit better.
+
+For example, there's a lot more control around app submission. You can cancel a running review in progress and you can also replace the build for an existing review with a new one or a previous valid one.
+
+### Support for multi-locale release metadata
+
+We now also support updating multiple languages for the release notes. When you start your release we pick up your last updated release notes, which you can edit before release.
+
+On top of this, we also support updating multiple languages for both iOS and Android (for cross-platform apps) from the same place!
+
+![](../../static/img/changelog/multi-locale-release-notes.png)
 
 <details open>
 <summary>Improvements and Fixes</summary>
 
-- Handle new Play Store errors - foreground services permissions and account issues
-- Handle unauthorized errors from App Store properly
 - Improve integration/config onboarding wizard
-- Allow hotfix for a cross-platform app even when one platform has started rollout
+- Add a banner to prompt users to complete their profile
+- Handle new Play Store errors – foreground services and account issues
+- Handle unauthorized errors from App Store properly
 - Allow internal testing releases when app is in draft mode
-- Add a banner to prompt users to complete their profile (team settings and VCS usernames)
+- Allow hotfix for a cross-platform app when one platform has started rollout
 
 </details>
 
@@ -43,6 +62,48 @@ We are introducing a new working pane for running releases. This page auto-struc
 
 <endcommiters/>
 
+## 0.0.17 (2024-09-17)
+
+<img src="/img/changelog/bitbucket.png" width="500"/>
+
+### Bitbucket support
+
+We now support Bitbucket both as a VCS and a build server integration. As with other integration categories, Bitbucket falls neatly in our abstractions but with two primary exceptions.
+
+First, Bitbucket doesn't allow us to pull builds from pipelines directly. You can upload them to the Downloads section for your repo via the [upload-file](https://bitbucket.org/atlassian/bitbucket-upload-file) pipe. We will soon release a custom pipe that wraps this and makes setting everything up even simpler.
+
+<p>
+  <img src="/img/changelog/bitbucket-downloads.png" width="400"/>
+</p>
+
+Second, Bitbucket doesn't provide us a way to cherry-pick commits (either manually or automatically) from the API, so [continous backmerges](/changelog/september-8-2023#continuously-backmerge) are currently turned off for this integration. We'll push an update as soon as we have a way around this.
+
+That's it! The rest works precisely as Tramline is meant to work.
+
+### SSO improvements
+
+1. If you're an SSO-enabled org, you now don't need to invite viewer users, all SSO users can self-join automatically as viewers. For write-enabled (developer) users, you would still need to go through the invite flow as usual.
+
+2. Until now, you could have both email-based authN and SAML-based authN working together. Now, if you're an SSO-enabled org, no other auth mechanism is allowed.
+
+<details open>
+<summary>Improvements and Fixes</summary>
+
+- Improve integration/config onboarding wizard
+- Add a banner to prompt users to complete their profile
+- Handle new Play Store errors – foreground services and account issues
+- Handle unauthorized errors from App Store properly
+- Allow internal testing releases when app is in draft mode
+- Allow hotfix for a cross-platform app when one platform has started rollout
+
+</details>
+
+#### Committers: 3
+
+- Akshay Gupta ([@kitallis](https://github.com/kitallis))
+- Nivedita Priyadarshini ([@nid90](https://github.com/nid90))
+
+<endcommiters/>
 
 ## 0.0.16 (2024-08-03)
 
@@ -54,7 +115,7 @@ SSO (via SAML) is now available as an authentication method in Tramline. Once en
 
 To simplify the setup and management of SSO, we use a third-party auth service provider. However, we continue to maintain our existing email/password login natively, i.e, without relying on any third-party dependencies. This allows open-source users to self-host Tramline without the need for setting up additional accounts outside.
 
-This is a big step for Tramline towards supporting enterprise organizations!
+With this, the user access management to Tramline can be centrally managed by companies and their IT teams. This is a big step for Tramline towards supporting enterprise organizations!
 
 ### New Reldex components 📊
 
@@ -62,9 +123,9 @@ We [rolled out Reldex](/changelog#introducing-reldex-release-process-index-) to 
 
 #### Days since the last release
 
-The number of days since the last release to production was made. This is a good indicator of how frequently you are shipping to production and will eventually feed into a standalone MTTR-esque metric within Tramline.
+The number of days since the last release to production was made. This is a good indicator of how much you are sticking to your regular release cadence. This is an indirect measure of drops in your deployment frequency.
 
-#### Number of rollout changes
+#### Number of rollout changes / patch fixes
 
 Tramline classifies changes in the following ways:
 
@@ -80,13 +141,16 @@ You can now configure your release train to only bump the patch version across n
 
 ![](../../static/img/changelog/patch-only.png)
 
+### Upcoming release without internal builds 🚂
+
+The [upcoming release feature](/changelog/september-8-2023#prepare-an-upcoming-release) is now available for release trains that directly ship to beta/production (without any internal builds). This allows you to prepare the next release while the current one is still in progress. This is especially useful for teams that have a long beta period and want to get a head start on the next release.
+
 <details open>
 <summary>Improvements and Fixes</summary>
 
 - Add Indian+Indonesian languages to list of locales for release notes
 - Gracefully handle lack of apps in iOS or Android projects on Firebase
 - Handle double-quotes inside build notes when distributing
-- Disallow starting a production rollout of an upcoming release
 
 </details>
 
