@@ -73,7 +73,7 @@ These steps can only be done by the owner of the Play Console account. If you're
 
 <img src="/img/google-play-app-permissions.png" width="800" />
 
-## Upload JSON key in Tramline
+### Upload JSON key in Tramline
 
 Once you've properly setup things in both, Google Play Console and Google Cloud Console, all that is left to be done is upload the service account JSON key file into Tramline.
 
