@@ -11,9 +11,9 @@ authors:
 
 ### The work pane (live release page)
 
-Tramline is conceptually a relatively rare paradigm of DevTools. Even other "release management" DevTools on the server-side like Heroku can operate more or less solely through a CLI. For bigger teams, Tramline is a high-touch tool where a lot of people end up collaborating. It is as much a GitHub as it is a Heroku.
+Tramline is conceptually a relatively rare paradigm of DevTools. Other "release management" DevTools on the server-side like Heroku can operate more or less solely through a CLI. For most teams, Tramline is a high-touch tool where a lot of people end up collaborating. It is as much a GitHub as it is a Heroku.
 
-This is why a more-than-default thoughtful design is necessary for Tramline. It is important so that people can learn the "right flow" for releasing apps.
+This is why a more-than-default thoughtful design is necessary for Tramline. It is important so that people can get used to the "right flow" for releasing apps.
 
 From this lens, we've made two broad changes.
 
@@ -24,13 +24,21 @@ From this lens, we've made two broad changes.
 
 The work pane is auto-structured into four main sections:
 
-**Overview:** Issue tracking, changeset tracking and the homepage for the Release Captain.
+<p>
+<ins>Overview:</ins> Issue tracking, changeset tracking and the homepage for the Release Captain.
+</p>
 
-**Stability:** Internal builds, Release Candidates, testing.
+<p>
+<ins>Stability:</ins> Internal builds, Release Candidates, testing.
+</p>
 
-**Metadata:** Dedicated space for updating notes, store metadata and screenshots.
+<p>
+<ins>Metadata:</ins> Dedicated space for updating notes, store metadata and screenshots.
+</p>
 
-**Store Release:** Managing reviews and rolling out to production.
+<p>
+<ins>Store Release:</ins> Managing reviews and rolling out to production.
+</p>
 
 Previously, the work pane was one giant page, and even though there's some value in everything in one single page; it is a nightmare of information architecture and page load times. More specifically, categorizing them allows us to clearly differentiate historical state, present state and future state across different events.
 
