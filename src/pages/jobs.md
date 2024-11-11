@@ -14,6 +14,13 @@ You will be joining as the Founding Engineer at [Tramline](https://tramline.app)
 
 This role can also be a path to leading the engineering team if that is something you desire.
 
+:::note
+
+This is a remote position and you'll be joining as a **full-time contractor**. We're primarily looking at candidates from India, but we're open to SEA candidates as well.
+
+:::
+
+
 ## What is Tramline?
 
 Tramline is a DevOps platform for mobile apps that lets you codify, coordinate, and automate your entire app release process. Tramline is already used by industry-leading fintech mobile teams like [Groww](https://groww.in/), OTT platforms like [Stage](https://www.stage.in), and big banks in SEA to ship their apps.
@@ -72,7 +79,7 @@ It’d be more attractive to us if you *also* have →
 
 :::note
 
-If there's anything else we can do to make your work more enjoyable or your life easier, just ask, we'll try.
+If there's anything else we can do to make your work more enjoyable, just ask, we'll try.
 
 :::
 
