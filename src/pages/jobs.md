@@ -10,28 +10,28 @@ You will be joining as the Founding Engineer at [Tramline](https://tramline.app)
 
 This role can also be a path to leading the engineering team if that is something you desire.
 
-# What is Tramline?
+## What is Tramline?
 
 Tramline is a DevOps platform for mobile apps that lets you codify, coordinate, and automate your entire app release process. Tramline is already used by industry-leading fintech mobile teams like [Groww](https://groww.in/), OTT platforms like [Stage](https://www.stage.in), and big banks in SEA to ship their apps.
 
-## Who are we?
+### Who are we?
 
 Hi! We’re a [small but strong team](https://www.tramline.app/about) of 3 co-founders: Akshay, Pratul, and Nivedita. Tramline is officially setup in the US, but all 3 of us are remote and work out of Bangalore. Our backend and frontend are entirely open-source and written in Ruby on Rails. Other, back-facing parts of our stack contain Go, Rust, and Node.js.
 
-## Do you *want* to help build a startup?
+### Do you *want* to help build a startup?
 
 * If you do not want ambiguity or surprises, this role is not for you. We’re early-stage, and the journey is only going to be uphill. Expect things to be difficult and change unexpectedly.
 * You’ll be the one finding answers, watch those answers become redundant at some point, and then find new answers! You want ownership, in spirit and reality.
 * We will be globally remote, ergo you document everything and over-communicate.
 * You love and favor simplicity over perfection. You know there is no perfection, only context.
 
-## Your first 90 days
+### Your first 90 days
 
 * Join us in ideating and building features to serve our existing customers and help us onboard new ones
 * Add new integrations and explore making all the third-party integrations in Tramline reliable and fault-tolerant
 * Design the product, talk to our customers, do lots of thinking and exploring, and play around with some wild ideas!
 
-## What we’re looking for
+### What we’re looking for
 
 :::note
 
@@ -53,19 +53,19 @@ We’re looking for someone who →
 * can write simple JS and UI flows (stimulus/hotwire preferred) that power dashboards and reports without necessitating SPA frameworks
 * has some experience building an Android/iOS/Flutter app (a toy hobby project works too!)
 
-It’ll be more attractive to us if you *also* have →
+It’d be more attractive to us if you *also* have →
 
 * worked at other seed-stage startups
 * experience in at least one other tech stack (other than Rails)
 * worked with GCP/AWS for deployments
 
-# Pay and benefits
+## Pay and benefits
 
 * Cash: USD 30k+ per annum
 * Equity: 1%+, 4 year vesting period including a 1-year cliff
 * We are open to adjusting the cash and equity proportions
 
-# How to Apply
+## How to Apply
 
 Email **hiring@tramline.app**, with your answers to these four questions:
 
