@@ -55,7 +55,7 @@ You can now re-use the same integration for multiple categories. This reduces th
 - Pick active locales only from the production track for Play Store
 - Fix "changes since previous" to handle unapplied commits
 - Add missing locale string for rollout getting updated
-- Add a warning to show until which release phase the release notes can be edited
+- Add a warning to show until which release step the notes can be edited
 - Fix health metric jobs to stop fetching after the monitoring period
 
 </details>
