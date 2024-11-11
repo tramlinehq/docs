@@ -16,7 +16,7 @@ This role can also be a path to leading the engineering team if that is somethin
 
 :::note
 
-This is a remote position and you'll be joining as a **full-time contractor**. We're primarily looking at candidates from India, but we're open to SEA candidates as well.
+This is a remote position and you'll be joining as a full-time contractor. We're primarily looking at candidates from India, but we're open to timezones within +/-4 hours of India.
 
 :::
 
