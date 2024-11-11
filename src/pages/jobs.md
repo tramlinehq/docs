@@ -2,6 +2,10 @@
 title: Jobs – Founding Engineer at Tramline
 ---
 
+<head>
+  <title>Jobs – Founding Engineer at Tramline</title>
+</head>
+
 ![](../../static/img/shinkan.png)
 
 # Founding Engineer at Tramline
