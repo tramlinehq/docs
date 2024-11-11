@@ -68,6 +68,13 @@ It’d be more attractive to us if you *also* have →
 * Cash: USD 30k+ per annum
 * Equity: 1%+, 4 year vesting period including a 1-year cliff
 * We are open to adjusting the cash and equity proportions
+* We'll cover the basics: workstation enhancements, co-working passes, software licenses you need, etc.
+
+:::note
+
+If there's anything else we can do to make your work more enjoyable or your life easier, just ask, we'll try.
+
+:::
 
 ## How to Apply
 
