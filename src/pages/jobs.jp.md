@@ -55,7 +55,7 @@ The current architecture is a Ruby on Rails monolith that does all the lifting. 
 
 We’re looking for someone who →
 
-* has 3+ years of experience writing Ruby & Rails
+* has 4+ years of experience writing Ruby & Rails
 * understands Rails conventions and design principles (service objects, decorators, etc.)
 * understands ActiveRecord, indexes, and caching well
 * has launched and maintained production Rails apps
@@ -74,7 +74,7 @@ It’d be more attractive to us if you *also* have →
 
 ## Pay and benefits
 
-* Cash: USD 30k–42k (₹25-35 lac INR) per annum
+* Cash: ¥6–7M yen per annum
 * Equity: 1–3%, 4 year vesting period including a 1-year cliff
 * We are open to adjusting the cash and equity proportions
 * We'll cover the basics: workstation enhancements, co-working passes, software licenses you need, etc.
