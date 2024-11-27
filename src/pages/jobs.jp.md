@@ -29,7 +29,7 @@ Tramline is a DevOps platform for mobile apps that lets you codify, coordinate, 
 
 Hi! We’re a [small but strong team](https://www.tramline.app/about) of 3 co-founders: Akshay, Pratul, and Nivedita. Tramline is officially setup in the US, but all 3 of us are remote and work out of Bangalore. Our backend and frontend are entirely open-source and written in Ruby on Rails. Other, back-facing parts of our stack contain Go, Rust, and Node.js.
 
-Tramline is new, but revenue-making (we cover about 50% of our operational expenses from the revenue). We are funded and supported by prominent [engineering-leaders and founders](https://www.tramline.app/about) from the industry.
+Tramline is new, but revenue-making (we cover about 50% of our operational expenses from the revenue). We are funded and supported by prominent [engineering leaders and founders](https://www.tramline.app/about) from the industry.
 
 ### Do you *want* to help build a startup?
 
