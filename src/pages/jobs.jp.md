@@ -74,7 +74,7 @@ It’d be more attractive to us if you *also* have →
 
 ## Pay and benefits
 
-* Cash: ¥6–7M yen per annum
+* Cash: USD 40k–45k (¥6–7M JPY) per annum
 * Equity: 1–3%, 4 year vesting period including a 1-year cliff
 * We are open to adjusting the cash and equity proportions
 * We'll cover the basics: workstation enhancements, co-working passes, software licenses you need, etc.
