@@ -32,22 +32,20 @@ This API would respond with a format like this:
 ```json
 {
   "latest": {
-    "ios": [
-      {
-        "build_version": "8.0.0",
-        "build_number": "471279587",
-        "updated_at": "2023-07-04T06:50:46.180Z",
-        "platform": "ios"
-      }
-    ],
-    "android": [
-      {
-        "build_version": "10.18.1",
-        "build_number": "471280026",
-        "updated_at": "2023-09-14T09:55:02.743Z",
-        "platform": "android"
-      }
-    ]
+    "ios": {
+      "build_version": "8.0.0",
+      "build_number": "471279587",
+      "updated_at": "2023-07-04T06:50:46.180Z",
+      "platform": "ios",
+      "rollout_percentage": 48.15
+    },
+    "android": {
+      "build_version": "10.18.1",
+      "build_number": "471280026",
+      "updated_at": "2023-09-14T09:55:02.743Z",
+      "platform": "android",
+      "rollout_percentage": 16.23
+    }
   }
 }
 ```
@@ -55,7 +53,7 @@ This API would respond with a format like this:
 You can use [jq](https://github.com/jqlang/jq) to parse parts for this response on your CI (or CLI) as follows:
 
 ```bash
-jq '.latest.android[0].build_version'
+jq '.latest.android.build_version'
 ```
 
 ...to get the latest build version for Android.
@@ -90,13 +88,15 @@ This API would respond with a format like this:
         "build_version": "8.0.0",
         "build_number": "471279578",
         "updated_at": "2023-07-03T17:19:49.428Z",
-        "platform": "android"
+        "platform": "android",
+        "rollout_percentage": 48.15
       },
       {
         "build_version": "8.0.2",
         "build_number": "471279585",
         "updated_at": "2023-07-03T18:40:58.189Z",
-        "platform": "android"
+        "platform": "android",
+        "rollout_percentage": 16.23
       }
     ],
     "ios": [
@@ -104,7 +104,8 @@ This API would respond with a format like this:
         "build_version": "8.0.0",
         "build_number": "471279587",
         "updated_at": "2023-07-04T06:50:46.180Z",
-        "platform": "ios"
+        "platform": "ios",
+        "rollout_percentage": 42.48
       }
     ]
   }
