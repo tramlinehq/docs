@@ -21,7 +21,7 @@ This entire flow is managed and prompted through appropriate callouts and action
 
 ### Continuous backmerges without cherry-picks
 
-We previously added [continous backmerges](/changelog/september-8-2023#continuously-backmerge), which allows teams to ensure that changes from the release branch are moved to the `main` (working branch) as quickly as possible by cherry-picking  every commit. However, this method is unfortunately integration-specific, as not all VCS providers support cherry-picking through APIs.
+We previously added [continuous backmerges](/changelog/september-8-2023#continuously-backmerge), which allows teams to ensure that changes from the release branch are moved to the `main` (working branch) as quickly as possible by cherry-picking every commit. However, this method is unfortunately integration-specific, as not all VCS providers support cherry-picking through APIs.
 
 ![](../../static/img/changelog/cont-backmerge-bitbucket.png)
 
@@ -30,7 +30,7 @@ Specifically, Bitbucket doesn't support cherry-picks or even mimicking a cherry-
 - Create new patch branches, like `patch-main-afddfcd` from the release branch for every new commit
 - Try and merge the patch branches to the `main` (working branch) via a pull request
 
-In this mode, subsequent patch branches could have more than one commit, if the previous ones are unmerged. So we recommend, merging everything as soon as possible and in the correct order to avoid confusion.
+In this mode, subsequent patch branches could have more than one commit, if the previous ones are unmerged. So we recommend merging everything as soon as possible and in the correct order to avoid confusion.
 
 ### Re-fetch workflow status
 
@@ -38,7 +38,7 @@ In this mode, subsequent patch branches could have more than one commit, if the 
   <img src="/img/changelog/refetch-build-status.png" width="600"/>
 </p>
 
-Until now, Tramline allowed you to re-trigger workflows if there was a failure in the runs. Now, additionally, you can simply re-fetch the status of the workflow run, instead of retriggering. This is especially helpful when you don't want to retrigger the entire workflow, but can just re-run the specific failed jobs and have them sync on Tramline.
+Until now, Tramline allowed you to re-trigger workflows if there was a failure in the runs. Now, additionally, you can simply re-fetch the status of the workflow run instead of retriggering. This is especially helpful when you don't want to retrigger the entire workflow but can just re-run the specific failed jobs and have them sync on Tramline.
 
 <details open>
 <summary>Improvements and Fixes</summary>
