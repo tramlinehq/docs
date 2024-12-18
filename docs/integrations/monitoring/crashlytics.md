@@ -45,7 +45,7 @@ For BigQuery exports that have been turned on for the first time, it may take a 
 - Select the project you want to use for Tramline.
 - Click on the *Create Service Account* button on the top of the page.
 - Give the service account an appropriate name, for e.g. "BQ access for Tramline".
-- In the *Grant this service account access to the project* section, you **must** grant the "BigQuery Job User" and "BigQuery Data Viewer" roles to this service account. The list of roles is quite long so use the filter to find the right role, if you must.
+- In the *Grant this service account access to the project* section, you **must** grant the **BigQuery Job User** and **BigQuery Data Viewer** roles to this service account. The list of roles is quite long so use the filter to find the right role, if you must.
 
 <img src="/img/play-store-service-account-roles.png" width="500" />
 
@@ -60,6 +60,43 @@ For BigQuery exports that have been turned on for the first time, it may take a 
 If you want to share a service account between this integration and your Google Play Store integrations, add additional roles (mentioned above) to the existing service account as needed (Play Console and BigQuery will need to live under the same project for this to work).
 :::
 
+#### Limiting BigQuery Access (optional)
+
+The service account you've created above will have access to all the data in your BigQuery. Since Tramline needs limited access to only the Google Analytics and Crashlytics datasets, you can limit the access of the service account to only those datasets.
+
+You can do this by adding IAM conditions to the BigQuery Data Viewer role of the service account (this can be updated after the service account is created).
+- In the [IAM](https://console.cloud.google.com/iam-admin/iam) section of the Google Cloud Console, find the service account you've created.
+- Open the Edit Access form by clicking on the Edit Principal icon at the end of the row.
+- Add an IAM condition to the **BigQuery Data Viewer** role by clicking on the Add IAM Condition button next to the role.
+
+<img src="/img/bigquery-service-account-edit.png" width="500" />
+
+- Add the following conditions to the **BigQuery Data Viewer** role:
+
+```
+(resource.type == "bigquery.googleapis.com/Table" ||
+ resource.type == "bigquery.googleapis.com/Dataset") &&
+(resource.name.startsWith("projects/<PROJECT_ID>/datasets/analytics") ||
+ resource.name.startsWith("projects/<PROJECT_ID>/datasets/firebase_crashlytics"))
+```
+
+- Replace the `<PROJECT_ID>` placeholder with the ID of your Google Cloud project. You can find it in the list of projects in the Project selector in the top left corner of the console header.
+
+<img src="/img/bigquery-iam-condition.png" width="800" />
+
+- Save both the IAM condition as well as the Access form.
+
+:::note
+Any changes to the access policy of the service account can take 3-5 minutes to take effect.
+:::
+
+You don't need to generate a new key for the service account, you can use the existing one. The policies and conditions will be applied to the existing key.
+
+:::info
+Ensure that the service account has access to _at least_ the Google Analytics (`analytics_*`) and Crashlytics (`firebase_crashlytics`) datasets and tables.
+:::
+
+
 ### Upload JSON key in Tramline
 
 Once you've properly set up a service account with the required roles, all that is left to be done is upload the service account JSON key file into Tramline.
@@ -72,4 +109,4 @@ Along with the service account JSON key, you will also need to add Project Numbe
 
 <img height="500" src="/img/crashlytics-configure.png" width="500"/>
 
-When you click *Create* after uploading the JSON key file, Tramline will verify that the integration is working correctly by connecting to your project and app on Firebase.
+When you click *Create* after uploading the JSON key file, Tramline will verify that the integration is working correctly by connecting to the required BigQuery datasets.
