@@ -6,13 +6,20 @@ title: Jobs – Founding Engineer at Tramline
   <title>Jobs – Founding Engineer at Tramline</title>
 </head>
 
+:::info
+
+The previously listed **Founding Engineer** position is now closed. We're now looking for a Mid-level Engineer to join our team. If you're interested, please look down below for the details.
+
+:::
+
+
 ![](../../static/img/shinkan.png)
 
-# Founding Engineer at Tramline
+# Mid-level Engineer at Tramline
 
-You will be joining as the Founding Engineer at [Tramline](https://tramline.app), and be responsible for everything on the technical side of things. You will work with the founders on a daily basis, discuss new features, changes and improvements, sales strategies, org policies, new hiring, full financial transparency – everything!
+You will be joining as a Mid-level Engineer at [Tramline](https://tramline.app), and be responsible for everything on the technical side of things. You will work with the founding team on a daily basis, discuss new features, changes and improvements, new hiring, and full financial transparency!
 
-This role can also be a path to leading the engineering team if that is something you desire.
+This role can also be a path to a senior engineering role if that is something you desire.
 
 :::note
 
@@ -40,9 +47,9 @@ Tramline is new, but revenue-making (we cover about 50% of our operational expen
 
 ### Your first 90 days
 
-* Join us in ideating and building features to serve our existing customers and help us onboard new ones
-* Add new integrations and explore making all the third-party integrations in Tramline reliable and fault-tolerant
-* Design the product, talk to our customers, do lots of thinking and exploring, and play around with some wild ideas!
+* Ideating and building features to serve our existing customers and help us onboard new ones
+* Add new integrations and helping make Tramline more reliable and fault-tolerant
+* Design the product, do lots of thinking and exploring, and play around with some wild ideas!
 
 ### What we’re looking for
 
@@ -55,27 +62,19 @@ The current architecture is a Ruby on Rails monolith that does all the lifting. 
 
 We’re looking for someone who →
 
-* has 3+ years of experience writing Ruby & Rails
+* has 3+ years of total experience
+* has 1+ years of experience writing Ruby & Rails
 * understands Rails conventions and design principles (service objects, decorators, etc.)
 * understands ActiveRecord, indexes, and caching well
 * has launched and maintained production Rails apps
 * has experience designing job orchestrators (through Sidekiq or otherwise)
-* has experience designing evented flows that have retryability and resumption baked in
-* has integrated third-party APIs into Rails (for ex. GitHub Developer APIs, Slack APIs etc.)
 * embraces testing and continuous integration
-* can write simple JS and UI flows (stimulus/hotwire preferred) that power dashboards and reports without necessitating SPA frameworks
-* has some experience building an Android/iOS/Flutter app (a toy hobby project works too!)
-
-It’d be more attractive to us if you *also* have →
-
-* worked at other seed-stage startups
-* experience in at least one other tech stack (other than Rails)
-* worked with GCP/AWS for deployments
+* can write simple JS and UI flows (stimulus/hotwire preferred) that power dashboards and reports
 
 ## Pay and benefits
 
-* Cash: USD 30k–42k (₹25-35 lac INR) per annum
-* Equity: 1–3%, 4 year vesting period including a 1-year cliff
+* Cash: USD 25k–30k (₹21-25 lac INR) per annum
+* Equity: 0.5–1%, 4 year vesting period including a 1-year cliff
 * We are open to adjusting the cash and equity proportions
 * We'll cover the basics: workstation enhancements, co-working passes, software licenses you need, etc.
 
