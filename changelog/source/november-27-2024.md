@@ -21,7 +21,7 @@ This entire flow is managed and prompted through appropriate callouts and action
 
 ### Continuous backmerges without cherry-picks
 
-We previously added [continuous backmerges](/changelog/september-8-2023#continuously-backmerge), which allows teams to ensure that changes from the release branch are moved to the `main` (working branch) as quickly as possible by cherry-picking every commit. However, this method is unfortunately integration-specific, as not all VCS providers support cherry-picking through APIs.
+every commit. However, this method is unfortunately integration-specific, as not all VCS providers support cherry-picking through APIs.
 
 ![](../../static/img/changelog/cont-backmerge-bitbucket.png)
 
