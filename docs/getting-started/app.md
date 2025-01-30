@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Adding Apps
 
-To kick things off, add a new app from the homepage.
+To kick things off, add a new app from the header menu.
 
 ![](/img/add-new-app.png)
 
@@ -20,6 +20,6 @@ The **build number** is just the initial version code you'd like to use to start
 
 On **iOS**, this is `cfBundleVersion`.<br />On **Android**, this is `versionCode`.
 
-You should pick the starting number to be your last released build number value. Feel free to increment it by a few to ensure that there are no clashes.
+You can read more about Tramline's build number management [here](/docs/using-tramline/build-number).
 
-Once the app is saved and validated, the next step is to add integrations and configure your app.
+Once the app is saved and validated, the next step is to add integrations and configure those integrations.

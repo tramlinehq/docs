@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 16
 ---
 
 # Release Health Monitoring
@@ -56,4 +56,3 @@ If the filter conditions are not matched, the rule is not evaluated and does not
 1. **Staged rollout**: Percentage of users your release has been rollout out to
 
 2. **Adoption rate**: Percentage (proportion) of sessions that a given release has seen over the last 24-hour period
-
