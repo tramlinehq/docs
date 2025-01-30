@@ -16,12 +16,13 @@
   --ifm-breadcrumb-item-background-active: #f4f4f4;
   --ifm-code-font-size: 90%;
   --ifm-font-size-base: 16px;
-  --ifm-font-family-base: objektiv-mk1, sans-serif;
+  --ifm-font-weight-base: 400;
+  --ifm-font-family-base: sarvatrik-latin-variable, sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -94,7 +95,6 @@
 
 /* smaller screens */
 @media only screen and (max-width: 996px) {
-
   /* fix the navbar */
   .navbar .navbar__title {
     font-size: 12px;
@@ -123,7 +123,6 @@
 
 /* adjust overall spacing between things */
 @media screen and (min-width: 780px) {
-
   /* fix the navbar */
   .navbar .navbar__title {
     font-size: 15px;
@@ -138,7 +137,6 @@
   }
 }
 
-
 /* adjust overall spacing between things */
 @media screen and (min-width: 996px) {
   :root {
@@ -152,7 +150,6 @@
 
 /* for large screens */
 @media (min-width: 1416px) {
-
   /* reduce container width */
   .main-wrapper {
     max-width: 1400px;
@@ -191,4 +188,22 @@
 
 [class^="sidebarItemList"] {
   text-align: right;
+}
+
+/* add borders to images, ignore the changelog images */
+.markdown img {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.docusaurus-content img {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.changelog-item-override img {
+  padding: 0px;
+  border: none;
 }
