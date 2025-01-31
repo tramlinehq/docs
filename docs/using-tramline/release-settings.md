@@ -8,7 +8,7 @@ Tramline's main building block is the release train. It is designed to emulate t
 
 Once you have added an app and configured all the integrations, you can add a new release train by providing the following configuration.
 
-![](/img/new-train.png)
+![](/img/create-new-train.png)
 
 The way to think about a release train is this encapsulation.
 
@@ -17,6 +17,32 @@ Release Train = Branching Strategy + Release Cadence
 ```
 
 Most teams would typically have a maximum of two release trains (although Tramline imposes no such limit) depending on the frequency of the release, the testing cycles and the audience for that release.
+
+## Basic settings
+
+1. Name
+2. Description
+3. Version Strategy
+4. Branching Strategy
+5. Enable Notifications
+
+## Advanced settings
+
+Tramline provides a lot of advanced settings to customize your release process. You can find them in the **Advanced Settings** section of the **Release Settings**.
+
+These settings have a sane default value, but you can always tweak them as per your team's needs.
+
+1. **Release Schedule** – If you run your release cycles on a strict schedule, you can set it here. Tramline will ensure that a release starts on the scheduled date and time on a periodic basis. More details on this can be found in the [Scheduled Releases](/using-tramline/scheduled-releases) section.
+2. **Enable Approvals** – Some teams prefer to have a human in the loop before starting a release. Tramline allows you to enable approvals for your releases. This will notify the stakeholders who need to approve the release before it can be sent to production. More details on this can be found in the [Approvals](/using-tramline/approvals) section.
+3. **Change queue** – Tramline allows you to control when changes landing on the release branch are applied to trigger new builds in your release. By default, commits on the release branch are auto-applied. Read more about this in the [Change Queue](/using-tramline/build-queue) section.
+4. **Continuous Backmerge** – By default, Tramline merges changes made in the release branch back into your working branch towards the end of a release. You can override that by enabling the continuous backmerge option for Tramline to merge each change back into the working branch as soon as it lands. Read more about how backmerges are managed across different branching strategies and integrations in the [Backmerges](/using-tramline/backmerges) section.
+5. Patch Change Application – If you want to enable patch change application for your release, you can do so here. Tramline will notify the release managers of the release and wait for their approval before starting the release.
+6. Build Notes – If you want to add build notes for your release, you can do so here. Tramline will notify the release managers of the release and wait for their approval before starting the release.
+7. Tags – If you want to add tags for your release
+8. Version Change
+  - Freeze Version
+  - Patch Version Change
+
 
 ## Submission settings
 
