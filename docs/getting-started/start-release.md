@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Start the release
 
-Once you have reviewed the submission settings, you can start a new release by using the Prepare New Release button in the top right corner of your home page.
+Once you have reviewed the submission settings, you can start a new release by using the **Prepare New Release** button in the top right corner of your home page.
 
 This will open a new modal that will guide you to choose the correct version for your new release.
 
@@ -18,11 +18,11 @@ You can read more about version management in [Version Management](/using-tramli
 
 Once the release is started, you will move the release forward the following stages:
 
-1. **Kickoff** – Overview, changeset tracking and the homepage for the Release Captain
-2. **Stability** – Internal builds, RCs, internal(QA) as well as beta testing
-3. **Preparing for production release** – Approvals, release notes, and preparing the release for store review
-4. **Production rollout** – Rolling out the release to public and monitoring the health of the release
-5. **Post-release automations** – Automatic tasks that Tramline runs like cutting tags, ensuring all release changes are merged, etc.
+1. [**Kickoff**](/using-tramline/release/kickoff) – Overview, changeset tracking and the homepage for the Release Captain
+2. [**Stability**](/using-tramline/release/stability) – Internal builds, RCs, internal(QA) as well as beta testing
+3. [**Preparing for production release**](/using-tramline/release/metadata) – Approvals, release notes, and preparing the release for store review
+4. [**Production rollout**](/using-tramline/release/store-releases) – Rolling out the release to public and monitoring the health of the release
+5. [**Post-release automations**](/using-tramline/release/finalization) – Automatic tasks that Tramline runs like cutting tags, ensuring all release changes are merged, etc.
 
 ![](/img/live-release.png)
 

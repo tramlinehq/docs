@@ -12,8 +12,6 @@ You need a set of core integrations to get started with your releases in Tramlin
 
 ![](/img/setup-integrations.png)
 
-The remaining integrations are optional and can be added later as per your requirements.
-
-A detailed integration guide is available [here](/integrations/).
+The remaining integrations are optional and can be added later as per your requirements. A detailed integration guide is available [here](/integrations/).
 
 Once the integrations are set up and configured, you can start creating your first release.
