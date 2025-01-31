@@ -6,15 +6,13 @@ sidebar_position: 999
 
 ## Customers
 
-If you're a customer — in trial or paid — you can always drop us an email at support@tramline.app.
-
-For priority support, there are two options:
+If you're a customer — in trial or paid — you can always drop us an email at support@tramline.app. For priority support, there are two options:
 
 #### In-app chat
 
 Use the support chat inside Tramline itself. Check the bottom right corner of your screen, for the blue colored button. The chat bubble will show our typical response times.
 
-<p><img src="/img/intercom-support-location.png" width="100" height="100"/></p>
+<p><img src="/img/support-location.png" width="200" height="200"/></p>
 
 #### Shared Slack channel
 

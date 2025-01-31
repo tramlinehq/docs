@@ -23,6 +23,21 @@
   --changelog-item-bg: url("data:image/svg+xml,%3Csvg width='12' height='2' viewBox='0 0 14 1' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='0.5' x2='14' y2='0.5' stroke='%235E6AD2'/%3E%3C/svg%3E%0A");
 }
 
+p code,
+li code,
+td code {
+  padding: 0px 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.05rem solid rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--ifm-code-background);
+  border-radius: 0.2rem;
+  font-size: 0.875em;
+  line-height: calc(max(1.2em, 1.25rem));
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
