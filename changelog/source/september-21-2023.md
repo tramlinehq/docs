@@ -8,6 +8,8 @@ authors:
 
 # September 21, 2023
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/release-activity.png)
 
 ### Enriched Release Activity

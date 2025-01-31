@@ -8,6 +8,8 @@ authors:
 
 # August 3, 2024
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/sso.png)
 
 ### Single Sign-On Support 🔑

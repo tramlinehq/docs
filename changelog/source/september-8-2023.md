@@ -8,6 +8,8 @@ authors:
 
 # September 8, 2023
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/release-backmerge-prs.png)
 
 ### Continuously Backmerge

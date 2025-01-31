@@ -28,11 +28,11 @@ function processSection(section) {
     .match(/\n## .*/)?.[0]
     .trim()
     .replace('## ', '');
-  
+
   if (!title) {
     return null;
   }
-  
+
   const content = section
     .replace(/\n## .*/, '')
     .trim()
@@ -59,7 +59,7 @@ function processSection(section) {
       authorsMap[author.alias] = author;
     });
   }
-  
+
   const dateMatch = title.match(/ \((?<date>.*)\)/)?.groups.date;
   if (!dateMatch) {
     return null;
@@ -71,7 +71,7 @@ function processSection(section) {
     month: 'long',
     day: 'numeric',
   });
-  
+
   let hour = 20;
   const date = title.match(/ \((?<date>.*)\)/)?.groups.date;
   while (publishTimes.has(`${date}T${hour}:00`)) {
@@ -93,16 +93,16 @@ ${authors.map((author) => `  - '${author.alias}'`).join('\n')}`
 
 # ${formattedDate}
 
-${content.replace(/#### Committers: \d[\s\S]*?<endcommiters\/>/g, '')}`,};
-
 <!-- truncate -->
+
+${content.replace(/#### Committers: \d[\s\S]*?<endcommiters\/>/g, '')}`,};
 }
 
 /**
  * @param {import('@docusaurus/types').LoadContext} context
  * @returns {import('@docusaurus/types').Plugin}
  */
-async function ChangelogPlugin(context, options) {
+export default async function ChangelogPlugin(context, options) {
   const generateDir = path.join(context.siteDir, 'changelog/source');
   const blogPlugin = await pluginContentBlog.default(context, {
     ...options,
@@ -168,6 +168,4 @@ async function ChangelogPlugin(context, options) {
   };
 }
 
-ChangelogPlugin.validateOptions = pluginContentBlog.validateOptions;
-
-module.exports = ChangelogPlugin;
+export const {validateOptions} = pluginContentBlog;

@@ -109,13 +109,13 @@ For SSO users, removing a user does not revoke their SSO access from the IdP (id
 
 ### Release Health Monitoring – Firebase Crashlytics
 
-Tramline [continously monitors](/using-tramline/release-health-monitoring) the release health of an app by listening to signals and metrics from dedicated monitoring tools and condensing them down through a release lens. Along with Bugsnag, we now also support Firebase Crashlytics.
+Tramline [continuously monitors](/using-tramline/release-health-monitoring) the release health of an app by listening to signals and metrics from dedicated monitoring tools and condensing them down through a release lens. Along with Bugsnag, we now also support Firebase Crashlytics.
 
 This integration works by internally [integrating](/integrations/monitoring/crashlytics) with two tools: Google Analytics and Crashlytics itself.
 
-Crashlytics by itself isn't feasbile for calculating aggregate stats like crash-free rate or adoption rate, because it only contains info on unhealthy sessions; without info on healthy session stats, there is no denominator for crash-free rates or adoption. This denominator is pulled from Google Analytics.
+Crashlytics by itself isn't feasible for calculating aggregate stats like crash-free rate or adoption rate, because it only contains info on unhealthy sessions; without info on healthy session stats, there is no denominator for crash-free rates or adoption. This denominator is pulled from Google Analytics.
 
-This feature is in beta as we're still collecting feedback and data from our users and will be publically available early next year.
+This feature is in beta as we're still collecting feedback and data from our users and will be publicly available early next year.
 
 ### Copy approvals from previous release
 

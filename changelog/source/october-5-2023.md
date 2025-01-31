@@ -8,6 +8,8 @@ authors:
 
 # October 5, 2023
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/overall.png)
 
 ### Enriched Release Summary

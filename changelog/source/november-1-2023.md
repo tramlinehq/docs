@@ -8,6 +8,8 @@ authors:
 
 # November 1, 2023
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/mobile-devops-charts.png)
 
 ### Release Overview

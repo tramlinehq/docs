@@ -8,6 +8,8 @@ authors:
 
 # September 17, 2024
 
+<!-- truncate -->
+
 <img src="/img/changelog/bitbucket.png" width="500"/>
 
 ### Bitbucket support

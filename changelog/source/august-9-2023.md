@@ -8,6 +8,8 @@ authors:
 
 # August 9, 2023
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/release-schedule.png)
 
 ### Scheduled releases

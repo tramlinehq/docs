@@ -8,6 +8,8 @@ authors:
 
 # February 29, 2024
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/team.png)
 
 ### Team-level analysis

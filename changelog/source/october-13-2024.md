@@ -7,6 +7,8 @@ authors:
 
 # October 13, 2024
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/live-release.png)
 
 ### The work pane (live release page)

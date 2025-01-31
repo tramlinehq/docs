@@ -7,6 +7,8 @@ authors:
 
 # November 27, 2024
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/cascading-rollouts.png)
 
 ### Cascading rollouts

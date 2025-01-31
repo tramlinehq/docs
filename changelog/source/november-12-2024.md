@@ -7,6 +7,8 @@ authors:
 
 # November 12, 2024
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/approvals-blocked.png)
 
 ### Approvals

@@ -8,6 +8,8 @@ authors:
 
 # November 23, 2023
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/hotfix-release.png)
 
 ### Hotfix Releases 🤕

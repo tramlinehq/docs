@@ -9,6 +9,8 @@ authors:
 
 # January 20, 2025
 
+<!-- truncate -->
+
 <p>
   <img src="/img/changelog/calver-banner.png" width="600"/>
 </p>

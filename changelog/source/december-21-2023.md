@@ -8,6 +8,8 @@ authors:
 
 # December 21, 2023
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/build-health.png)
 
 ### Custom build metadata

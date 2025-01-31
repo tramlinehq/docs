@@ -9,6 +9,8 @@ authors:
 
 # December 30, 2024
 
+<!-- truncate -->
+
 <p>
   <img src="/img/changelog/firebase-crashlytics.png" width="600"/>
 </p>

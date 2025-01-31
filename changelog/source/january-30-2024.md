@@ -8,6 +8,8 @@ authors:
 
 # January 30, 2024
 
+<!-- truncate -->
+
 ![](../../static/img/changelog/mid-release-prs.png)
 
 ### Mid-release pull requests
