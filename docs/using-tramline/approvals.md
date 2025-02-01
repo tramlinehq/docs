@@ -24,4 +24,4 @@ Furthermore, you can add a flag to automatically copy over approval items from t
 
 Even if you don't have the automatic setting on, you can still copy them over from a single click after the release starts.
 
-![](/img/approvals-actions.png)
+<p><img src="/img/approvals-actions.png" width="500" /></p>
