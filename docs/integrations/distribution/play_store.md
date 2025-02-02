@@ -79,4 +79,4 @@ Once you've properly setup things in both, Google Play Console and Google Cloud 
 
 <img height="500" src="/img/play-store-connect.png" width="500"/>
 
-When you click *Create* after uploading the JSON key file, Tramline will verify that the integration is working correctly by checking for any releases or bundles with the [bundle identifier that you would have specified](/using-tramline/app) while adding the app.
+When you click *Create* after uploading the JSON key file, Tramline will verify that the integration is working correctly by checking for any releases or bundles with the [bundle identifier that you would have specified](/getting-started/app) while adding the app.

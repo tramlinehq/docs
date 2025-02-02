@@ -14,7 +14,7 @@ This is where hotfix releases come in. By starting a hotfix release, Tramline wi
 
 Importantly, you can quickly deploy a hotfix release because these releases are special. They allow you to bypass the defined step order, skipping the review steps and going straight to production.
 
-For [synchronized releases](/using-tramline/synchronized-releases), as is often the case, hotfixes also support releasing only to a single platform to avoid spending time on manually skipping the other platform.
+For [synchronized releases](/using-tramline/synchronized-release), as is often the case, hotfixes also support releasing only to a single platform to avoid spending time on manually skipping the other platform.
 
 ### Caveat
 

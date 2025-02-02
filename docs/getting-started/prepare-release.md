@@ -11,8 +11,8 @@ Once your app and integrations are set up, you can set up your release process.
 ## Configure the release cycle
 
 1. Choose the correct branching strategy for your release train. We recommend [Almost Trunk](/using-tramline/branching-strategies#almost-trunk).
-2. Select the versioning strategy that you use for you app. We support [SemVer](/using-tramline/versioning-strategies#semver) and [CalVer](using-tramline/versioning-strategies) version schemes.
-3. Depending on your [Branching Strategy](/using-tramline/branching-strategy), configure the correct set of branches that Tramline will read and write to.
+2. Select the versioning strategy that you use for you app. We support [SemVer](/using-tramline/version-strategies#semver) and [CalVer](/using-tramline/version-strategies) version schemes.
+3. Depending on your [Branching Strategy](/using-tramline/branching-strategies), configure the correct set of branches that Tramline will read and write to.
 
 ![](/img/create-new-train.png)
 

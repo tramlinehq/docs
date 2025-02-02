@@ -28,7 +28,7 @@ If you have suggestions for common processes that Tramline can automate for you,
 ### Cut a release branch
 
 :::tip
-This automation is run when a [new release is prepared](/new-release).
+This automation is run when a [new release is prepared](/using-tramline/new-release).
 :::
 :::info
 Release branches are only cut for specific branching strategies. See [Branching Strategies](using-tramline/branching-strategies).
@@ -39,10 +39,10 @@ On starting a new release, we automatically cut a release branch from the config
 ### Pre-release pull requests
 
 :::tip
-This automation is run when a [new release is prepared](/new-release).
+This automation is run when a [new release is prepared](/using-tramline/new-release).
 :::
 :::info
-Only works for [Parallel Working and Release Branch](using-tramline/branching-strategies#parallel-working-and-release-branch) strategy.
+Only works for [Parallel Working and Release Branch](/using-tramline/branching-strategies#parallel-working-and-release-branch) strategy.
 :::
 
 ```mermaid
@@ -69,7 +69,7 @@ The working branch (eg. `main`) is merged into the static release branch (eg. `r
 ### Start release flow for new commits
 
 :::tip
-This automation is run when [new commits land on the release branch](/release/stability).
+This automation is run when [new commits land on the release branch](/using-tramline/release/stability).
 :::
 
 When you land fixes to your release branch for an active release, the Tramline release flow automatically kicks off again. If you have Internal Releases enabled, on the arrival of every new commit, a new internal release process will start. If you only have Release Candidates enabled, only the release candidate process will automatically start. When any of this happens, the previous internal or RC builds are marked as stale, so that you can start working on the fresh builds.
@@ -77,7 +77,7 @@ When you land fixes to your release branch for an active release, the Tramline r
 ### Trigger workflows
 
 :::tip
-This automation is run when [new commits land on the release branch](/release/stability).
+This automation is run when [new commits land on the release branch](/using-tramline/release/stability).
 :::
 
 When an internal or release candidate process starts, the associated workflow is automatically triggered. The subsequent updates to that workflow are also tracked and updated in the dashboard.
@@ -196,7 +196,7 @@ Additionally, if you manually add new locales for your release notes directly on
 ### Pull Requests
 We wholly manage pull requests around release branches while starting and ending a release (depending on the branching strategy selected).
 
-See [Branching Strategies](/branching-strategies) for more information.
+See [Branching Strategies](/using-tramline/branching-strategies) for more information.
 
 
   - enable auto-merge

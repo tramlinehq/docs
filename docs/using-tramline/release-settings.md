@@ -32,7 +32,7 @@ Tramline provides a lot of advanced settings to customize your release process. 
 
 These settings have a sane default value, but you can always tweak them as per your team's needs.
 
-1. **Release Schedule** – If you run your release cycles on a strict schedule, you can set it here. Tramline will ensure that a release starts on the scheduled date and time on a periodic basis. More details on this can be found in the [Scheduled Releases](/using-tramline/scheduled-releases) section.
+1. **Release Schedule** – If you run your release cycles on a strict schedule, you can set it here. Tramline will ensure that a release starts on the scheduled date and time on a periodic basis. More details on this can be found in the [Scheduled Releases](/using-tramline/scheduled-release) section.
 2. **Enable Approvals** – Some teams prefer to have a human in the loop before starting a release. Tramline allows you to enable approvals for your releases. This will notify the stakeholders who need to approve the release before it can be sent to production. More details on this can be found in the [Approvals](/using-tramline/approvals) section.
 3. **Change queue** – Tramline allows you to control when changes landing on the release branch are applied to trigger new builds in your release. By default, commits on the release branch are auto-applied. Read more about this in the [Change Queue](/using-tramline/build-queue) section.
 4. **Continuous Backmerge** – By default, Tramline merges changes made in the release branch back into your working branch towards the end of a release. You can override that by enabling the continuous backmerge option for Tramline to merge each change back into the working branch as soon as it lands. Read more about how backmerges are managed across different branching strategies and integrations in the [Backmerges](/using-tramline/backmerges) section.
@@ -127,7 +127,7 @@ Staging + Production Build Train (every 14 days)
 
 And so on.
 
-Releases can also be run on a schedule as mentioned in the example above. You can read more on that [here](/automations/scheduled-releases).
+Releases can also be run on a schedule as mentioned in the example above. You can read more on that [here](/automations#start-releases-on-a-schedule).
 
 TODO: add scheduled release page
 
