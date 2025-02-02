@@ -4,6 +4,7 @@ sidebar_position: 6
 
 # 💰 Checks & Balances
 
+- what is the correct build? (for qa)
 - blocking production
   - approvals
   - upcoming release

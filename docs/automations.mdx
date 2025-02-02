@@ -21,17 +21,17 @@ export const ReleaseBranch = ({name, n}) => {
     return (<code>r/{name}/{date()}{n ? '-1' : ''}</code>)
 };
 
-Tramline automates away a lot of boilerplate work and opines on some sensible defaults. We will continue to add more automations and hopefully also add controls to chose which ones to run.
+Tramline automates away a lot of boilerplate work and opines on some sensible defaults. We will continue to add more automations and hopefully also add controls to chose which ones to run. Currently, some sensible automations (that everyone should do) are just magically done for you, and some require enabling manually.
 
-This is a list of important things Tramline currently automatically does with little to no user intervention.
+If you have suggestions for common processes that Tramline can automate for you, which don't exist in this list down below, [please let us know](mailto:hello@tramline.app)!
 
 ### Cut a release branch
 
 :::tip
-This automation when a [new release is prepared](/new-release).
+This automation is run when a [new release is prepared](/new-release).
 :::
 :::info
-Release branches are only cut for specific branching strategies. See [Branching Strategies](/branching-strategies).
+Release branches are only cut for specific branching strategies. See [Branching Strategies](using-tramline/branching-strategies).
 :::
 
 On starting a new release, we automatically cut a release branch from the configured working branch for the repo. The release branch takes the pattern of `r/name-of-release-train/date-of-release`. For example, if your release train is called **Nightly**, the release branch will be <ReleaseBranch name="nightly" n=''/>. Additional releases during the day will be <ReleaseBranch name="nightly" n='1'/>.
@@ -42,10 +42,29 @@ On starting a new release, we automatically cut a release branch from the config
 This automation is run when a [new release is prepared](/new-release).
 :::
 :::info
-Only works for [Parallel Working and Release Branch](/branching-strategies#parallel-working-and-release-branch) strategy.
+Only works for [Parallel Working and Release Branch](using-tramline/branching-strategies#parallel-working-and-release-branch) strategy.
 :::
 
-The working branch is merged into the static release branch automatically at the the start of every release.
+```mermaid
+gitGraph
+  branch release
+  commit id: "previously"
+  checkout main
+  commit id: "commit 1"
+  commit id: "commit 2"
+  checkout release
+  merge main tag: "Start of release 1.0.0"
+  checkout main
+  commit id: "commit 3"
+  commit id: "commit 4"
+  commit id: "commit 5"
+  checkout release
+  merge main tag: "Start of Release 1.1.0"
+  checkout main
+  commit id: "commit 6"
+```
+
+The working branch (eg. `main`) is merged into the static release branch (eg. `release`) automatically at the the start of every release.
 
 ### Start release flow for new commits
 
@@ -71,6 +90,10 @@ Enable in the submissions settings for each submission when setting up the relea
 
 When a workflow finishes and a build is found, Tramline can optionally auto-submit the build to the configured distribution channel.
 
+### Cancel previous workflow run
+
+When a new commit lands, and if there's already a workflow running for a previous commit, Tramline will attempt to cancel the previous workflow run. We do this to avoid wasting compute minutes.
+
 ### Apply change queue
 
 :::info
@@ -78,6 +101,12 @@ Enable build queues in your train setting for this automation
 :::
 
 ### Track ongoing work
+
+:::tip
+This automation is always available as long as the release is active. See [changeset tracking](/using-tramline/release/changeset-tracking).
+:::
+
+All the pull requests that directly target the release branch (eg. `r/production/2022-12-31-1`) are automatically tracked and updated in the [changeset tracking](/using-tramline/release/changeset-tracking) dashboard.
 
 ![](/img/ongoing-work.png)
 
@@ -91,11 +120,27 @@ Similarly, when starting new hotfix releases, the patch version always get auto-
 
 #### Build numbers
 
-Every build created generated through Tramline always has a unique build number. This is true across workflows, and across trains. Tramline maintains an atomic counter internally and automatically updates the build number through the workflow triggering mechanism.
+Every build created generated through Tramline always has a unique build number. This is true across workflows, and across trains. Tramline maintains an atomic counter internally and automatically updates the build number through the [workflow triggering](/using-tramline/release/stability) mechanism.
 
-### Merging code
-- continuous
-- final
+### Merging fixes back
+
+:::tip
+This is applicable for all [branching strategies](/using-tramline/branching-strategies).
+:::
+
+Tramline ensures that the code that's added to a release branch is always merged back into the working branch. It can be done in two ways:
+
+#### Open a PR at the end of a release
+
+This is the default setting. When your release is done, and if there are any fix commits that are in the release branch, Tramline will automatically open a pull request (and merge if possible) back to the working branch.
+
+#### Continuously cherry-pick commits
+
+:::info
+Depending on the [VCS integration](/integrations/version-control), the way cherry-picks happen have will slight variations.
+:::
+
+When this is enabled, Tramline will continuously merge code back for every commit (or set of commits) that lands on the release branch. This is helpful for teams that do a number of fixes directly on the release branch so that the code is merged back to the "trunk" as _quickly_ as possible.
 
 ### Notifications
 
@@ -123,7 +168,6 @@ This automation runs right before the release is finalized or completed.
 :::
 
 If you're using the GitHub integration for source control, we will also create a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) with an auto-generated changelog.
-
 
 ### Pick the correct code for Hotfixes
 
@@ -157,7 +201,3 @@ See [Branching Strategies](/branching-strategies) for more information.
 
   - enable auto-merge
   - merge on checks passing
-
-### Cancel previous workflow run
-
-When a new commit lands, and there's already a workflow running for a previous commit, Tramline will attempt to cancel the previous workflow run. We do this to avoid wasting compute minutes.

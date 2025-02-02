@@ -1,0 +1,106 @@
+---
+sidebar_position: 9
+---
+
+# Branching Strategies
+
+:::tip
+**Three** types of branching strategies are currently supported when [setting up a release](/using-tramline/release-settings).
+:::
+
+:::info
+There are various automations around these branching strategies that help manage merges, create pull requests, cut tags etc. See [Automations](/automations.mdx) for more information.
+:::
+
+## Almost Trunk
+Almost Trunk is the simplest strategy and the one that we generally recommend.
+
+For every release, we create a new release branch from the `HEAD` of the working branch. Release-specific fixes should not be committed to the release branch directly. Instead, you should land the fixes on your working branch, and then cherry-pick them on to the release branch.
+
+```mermaid
+gitGraph
+  commit id: "commit 1"
+  commit id: "commit 2"
+  branch rel/production/2025-01-01
+  checkout rel/production/2025-01-01
+  commit id: "fix 1"
+  commit id: "fix 2"
+  checkout main
+  commit id: "commit 3"
+  commit id: "commit 4"
+  commit id: "commit 5"
+  merge rel/production/2025-01-01 tag: "End of release 2025-01-01"
+  commit id: "commit 6"
+  commit id: "commit 7"
+```
+
+#### Under release settings
+
+![](/img/branching-atrunk.png)
+
+## Release with Backmerge
+
+Release with Backmerge creates a new release branch from the `HEAD` of the working branch, for every release. Once the release is finalized, two things happen:
+
+1. The release branch is merged into the backmerge (production) branch
+2. The backmerge branch is "backmerged" into the working branch
+
+```mermaid
+gitGraph
+  branch production order: 3
+  commit id: "previously"
+  checkout main
+  commit id: "commit 1"
+  commit id: "commit 2"
+  branch rel/production/2025-01-01 order: 2
+  checkout rel/production/2025-01-01
+  commit id: "fix 1"
+  commit id: "fix 2"
+  checkout main
+  merge rel/production/2025-01-01 tag: "Backmerge from release 2025-01-01"
+  checkout production
+  merge rel/production/2025-01-01 tag: "Backmerge from release 2025-01-01"
+  checkout main
+  commit id: "commit 3"
+  commit id: "commit 4"
+  commit id: "commit 5"
+```
+
+#### Under release settings
+
+![](/img/branching-rbm.png)
+
+## Parallel Working and Release Branch
+
+Parallel Working and Release does not create a new release branch for every release. Instead, at the start of a release, the working branch is merged into the release branch. Release-specific fixes land on the release branch directly. At the end of the release, the release branch is merged back into the working branch.
+
+```mermaid
+gitGraph
+  branch release
+  commit id: "previously"
+  checkout main
+  commit id: "commit 1"
+  commit id: "commit 2"
+  checkout release
+  merge main tag: "Start of release 1.0.0"
+  commit id: "fix 1"
+  commit id: "fix 2"
+  checkout main
+  commit id: "commit 3"
+  commit id: "commit 4"
+  merge release tag: "End of release 1.0.0"
+  commit id: "commit 5"
+  commit id: "commit 6"
+```
+
+#### Under release settings
+
+![](/img/branching-pwr.png)
+
+## Trunk-based
+
+:::info
+This branching strategy is currently in beta and will be publicly available in mid-2025.
+:::
+
+Trunk-based branching strategy releases from a single, long-lived branch that's used for both development and releases. No new branches are created. The `HEAD` of trunk is simply tagged and a release is started from that point onwards. Additional fixes to the release can be optionally picked into the release.
