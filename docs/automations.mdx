@@ -85,7 +85,7 @@ When an internal or release candidate process starts, the associated workflow is
 ## Trigger distributions
 
 :::info
-Enable this in your [submission settings](/using-tramline/submissions).
+Enable this in your [submission settings](/using-tramline/release-settings#submission-settings).
 :::
 
 When a workflow finishes and a build is found, Tramline can optionally auto-submit the build to the configured distribution channel.
@@ -99,6 +99,8 @@ When a new commit lands, and if there's already a workflow running for a previou
 :::info
 Enable build queues in your [release train settings](/using-tramline/release-settings).
 :::
+
+Changes that land on the release branch can optionally be staged in a [Change Queue](/using-tramline/build-queue). The change queue gets automatically drained if either the number of changes in the queue exceed the configured limit or if the configured batch-time has passed.
 
 ## Track ongoing work
 
@@ -182,7 +184,7 @@ If you're using the [GitHub integration](/integrations/version-control/github) f
 
 ## Pick the correct version for hotfixes
 
-When you start a [hotfix release](/using-tramline/hotfix), Tramline will automatically pick the correct version to be hotfix'd (the last completed release). When the hotfix release starts, and if there's a diff – between the current hotfix changes and the last release – the release will jump straight into to creating a new Release Candidate build and will skip Internal builds to save time.
+When you start a [hotfix release](/using-tramline/hotfix), Tramline will automatically pick the correct version to be hotfix'd (the last completed release). When the hotfix release starts, and if there's a diff — between the current hotfix changes and the last release — the release will jump straight into to creating a new Release Candidate build and will skip Internal builds to save time.
 
 ## Start releases on a schedule
 
