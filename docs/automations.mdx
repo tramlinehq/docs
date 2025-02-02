@@ -25,7 +25,7 @@ Tramline automates away a lot of boilerplate work and opines on some sensible de
 
 If you have suggestions for common processes that Tramline can automate for you, which don't exist in this list down below, [please let us know](mailto:hello@tramline.app)!
 
-### Cut a release branch
+## Cut a release branch
 
 :::tip
 This automation is run when a [new release is prepared](/using-tramline/new-release).
@@ -36,7 +36,7 @@ Release branches are only cut for specific branching strategies. See [Branching 
 
 On starting a new release, we automatically cut a release branch from the configured working branch for the repo. The release branch takes the pattern of `r/name-of-release-train/date-of-release`. For example, if your release train is called **Nightly**, the release branch will be <ReleaseBranch name="nightly" n=''/>. Additional releases during the day will be <ReleaseBranch name="nightly" n='1'/>.
 
-### Pre-release pull requests
+## Pre-release pull requests
 
 :::tip
 This automation is run when a [new release is prepared](/using-tramline/new-release).
@@ -66,7 +66,7 @@ gitGraph
 
 The working branch (eg. `main`) is merged into the static release branch (eg. `release`) automatically at the the start of every release.
 
-### Start release flow for new commits
+## Start release flow for new commits
 
 :::tip
 This automation is run when [new commits land on the release branch](/using-tramline/release/stability).
@@ -74,7 +74,7 @@ This automation is run when [new commits land on the release branch](/using-tram
 
 When you land fixes to your release branch for an active release, the Tramline release flow automatically kicks off again. If you have Internal Releases enabled, on the arrival of every new commit, a new internal release process will start. If you only have Release Candidates enabled, only the release candidate process will automatically start. When any of this happens, the previous internal or RC builds are marked as stale, so that you can start working on the fresh builds.
 
-### Trigger workflows
+## Trigger workflows
 
 :::tip
 This automation is run when [new commits land on the release branch](/using-tramline/release/stability).
@@ -82,25 +82,25 @@ This automation is run when [new commits land on the release branch](/using-tram
 
 When an internal or release candidate process starts, the associated workflow is automatically triggered. The subsequent updates to that workflow are also tracked and updated in the dashboard.
 
-### Trigger distributions
+## Trigger distributions
 
 :::info
-Enable in the submissions settings for each submission when setting up the release.
+Enable this in your [submission settings](/using-tramline/submissions).
 :::
 
 When a workflow finishes and a build is found, Tramline can optionally auto-submit the build to the configured distribution channel.
 
-### Cancel previous workflow run
+## Cancel previous workflow run
 
 When a new commit lands, and if there's already a workflow running for a previous commit, Tramline will attempt to cancel the previous workflow run. We do this to avoid wasting compute minutes.
 
-### Apply change queue
+## Apply change queue
 
 :::info
-Enable build queues in your train setting for this automation
+Enable build queues in your [release train settings](/using-tramline/release-settings).
 :::
 
-### Track ongoing work
+## Track ongoing work
 
 :::tip
 This automation is always available as long as the release is active. See [changeset tracking](/using-tramline/release/changeset-tracking).
@@ -110,19 +110,19 @@ All the pull requests that directly target the release branch (eg. `r/production
 
 ![](/img/ongoing-work.png)
 
-### Bumping versions and build numbers
+## Bumping versions and build numbers
 
-#### Versions
+### Versions
 
 Versions are automatically managed by Tramline. New releases start with a minor or major version bump (in SemVer terminology). When fixes land in the middle of a production rollout, the patch version always gets auto-bumped for the new changes.
 
 Similarly, when starting new hotfix releases, the patch version always get auto-bumped.
 
-#### Build numbers
+### Build numbers
 
 Every build created generated through Tramline always has a unique build number. This is true across workflows, and across trains. Tramline maintains an atomic counter internally and automatically updates the build number through the [workflow triggering](/using-tramline/release/stability) mechanism.
 
-### Merging fixes back
+## Merging fixes back
 
 :::tip
 This is applicable for all [branching strategies](/using-tramline/branching-strategies).
@@ -130,11 +130,11 @@ This is applicable for all [branching strategies](/using-tramline/branching-stra
 
 Tramline ensures that the code that's added to a release branch is always merged back into the working branch. It can be done in two ways:
 
-#### Open a PR at the end of a release
+### PR at the end of a release
 
 This is the default setting. When your release is done, and if there are any fix commits that are in the release branch, Tramline will automatically open a pull request (and merge if possible) back to the working branch.
 
-#### Continuously cherry-pick commits
+### Continuously cherry-pick commits
 
 :::info
 Depending on the [VCS integration](/integrations/version-control), the way cherry-picks happen have will slight variations.
@@ -142,62 +142,82 @@ Depending on the [VCS integration](/integrations/version-control), the way cherr
 
 When this is enabled, Tramline will continuously merge code back for every commit (or set of commits) that lands on the release branch. This is helpful for teams that do a number of fixes directly on the release branch so that the code is merged back to the "trunk" as _quickly_ as possible.
 
-### Notifications
+## Notifications
 
 :::info
-Enable Notifications in your train setting for this automation
+Enable [Notifications](/using-tramline/notifications) in your [release train settings](/using-tramline/release-settings).
 :::
+
+### Attach builds
+
+Along with all the available notifications, the "build available" notification specifically attaches the Internal or Release Candidate build as a part of the slack notification. This is helpful for QAs or other folks in the configured Slack channel to quickly download the build for testing.
+
+### Release notes
 
 When a new build is available to download from Tramline, we now attach the build to the Slack notification where it can be directly downloaded for testing or other purposes.
 
-### Create VCS tags
-
-Once the release is finalized, we automatically tag the last commit that was released with the version generated by the release train. If the released version is `1.0.0`. The tag will be `v1.0.0`.
+## Create VCS tags
 
 :::info
-Enable release tagging in your train settings for this automation
+Enable tagging in your [release train settings](/using-tramline/release-settings).
 :::
 
-  - prod submission
-  - final
+Tramline cuts git tags on your version control in a couple of different scenarios:
 
-### Create VCS release
+### End of a release
+
+When the release ends, we automatically tag the last commit that was released at the end. If the released version is `1.0.0`. The tag will be `v1.0.0`.
+
+### When a production submission finishes
+
+For cases where you anticipate sending more than one build to the store, we also allow tagging each submission that actually went to the store. So in a single release, if you first partially release 1.0.0 to the production track on Play Store, and then land a patch fix and release 1.0.1 to 100%, you will get two tags: `v1.0.0` and `v1.0.1` against the appropriate commits.
+
+## Create VCS release
 
 :::tip
-This automation runs right before the release is finalized or completed.
+VCS releases are created at the [end of a release](#end-of-a-release).
 :::
 
-If you're using the GitHub integration for source control, we will also create a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) with an auto-generated changelog.
+If you're using the [GitHub integration](/integrations/version-control/github) for version control, Tramline will automatically create a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) with an auto-generated changelog.
 
-### Pick the correct code for Hotfixes
+## Pick the correct version for hotfixes
 
-### Start releases on a schedule
+When you start a [hotfix release](/using-tramline/hotfix), Tramline will automatically pick the correct version to be hotfix'd (the last completed release). When the hotfix release starts, and if there's a diff – between the current hotfix changes and the last release – the release will jump straight into to creating a new Release Candidate build and will skip Internal builds to save time.
+
+## Start releases on a schedule
 
 :::info
-Add a release schedule to you train settings for this automation
+Add a schedule to your release in the [release train settings](/using-tramline/release-settings).
 :::
+
+Scheduled releases automatically start a new release on the specified date and retain the schedule for subsequent releases. You can also optionally set a scheduled release to automatically stop on failure.
+
+Additionally, if your release spans across a future release, the future release gets automatically adjusted.
 
 ![](/img/scheduled-release.png)
 
-### Update Export Compliance Information in App Store Connect
+## Update Export Compliance Information in App Store Connect
 
 If enabled, Tramline will automatically sets the `usesNonExemptEncryption` to be `false` for all builds as they get upload to the App Store.
 
-### Upload builds to Tramline
+## Upload builds to Tramline
 
-By default, all builds generated by your CI workflows as artifacts are automatically uploaded to Tramline. This is true for all: `aab`, `apk` and `ipa` files.
+By default, all builds generated by your CI workflows as artifacts are automatically uploaded to Tramline. This is true for the following file types: `aab`, `apk` and `ipa`. They are subsequently also available for download from the [Tramline dashboard](/using-tramline/release/stability) and [Slack notifications](/using-tramline/release/stability#notifications).
 
-### Default release notes from last release
+## Default release notes from last release
 
-Tramline will automatically apply 'What's new' text or release notes from your previous release version to populate the release notes for the current release.
+Tramline will automatically apply "What's new" text or release notes from your previous release version to populate the release notes for the current release.
 
 Additionally, if you manually add new locales for your release notes directly on the stores, Tramline will automatically pull them up in the next release.
 
-### Pull Requests
-We wholly manage pull requests around release branches while starting and ending a release (depending on the branching strategy selected).
+## Pull Requests
 
-See [Branching Strategies](/using-tramline/branching-strategies) for more information.
+:::tip
+Pull requests are created under a variety of circumstances ([see above](/automations)).
+:::
 
+There are a few default automatic settings for all pull requests created by Tramline:
 
-  - enable auto-merge
-  - merge on checks passing
+ * If the PR is on the [GitHub VCS integration](/integrations/version-control/github), Tramline will try to set the [auto-merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request) option (if possible).
+ * Even if auto-merge flag is not possible (eg. other VCS integrations), Tramline will continually try to auto-merge until all the checks pass.
+ * For [cherry-pick PRs](#continuously-cherry-pick-commits) (or "patch" PRs), Tramline will reference-tag the name of the author of the cherry-pick commit in the body of the PR.
