@@ -10,9 +10,9 @@ Once your app and integrations are set up, you can set up your release process.
 
 ## Configure the release cycle
 
-1. Choose the correct branching strategy for your release train. We recommend [Almost Trunk](/using-tramline/branching-strategies#almost-trunk).
-2. Select the versioning strategy that you use for you app. We support [SemVer](/using-tramline/version-strategies#semver) and [CalVer](/using-tramline/version-strategies) version schemes.
-3. Depending on your [Branching Strategy](/using-tramline/branching-strategies), configure the correct set of branches that Tramline will read and write to.
+1. Choose the correct branching strategy for your release train. We recommend [Almost Trunk](/using-tramline/release-management/branching-strategies#almost-trunk).
+2. Select the versioning strategy that you use for you app. We support [SemVer](/using-tramline/version-management/version-strategies#semver) and [CalVer](/using-tramline/version-management/version-strategies) version schemes.
+3. Depending on your [Branching Strategy](/using-tramline/release-management/branching-strategies), configure the correct set of branches that Tramline will read and write to.
 
 ![](/img/create-new-train.png)
 
@@ -22,10 +22,10 @@ Once the release train is created, review the submission settings that Tramline 
 
 ![](/img/submission-settings.png)
 
-1. [**Release Candidate (RC) Workflow**](/using-tramline/release-settings#release-candidate-rc-workflow): This is a mandatory configuration. This workflow selected should generate an RC build (aab/apk/ipa) that will be sent to your production and beta testing submissions.
-2. [**Production Release**](/using-tramline/release-settings#production-release-settings): This is enabled by default if you have connected the store integrations. You can disable this if you don't want to release the app to public. If enabled, you can also control the staged rollout configurations for your store release.
-3. [**Beta Testing**](/using-tramline/release-settings#beta-testing-configuration): If you share your RC with internal or external testers on the store before releasing to public, you can enable this. This is disabled by default.
-4. [**Internal Testing**](/using-tramline/release-settings#internal-testing-configuration): In addition to beta testing, if you generate an internal build (staging/debug) that your internal testers use for testing, you can enable this. This is disabled by default. Configure how you generate this build as well as where the internal builds are send to (likely a place like Firebase App Distribution).
+1. [**Release Candidate (RC) Workflow**](/using-tramline/release-management/release-settings#release-candidate-rc-workflow): This is a mandatory configuration. This workflow selected should generate an RC build (aab/apk/ipa) that will be sent to your production and beta testing submissions.
+2. [**Production Release**](/using-tramline/release-management/release-settings#production-release-settings): This is enabled by default if you have connected the store integrations. You can disable this if you don't want to release the app to public. If enabled, you can also control the staged rollout configurations for your store release.
+3. [**Beta Testing**](/using-tramline/release-management/release-settings#beta-testing-configuration): If you share your RC with internal or external testers on the store before releasing to public, you can enable this. This is disabled by default.
+4. [**Internal Testing**](/using-tramline/release-management/release-settings#internal-testing-configuration): In addition to beta testing, if you generate an internal build (staging/debug) that your internal testers use for testing, you can enable this. This is disabled by default. Configure how you generate this build as well as where the internal builds are send to (likely a place like Firebase App Distribution).
 
 :::info
 There are some changes required in your workflow and app codebase to ensure that the builds generated are identified correctly by Tramline.
@@ -105,4 +105,4 @@ For more variations of these changes, please read the [CI/CD](/integrations/ci-c
 
 Once all the submission settings are configured, you can start the release process.
 
-More details on the configuration options of the release cycle and submissions can be found in the [Release Settings](/using-tramline/release-settings) section.
+More details on the configuration options of the release cycle and submissions can be found in the [Release Settings](/using-tramline/release-management/release-settings) section.

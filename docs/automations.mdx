@@ -28,10 +28,10 @@ If you have suggestions for common processes that Tramline can automate for you,
 ## Cut a release branch
 
 :::tip
-This automation is run when a [new release is prepared](/using-tramline/new-release).
+This automation is run when a [new release is prepared](/using-tramline/release-management/new-release).
 :::
 :::info
-Release branches are only cut for specific branching strategies. See [Branching Strategies](using-tramline/branching-strategies).
+Release branches are only cut for specific branching strategies. See [Branching Strategies](using-tramline/release-management/branching-strategies).
 :::
 
 On starting a new release, we automatically cut a release branch from the configured working branch for the repo. The release branch takes the pattern of `r/name-of-release-train/date-of-release`. For example, if your release train is called **Nightly**, the release branch will be <ReleaseBranch name="nightly" n=''/>. Additional releases during the day will be <ReleaseBranch name="nightly" n='1'/>.
@@ -39,10 +39,10 @@ On starting a new release, we automatically cut a release branch from the config
 ## Pre-release pull requests
 
 :::tip
-This automation is run when a [new release is prepared](/using-tramline/new-release).
+This automation is run when a [new release is prepared](/using-tramline/release-management/new-release).
 :::
 :::info
-Only works for [Parallel Working and Release Branch](/using-tramline/branching-strategies#parallel-working-and-release-branch) strategy.
+Only works for [Parallel Working and Release Branch](/using-tramline/release-management/branching-strategies#parallel-working-and-release-branch) strategy.
 :::
 
 ```mermaid
@@ -69,7 +69,7 @@ The working branch (eg. `main`) is merged into the static release branch (eg. `r
 ## Start release flow for new commits
 
 :::tip
-This automation is run when [new commits land on the release branch](/using-tramline/release/stability).
+This automation is run when [new commits land on the release branch](/using-tramline/working-pane/stability).
 :::
 
 When you land fixes to your release branch for an active release, the Tramline release flow automatically kicks off again. If you have Internal Releases enabled, on the arrival of every new commit, a new internal release process will start. If you only have Release Candidates enabled, only the release candidate process will automatically start. When any of this happens, the previous internal or RC builds are marked as stale, so that you can start working on the fresh builds.
@@ -77,7 +77,7 @@ When you land fixes to your release branch for an active release, the Tramline r
 ## Trigger workflows
 
 :::tip
-This automation is run when [new commits land on the release branch](/using-tramline/release/stability).
+This automation is run when [new commits land on the release branch](/using-tramline/working-pane/stability).
 :::
 
 When an internal or release candidate process starts, the associated workflow is automatically triggered. The subsequent updates to that workflow are also tracked and updated in the dashboard.
@@ -85,7 +85,7 @@ When an internal or release candidate process starts, the associated workflow is
 ## Trigger distributions
 
 :::info
-Enable this in your [submission settings](/using-tramline/release-settings#submission-settings).
+Enable this in your [submission settings](/using-tramline/release-management/release-settings#submission-settings).
 :::
 
 When a workflow finishes and a build is found, Tramline can optionally auto-submit the build to the configured distribution channel.
@@ -97,18 +97,18 @@ When a new commit lands, and if there's already a workflow running for a previou
 ## Apply change queue
 
 :::info
-Enable build queues in your [release train settings](/using-tramline/release-settings).
+Enable build queues in your [release train settings](/using-tramline/release-management/release-settings).
 :::
 
-Changes that land on the release branch can optionally be staged in a [Change Queue](/using-tramline/build-queue). The change queue gets automatically drained if either the number of changes in the queue exceed the configured limit or if the configured batch-time has passed.
+Changes that land on the release branch can optionally be staged in a [Change Queue](/using-tramline/build-processing/build-queue). The change queue gets automatically drained if either the number of changes in the queue exceed the configured limit or if the configured batch-time has passed.
 
 ## Track ongoing work
 
 :::tip
-This automation is always available as long as the release is active. See [changeset tracking](/using-tramline/release/changeset-tracking).
+This automation is always available as long as the release is active. See [changeset tracking](/using-tramline/working-pane/changeset-tracking).
 :::
 
-All the pull requests that directly target the release branch (eg. `r/production/2022-12-31-1`) are automatically tracked and updated in the [changeset tracking](/using-tramline/release/changeset-tracking) dashboard.
+All the pull requests that directly target the release branch (eg. `r/production/2022-12-31-1`) are automatically tracked and updated in the [changeset tracking](/using-tramline/working-pane/changeset-tracking) dashboard.
 
 ![](/img/ongoing-work.png)
 
@@ -122,12 +122,12 @@ Similarly, when starting new hotfix releases, the patch version always get auto-
 
 ### Build numbers
 
-Every build created generated through Tramline always has a unique build number. This is true across workflows, and across trains. Tramline maintains an atomic counter internally and automatically updates the build number through the [workflow triggering](/using-tramline/release/stability) mechanism.
+Every build created generated through Tramline always has a unique build number. This is true across workflows, and across trains. Tramline maintains an atomic counter internally and automatically updates the build number through the [workflow triggering](/using-tramline/working-pane/stability) mechanism.
 
 ## Merging fixes back
 
 :::tip
-This is applicable for all [branching strategies](/using-tramline/branching-strategies).
+This is applicable for all [branching strategies](/using-tramline/release-management/branching-strategies).
 :::
 
 Tramline ensures that the code that's added to a release branch is always merged back into the working branch. It can be done in two ways:
@@ -147,7 +147,7 @@ When this is enabled, Tramline will continuously merge code back for every commi
 ## Notifications
 
 :::info
-Enable [Notifications](/using-tramline/notifications) in your [release train settings](/using-tramline/release-settings).
+Enable [Notifications](/using-tramline/quality-and-monitoring/notifications) in your [release train settings](/using-tramline/release-management/release-settings).
 :::
 
 ### Attach builds
@@ -161,7 +161,7 @@ When a new build is available to download from Tramline, we now attach the build
 ## Create VCS tags
 
 :::info
-Enable tagging in your [release train settings](/using-tramline/release-settings).
+Enable tagging in your [release train settings](/using-tramline/release-management/release-settings).
 :::
 
 Tramline cuts git tags on your version control in a couple of different scenarios:
@@ -184,12 +184,12 @@ If you're using the [GitHub integration](/integrations/version-control/github) f
 
 ## Pick the correct version for hotfixes
 
-When you start a [hotfix release](/using-tramline/hotfix), Tramline will automatically pick the correct version to be hotfix'd (the last completed release). When the hotfix release starts, and if there's a diff — between the current hotfix changes and the last release — the release will jump straight into to creating a new Release Candidate build and will skip Internal builds to save time.
+When you start a [hotfix release](/using-tramline/special-cases/hotfix), Tramline will automatically pick the correct version to be hotfix'd (the last completed release). When the hotfix release starts, and if there's a diff — between the current hotfix changes and the last release — the release will jump straight into to creating a new Release Candidate build and will skip Internal builds to save time.
 
 ## Start releases on a schedule
 
 :::info
-Add a schedule to your release in the [release train settings](/using-tramline/release-settings).
+Add a schedule to your release in the [release train settings](/using-tramline/release-management/release-settings).
 :::
 
 Scheduled releases automatically start a new release on the specified date and retain the schedule for subsequent releases. You can also optionally set a scheduled release to automatically stop on failure.
@@ -204,7 +204,7 @@ If enabled, Tramline will automatically sets the `usesNonExemptEncryption` to be
 
 ## Upload builds to Tramline
 
-By default, all builds generated by your CI workflows as artifacts are automatically uploaded to Tramline. This is true for the following file types: `aab`, `apk` and `ipa`. They are subsequently also available for download from the [Tramline dashboard](/using-tramline/release/stability) and [Slack notifications](/using-tramline/release/stability#notifications).
+By default, all builds generated by your CI workflows as artifacts are automatically uploaded to Tramline. This is true for the following file types: `aab`, `apk` and `ipa`. They are subsequently also available for download from the [Tramline dashboard](/using-tramline/working-pane/stability) and [Slack notifications](/using-tramline/working-pane/stability#notifications).
 
 ## Default release notes from last release
 
