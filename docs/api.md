@@ -4,21 +4,21 @@ sidebar_position: 8
 
 # 🧪 Tramline API
 
-Tramline currently exposes three API endpoints to fetch release information and to send custom build metadata to Tramline.
+Tramline currently exposes 3 API endpoints to fetch release information and to send custom build metadata. Before you start, you need your API credentials to make requests. To get these click on **Organization Settings** in the top navbar:
 
-You need your `Account ID` and `API Key` before you can make any requests. To get these click on **Settings** in the dropdown on the top-right:
+![](/img/organization-settings-dropdown.png)
 
-![](/img/org-settings.png)
+Under the **Settings** tab, inside the **API** section, you will find the `Account ID` and the `API key` that will be used later for all API calls.
 
-Here you will find the relevant API settings:
-
-![](/img/api-settings.png)
+<p><img src="/img/api-settings.png" width="400" height="400"/></p>
 
 :::info
-Only a user with owner or developer privileges can access these API settings.
+Only a user with owner or developer privileges can view these API settings.
 :::
 
 ### Get the latest release made to the store for an app
+
+#### Request
 
 ```bash
 curl -H "Authorization: Bearer your-api-key" \
@@ -26,6 +26,8 @@ curl -H "Authorization: Bearer your-api-key" \
      -H "Accept: application/json" \
      https://tramline.dev/api/v1/apps/<app-id>
 ```
+
+#### Response
 
 This API would respond with a format like this:
 
@@ -60,6 +62,8 @@ jq '.latest.android.build_version'
 
 ### Get all release versions sent to the store for a given release
 
+#### Request
+
 You can either specify a particular branch
 
 ```bash
@@ -77,6 +81,8 @@ curl -H "Authorization: Bearer your-api-key" \
      -H "Accept: application/json" \
      https://tramline.dev/api/v1/releases/<release-id>
 ```
+
+#### Response
 
 This API would respond with a format like this:
 
@@ -122,6 +128,8 @@ jq '.releases.android | map(.build_version)'
 
 
 ### Send custom metadata for a build
+
+#### Request
 
 You can send custom metadata to be displayed on Tramline dashboard about your build. Each metadata should have a unique identifier, and its value can be numerical or textual. The trend of all numeric metadata will be shown on Tramline dashboard.
 
@@ -197,6 +205,7 @@ The `external_metadata` in the request body should adhere to the following schem
 ```
 
 Sample request body:
+
 ```json
 {
     "external_metadata": [
@@ -227,3 +236,7 @@ Sample request body:
     ]
 }
 ```
+
+#### Response
+
+If the schema is valid and the request is successful, the response will be a `200 OK`.

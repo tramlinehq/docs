@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # ⚙️ Integrations
 
 Tramline is designed to seamlessly integrate with the services you already use to manage your app's release. These integrations provide Tramline with valuable data, events, and actions that allow it to create a comprehensive picture of your release train.
