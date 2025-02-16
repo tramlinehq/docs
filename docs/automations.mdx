@@ -98,7 +98,7 @@ When a new commit lands, and if there's already a workflow running for a previou
 ## Apply change queue
 
 :::info
-Enable build queues in your [release train settings](/using-tramline/release-management/release-settings).
+Enable build queues in your [release train settings](/using-tramline/release-management/release-settings#advanced-settings).
 :::
 
 Changes that land on the release branch can optionally be staged in a [Change Queue](/using-tramline/build-processing/build-queue). The change queue gets automatically drained if either the number of changes in the queue exceed the configured limit or if the configured batch-time has passed.
@@ -164,11 +164,11 @@ Enable [Notifications](/using-tramline/quality-and-monitoring/notifications) in 
 
 ### Attach builds
 
-Along with all the available notifications, the "build available" notification specifically attaches the Internal or Release Candidate build as a part of the slack notification. This is helpful for QAs or other folks in the configured Slack channel to quickly download the build for testing.
+Along with all the available notifications, the "build available" notification specifically attaches the Internal or Release Candidate build as a part of the Slack notification. This is helpful for QAs or other folks in the configured Slack channel to quickly download the build for testing.
 
-### Release notes
+### Tester notes
 
-When a new build is available to download from Tramline, we now attach the build to the Slack notification where it can be directly downloaded for testing or other purposes.
+When a new build is available to download from Tramline, in addition to the build itself, Tramline also sends the list of changes that were made for the build (since the last build) in the Slack notification. This tells anyone who is downloading the build what changes were made in it. The same information is also available in the Tramline dashboard.
 
 ## Create VCS tags
 
@@ -204,7 +204,7 @@ When you start a [hotfix release](/using-tramline/special-cases/hotfix), Tramlin
 Add a schedule to your release in the [release train settings](/using-tramline/release-management/release-settings).
 :::
 
-Scheduled releases automatically start a new release on the specified date and retain the schedule for subsequent releases. You can also optionally set a scheduled release to automatically stop on failure.
+[Scheduled releases](/using-tramline/release-management/scheduled-release) automatically start a new release on the specified date and retain the schedule for subsequent releases. You can also optionally set a scheduled release to automatically stop on failure.
 
 Additionally, if your release spans across a future release, the future release gets automatically adjusted.
 
