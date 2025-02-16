@@ -18,7 +18,7 @@ You can read more about version management in [Version Management](/using-tramli
 
 Once the release is started, you will move the release forward the following stages:
 
-1. [**Kickoff**](/using-tramline/working-pane/kickoff) – Overview, changeset tracking and the homepage for the Release Captain
+1. [**Kickoff**](/using-tramline/working-pane/overview) – Overview, changeset tracking and the homepage for the Release Captain
 2. [**Stability**](/using-tramline/working-pane/stability) – Internal builds, RCs, internal(QA) as well as beta testing
 3. [**Preparing for production release**](/using-tramline/working-pane/metadata) – Approvals, release notes, and preparing the release for store review
 4. [**Production rollout**](/using-tramline/working-pane/store-releases) – Rolling out the release to public and monitoring the health of the release
