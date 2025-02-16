@@ -1,9 +1,9 @@
 ---
+id: stability
+title: Stability
+sidebar_label: Stability
 sidebar_position: 3
 ---
-
-# Stability
-
 
 ## Internal builds
 

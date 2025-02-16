@@ -1,5 +1,6 @@
 ---
-sidebar_position: 7
+id: build-number-management
+title: Build Number Management
+sidebar_label: Build Number Management
+sidebar_position: 1
 ---
-
-# Build Number Management

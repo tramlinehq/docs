@@ -1,8 +1,9 @@
 ---
+id: firebase
+title: Firebase App Distribution
+sidebar_label: Firebase App Distribution
 sidebar_position: 3
 ---
-
-# Firebase App Distribution
 
 Navigate to the integrations page for your app and select __Firebase App Distribution__ under the __Distributions__ section on the page.
 

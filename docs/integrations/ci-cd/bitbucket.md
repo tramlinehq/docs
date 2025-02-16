@@ -1,5 +1,6 @@
 ---
-sidebar_position: 3
+id: bitbucket
+title: Bitbucket
+sidebar_label: Bitbucket
+sidebar_position: 2
 ---
-
-# Bitbucket

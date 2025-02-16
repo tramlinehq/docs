@@ -1,8 +1,9 @@
 ---
-sidebar_position: 14
+id: synchronized-release
+title: Synchronized Release
+sidebar_label: Synchronized Release
+sidebar_position: 7
 ---
-
-# Synchronized Release
 
 For teams with apps built in cross-platform stacks like React Native and Flutter, we now support synchronized release trains across both platforms.
 

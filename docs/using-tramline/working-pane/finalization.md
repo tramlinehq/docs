@@ -1,8 +1,9 @@
 ---
+id: finalization
+title: Finalizing the Release
+sidebar_label: Finalizing the Release
 sidebar_position: 8
 ---
-
-# Finalizing the Release
 
 Once the build has been successfully distributed to all channels in the release step, you can finalize your release.
 

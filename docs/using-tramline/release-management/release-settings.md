@@ -1,8 +1,9 @@
 ---
+id: release-settings
+title: Release Settings
+sidebar_label: Release Settings
 sidebar_position: 1
 ---
-
-# Release Settings
 
 Tramline's main building block is the release train. It is designed to emulate the release process followed by your team when shipping apps.
 

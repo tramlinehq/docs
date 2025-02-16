@@ -1,8 +1,9 @@
 ---
-sidebar_position: 16
+id: release-health-monitoring
+title: Release Health Monitoring
+sidebar_label: Release Health Monitoring
+sidebar_position: 3
 ---
-
-# Release Health Monitoring
 
 During the distribution of a release, it's crucial to ensure its health is continuously monitored. This monitoring process involves observing various metrics tracked by a dedicated monitoring tool.
 

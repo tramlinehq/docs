@@ -1,8 +1,9 @@
 ---
-sidebar_position: 15
+id: scheduled-release
+title: Scheduled Release
+sidebar_label: Scheduled Release
+sidebar_position: 6
 ---
-
-# Scheduled Release
 
 Releases can be configured to run on a pre-defined schedule. You can configure this on the **Advanced Settings** tab of the **Release Settings**.
 

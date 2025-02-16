@@ -1,4 +1,11 @@
-# Working Pane
+---
+id: working-pane
+title: Working Pane
+sidebar_label: Working Pane
+sidebar_position: 2
+---
+
+import DocCardList from '@theme/DocCardList';
 
 When you start a new release, this page is your work pane. Everything about the current release is controlled from right here. You will likely spend most of your time in Tramline here.
 
@@ -14,3 +21,7 @@ The work pane is auto-structured into four main sections:
 4. *Store Release*: Managing reviews and rolling out to production.
 
 The tabs are alive — they always track the current state of that section — whether it's in progress, completed or pending. They also automatically get switched over to the most important tab in the current release.
+
+## Jump to
+
+<DocCardList />

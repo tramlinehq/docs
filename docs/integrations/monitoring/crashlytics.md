@@ -1,8 +1,9 @@
 ---
+id: crashlytics
+title: Firebase Crashlytics
+sidebar_label: Firebase Crashlytics
 sidebar_position: 2
 ---
-
-# Firebase Crashlytics
 
 There are two tools in Firebase that collect data from your app: Crashlytics and Google Analytics.
 

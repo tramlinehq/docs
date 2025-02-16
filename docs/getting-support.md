@@ -1,8 +1,9 @@
 ---
+id: getting-support
+title: ☎️ Getting Support
+sidebar_label: ☎️ Getting Support
 sidebar_position: 999
 ---
-
-# ☎️ Getting Support
 
 ## Customers
 

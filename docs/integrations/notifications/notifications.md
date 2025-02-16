@@ -1,8 +1,9 @@
 ---
+id: notifications
+title: Notifications
+sidebar_label: Notifications
 sidebar_position: 3
 ---
-
-# Notifications
 
 Tramline sends significant events in your release life cycle to your configured notification channel.
 

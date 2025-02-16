@@ -1,8 +1,9 @@
 ---
-sidebar_position: 21
+id: build-queue
+title: Change Queue
+sidebar_label: Change Queue
+sidebar_position: 3
 ---
-
-# Change Queue
 
 For large teams, the process of release stabilization often extends over several days. Throughout this period, testers and stakeholders may find themselves inundated with a continuous stream of new builds as bug fixes are incrementally added to the release branch.
 

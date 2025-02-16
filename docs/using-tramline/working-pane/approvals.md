@@ -1,8 +1,9 @@
 ---
+id: approvals
+title: Approvals
+sidebar_label: Approvals
 sidebar_position: 6
 ---
-
-# Approvals
 
 Tramline supports an approvals system that allows you to add high-level approvals from various stakeholders for the release.
 

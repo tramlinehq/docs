@@ -1,8 +1,9 @@
 ---
+id: overview
+title: Overview
+sidebar_label: Overview
 sidebar_position: 1
 ---
-
-# Overview
 
 This tab of the work pane is the default starting tab when the release starts or once it is finished. It summarizes all the information about the release. This summary is dynamic while the release is in progress, but remains frozen once the release is completed.
 

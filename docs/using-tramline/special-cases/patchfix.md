@@ -1,5 +1,6 @@
 ---
-sidebar_position: 11
+id: patchfix
+title: Patchfixes
+sidebar_label: Patchfix
+sidebar_position: 2
 ---
-
-# Patchfixes

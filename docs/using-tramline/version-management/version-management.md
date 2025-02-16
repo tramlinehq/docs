@@ -1,5 +1,10 @@
 ---
-sidebar_position: 6
+id: version-management
+title: Version Management
+sidebar_label: Version Management
+sidebar_position: 3
 ---
 
-# Version Management
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

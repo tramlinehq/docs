@@ -1,8 +1,9 @@
 ---
+id: prepare-release
+title: Prepare for release
+sidebar_label: Prepare for release
 sidebar_position: 3
 ---
-
-# Prepare for release
 
 Once your app and integrations are set up, you can set up your release process.
 

@@ -1,8 +1,9 @@
 ---
+id: setup-integrations
+title: Set up integrations
+sidebar_label: Set up integrations
 sidebar_position: 2
 ---
-
-# Set up integrations
 
 You need a set of core integrations to get started with your releases in Tramline.
 

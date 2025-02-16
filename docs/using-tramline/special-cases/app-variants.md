@@ -1,8 +1,9 @@
 ---
-sidebar_position: 22
+id: app-variants
+title: App Variants
+sidebar_label: App Variants
+sidebar_position: 6
 ---
-
-# App Variants
 
 Tramline supports App Variants which are akin to product flavors or build variants, but with an explicit requirement of having a different bundle identifier.
 

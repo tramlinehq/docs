@@ -1,8 +1,9 @@
 ---
-sidebar_position: 12
+id: hotfix
+title: Hotfixes
+sidebar_label: Hotfix
+sidebar_position: 1
 ---
-
-# Hotfixes
 
 Most people want to avoid hotfixes entirely, but when push comes to shove, you don't want your regular release processes to become shackles.
 

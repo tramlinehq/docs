@@ -1,8 +1,9 @@
 ---
+id: store-releases
+title: Store Releases
+sidebar_label: Store Releases
 sidebar_position: 7
 ---
-
-# Store Releases
 
 The production release across both stores in handled by Tramline slightly differently due to the different processes of these stores.
 

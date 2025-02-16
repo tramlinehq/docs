@@ -1,8 +1,9 @@
 ---
+id: play-store
+title: Google Play Console
+sidebar_label: Google Play Console
 sidebar_position: 2
 ---
-
-# Google Play Console
 
 Navigate to the integrations page for your app and select __Google Play Store__ under the __Distributions__ section on the page.
 

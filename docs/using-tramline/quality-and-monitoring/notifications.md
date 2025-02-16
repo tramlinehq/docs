@@ -1,8 +1,9 @@
 ---
-sidebar_position: 18
+id: notifications
+title: Notifications
+sidebar_label: Notifications
+sidebar_position: 2
 ---
-
-# Notifications
 
 Not everyone in your team is the correct audience for all release-related notifications. Tramline allows you to configure which notifications you want, and what all channels do they need to go in the **Notification Settings** tab for each of your **Release Settings**.
 

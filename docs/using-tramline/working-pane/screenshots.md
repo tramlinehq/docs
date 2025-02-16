@@ -1,8 +1,9 @@
 ---
+id: screenshots
+title: Screenshots
+sidebar_label: Screenshots
 sidebar_position: 5
 ---
-
-# Screenshots
 
 :::info
 

@@ -1,8 +1,9 @@
 ---
-sidebar_position: 23
+id: cascading-rollout
+title: Cascading Rollout
+sidebar_label: Cascading Rollout
+sidebar_position: 5
 ---
-
-# Cascading Rollout
 
 With Google Play Console, when you update your rollout to a 100%, it is not possible to halt it, even if in reality the actual rollout hasn't farmed out to all of the 100% of users yet.
 

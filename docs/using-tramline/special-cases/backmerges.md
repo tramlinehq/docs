@@ -1,9 +1,9 @@
 ---
-sidebar_position: 13
+id: backmerges
+title: Backmerges
+sidebar_label: Backmerges
+sidebar_position: 4
 ---
-
-# Backmerges
-
 
 ## Continuous Backmerge
  By default, Tramline only merges changes made in the release branch back into your working branch towards the end of a release. For teams who end up with a lot of changes in their release branch, it is essential to get new changes back as quickly as possible. Doing this avoids both merge hells at the end and hands control over to individuals to ensure they are merging their changes back.

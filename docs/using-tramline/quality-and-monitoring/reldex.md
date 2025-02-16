@@ -1,8 +1,9 @@
 ---
+id: reldex
+title: Reldex (Release Score)
+sidebar_label: Reldex (Release Score)
 sidebar_position: 4
 ---
-
-# 🌡️ Reldex (Release Score)
 
 Release Score or Reldex – Release Process Index – is a quantitative metric that measures the efficacy of your mobile release process.
 Like [Apdex](https://en.wikipedia.org/wiki/Apdex), it breaks down various measurements and insights from your release into a single score between 0 and 1.

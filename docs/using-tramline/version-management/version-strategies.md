@@ -1,5 +1,6 @@
 ---
-sidebar_position: 10
+id: version-strategies
+title: Version Strategies
+sidebar_label: Version Strategies
+sidebar_position: 2
 ---
-
-# Version Strategies

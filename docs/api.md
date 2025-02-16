@@ -1,8 +1,9 @@
 ---
-sidebar_position: 8
+id: api
+title: 🧪 Tramline API
+sidebar_label: 🧪 Tramline API
+sidebar_position: 7
 ---
-
-# 🧪 Tramline API
 
 Tramline currently exposes 3 API endpoints to fetch release information and to send custom build metadata. Before you start, you need your API credentials to make requests. To get these click on **Organization Settings** in the top navbar:
 

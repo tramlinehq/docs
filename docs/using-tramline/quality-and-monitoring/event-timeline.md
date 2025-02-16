@@ -1,8 +1,9 @@
 ---
-sidebar_position: 17
+id: event-timeline
+title: Release Activity
+sidebar_label: Release Activity
+sidebar_position: 1
 ---
-
-# Event Timeline
 
 From the Live Release page, you can head over to the Event Timeline page.
 

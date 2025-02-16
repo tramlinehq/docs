@@ -1,8 +1,9 @@
 ---
+id: invite-team
+title: Invite your team
+sidebar_label: Invite your team
 sidebar_position: 5
 ---
-
-# Invite your team
 
 Invite your team members to join the Tramline workspace so they can collaborate on the releases with you.
 

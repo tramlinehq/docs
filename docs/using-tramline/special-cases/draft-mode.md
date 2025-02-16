@@ -1,8 +1,9 @@
 ---
-sidebar_position: 25
+id: draft-mode
+title: App Draft Mode
+sidebar_label: App Draft Mode
+sidebar_position: 7
 ---
-
-# App Draft Mode
 
 Users shipping brand new apps to Play Store for the very first time often face issues releasing to public channels. This is because the Play Store requires one to make an initial deploy manually before using the APIs.
 

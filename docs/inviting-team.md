@@ -1,8 +1,9 @@
 ---
-sidebar_position: 7
+id: inviting-team
+title: 👫 Team & Membership
+sidebar_label: 👫 Team & Membership
+sidebar_position: 6
 ---
-
-# 👫 Team & Membership
 
 Tramline currently supports inviting new users as either developers or viewers. The primary owner of the organization has roughly the same permissions as a developer in addition to managing billing.
 

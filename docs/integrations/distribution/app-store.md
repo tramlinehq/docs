@@ -1,8 +1,9 @@
 ---
+id: app-store
+title: App Store Connect
+sidebar_label: App Store Connect
 sidebar_position: 0
 ---
-
-# App Store Connect
 
 :::info
 For both TestFlight and App Store, you only need to add the integration once.

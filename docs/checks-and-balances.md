@@ -1,8 +1,9 @@
 ---
-sidebar_position: 6
+id: checks-and-balances
+title: 💰 Checks & Balances
+sidebar_label: 💰 Checks & Balances
+sidebar_position: 5
 ---
-
-# 💰 Checks & Balances
 
 Tramline has a variety of important checks that help ensure that minimum-to-no human errors are made during a release. This isn't just a list of [automations](/automations) that you get or you can enable, but a set of fundamental constraints enforced by the system.
 

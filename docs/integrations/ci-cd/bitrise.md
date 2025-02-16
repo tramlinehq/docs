@@ -1,8 +1,9 @@
 ---
+id: bitrise
+title: Bitrise
+sidebar_label: Bitrise
 sidebar_position: 1
 ---
-
-# Bitrise
 
 Navigate to the integrations page for your app and select __Bitrise__ under the __Build Servers__ section on the page.
 

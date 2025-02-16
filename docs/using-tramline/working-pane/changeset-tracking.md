@@ -1,8 +1,9 @@
 ---
+id: changeset-tracking
+title: Changeset Tracking
+sidebar_label: Changeset Tracking
 sidebar_position: 2
 ---
-
-# Changeset Tracking
 
 There is one dedicated page to track all the commits, PRs and changes going into the release.
 There are five sections to this page:

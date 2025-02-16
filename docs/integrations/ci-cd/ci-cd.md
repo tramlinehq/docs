@@ -1,8 +1,9 @@
 ---
+id: ci-cd
+title: Build Servers (CI/CD)
+sidebar_label: Build Servers (CI/CD)
 sidebar_position: 1
 ---
-
-# Build Servers (CI/CD)
 
 :::tip
 [Contact us](/getting-support) and we'll help you get setup, including your Continuous Integration (CI) workflow.

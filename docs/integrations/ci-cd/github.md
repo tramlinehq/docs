@@ -1,8 +1,9 @@
 ---
+id: github
+title: GitHub Actions
+sidebar_label: GitHub Actions
 sidebar_position: 0
 ---
-
-# GitHub Actions
 
 :::caution
 In order to connect this integration, you'll need to be logged in to GitHub as an admin/owner of the organization where your repository is located.

@@ -1,8 +1,9 @@
 ---
+id: start-release
+title: Start the release
+sidebar_label: Start the release
 sidebar_position: 4
 ---
-
-# Start the release
 
 Once you have reviewed the submission settings, you can start a new release by using the **Prepare New Release** button in the top right corner of your home page.
 

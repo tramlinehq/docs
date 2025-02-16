@@ -1,8 +1,9 @@
 ---
-sidebar_position: 8
+id: upcoming-release
+title: Upcoming Release
+sidebar_label: Upcoming Release
+sidebar_position: 5
 ---
-
-# Upcoming Release
 
 You can start ramping up a new release before your current release finishes. This allows you to cut back on the additional time spent waiting for a full phased rollout to complete in the current release and start stabilizing new features on the working branch.
 
