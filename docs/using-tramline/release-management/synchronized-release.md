@@ -5,6 +5,8 @@ sidebar_label: Synchronized Release
 sidebar_position: 7
 ---
 
+![](/img/cross-platform-release-example.png)
+
 For teams with apps built in cross-platform stacks like React Native and Flutter, we now support synchronized release trains across both platforms.
 
 - This allows teams to run their releases from a single branch.

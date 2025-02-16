@@ -9,4 +9,4 @@ You can start ramping up a new release before your current release finishes. Thi
 
 This feature is only available when you have production release enabled in your release settings.
 
-<!-- ![Upcoming Release](/img/upcoming-release.png) -->
+![](/img/upcoming-release-section.png)
