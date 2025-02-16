@@ -20,4 +20,4 @@ With the option of **Automatic stop on failure** under scheduled releases, Traml
 
 ![](/img/scheduled-release-auto-stop.png)
 
-Please note that only releases that in failure state will be stopped. If you have a running successful release, Tramline will start an [upcoming release](/using-tramline/upcoming-release) instead of stopping the ongoing one.
+Please note that only releases that in failure state will be stopped. If you have a running successful release, Tramline will start an [upcoming release](/using-tramline/release-management/upcoming-release) instead of stopping the ongoing one.

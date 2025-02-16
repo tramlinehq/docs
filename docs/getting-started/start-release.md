@@ -12,7 +12,7 @@ This will open a new modal that will guide you to choose the correct version for
 
 The first release will use the seed version that you configured in the release settings and use that as a base to create the next version. The next version can be a minor or major version bmp as per your selection. You can also choose to provide a custom version, if you want. Tramline will auto-correct the next version for the next release based on this custom version.
 
-You can read more about version management in [Version Management](/using-tramline/version-management/version-management).
+You can read more about version management in [Version Management](/using-tramline/version-management).
 
 ## Live Release
 

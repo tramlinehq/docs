@@ -16,4 +16,4 @@ Release Captain can also log any special notes around the release in the Captain
 
 As soon the release is started, a new branch is created from the main branch. This branch is named after the release and is used for all the work related to the release.
 
-Depending on your [branching strategy](/using-tramline/branching-strategy.md) used, the release branch might be a long-running branch or a special branch created just for that particular release.
+Depending on your [branching strategy](/using-tramline/release-management/branching-strategies) used, the release branch might be a long-running branch or a special branch created just for that particular release.
