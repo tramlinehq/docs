@@ -130,20 +130,31 @@ Every build created generated through Tramline always has a unique build number.
 :::tip
 This is applicable for all [branching strategies](/using-tramline/release-management/branching-strategies).
 :::
+:::tip
+Tramline will always automatically try to merge (not just create) all PRs that are created by Tramline, whenever possible (depending on required checks etc.).
+:::
 
-Tramline ensures that the code that's added to a release branch is always merged back into the working branch. It can be done in two ways:
 
-### PR at the end of a release
 
-This is the default setting. When your release is done, and if there are any fix commits that are in the release branch, Tramline will automatically open a pull request (and merge if possible) back to the working branch.
+Tramline can automatically backmerge changes from the release branch to your working branch and any upcoming release branches. There are two backmerge strategy options available.
 
-### Continuously cherry-pick commits
+### Continuously as changes land
+
+Any PRs or commits merged into the release branch will be "backmerged" into the working branch. As new changes land, this process repeats so that the working branch is always up to date with the release branch. This is helpful for teams that do a number of fixes directly on the release branch so that the code is merged back to the "trunk" as _quickly_ as possible.
 
 :::info
 Depending on the [VCS integration](/integrations/version-control), the way cherry-picks happen have will slight variations.
 :::
 
-When this is enabled, Tramline will continuously merge code back for every commit (or set of commits) that lands on the release branch. This is helpful for teams that do a number of fixes directly on the release branch so that the code is merged back to the "trunk" as _quickly_ as possible.
+These running PRs created by Tramline are sometimes referred to as _Patch PRs_. These PRs get also get assigned to the original authors of the relevant change/commit.
+
+### End of release
+
+:::info
+A backmerge branch will only be created if commits are found on the release branch that are not on the working branch.
+:::
+
+At the end of the release cycle, Tramline will create a backmerge branch and open a pull request to merge the release branch back into the working branch and also to any upcoming release branch.
 
 ## Notifications
 

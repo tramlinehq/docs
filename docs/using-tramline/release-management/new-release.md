@@ -15,12 +15,12 @@ When you prepare a new release from the top-right button in your releases page. 
 
 The very first release you create, uses the seed version that you configured in the [release settings](/using-tramline/release-management/release-settings) and use that as a base to create the next version. Subsequent versions, depending on the option you select will correctly increment the version based on the [versioning strategy](/using-tramline/version-management) used – minor, major or custom.
 
-:::note
+:::info
 
 If you're using the [Almost Trunk](/using-tramline/release-management/branching-strategies#almost-trunk) branching strategy, you will also see a note at the top that informs you of the release branch that will automatically be created when you start a new release.
 :::
 
-:::note
+:::info
 If you pick the custom version option, Tramline will auto-correct the next minor or major version for the next release based on this custom version.
 :::
 
