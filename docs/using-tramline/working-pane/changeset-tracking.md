@@ -15,15 +15,3 @@ There are five sections to this page:
 5. **Pending backmerges** - Continuous backmerge PRs for each of the release branch changes that are not yet merged to the working branch.
 
 There is a flow of change from Ongoing work ➡ Change queue ➡ Latest applied commits.
-
-## Ongoing work
-
-We now track all the PRs that you create against the release branch during a release. This serves as a solid foundation for us to start tracking behavioural and process-related aspects around shipping code during a release.
-
-Currently, we display all PRs (along with their labels), emphasizing those that haven't been merged yet. With this system in place, we can soon start gathering information, such as PRs that caused delays in a release or the size of commit diffs that were shipped after a release had already commenced.
-
-## Change queue
-
-## Applied commits
-
-## Pending backmerges

@@ -12,4 +12,4 @@ You can update release-related metadata prior to initiating your production stor
 
 Tramline will add some sensible defaults for these for your benefit.
 
-![](/img/release-metadata.png)
+<!-- ![](/img/release-metadata.png) -->
