@@ -97,7 +97,7 @@ MAJOR = Non-zero-padded sequence number
 1.2.3
 ```
 
-This isn't a full-fledged strategy per se, but rather an omission of the patch number. When you're [setting up your release](/using-tramline/release-management/release-settings), and you omit the patch value, we assume that you want versioning based on partial SemVer. This can technically be overridden if you make a [custom release](/using-tramline/release-management/new-release) with a proper SemVer version. The next release from there on out, will be **not** assume a partial SemVer strategy.
+Partial SemVer always updates `<MINOR|PATCH>` part of the version for both a minor bump and patch bump (in case of a [patchfix](/using-tramline/special-cases/patchfix) or a [hotfix](/using-tramline/special-cases/hotfix)). This isn't a full-fledged strategy per se, but rather an omission of the patch number. When you're [setting up your release](/using-tramline/release-management/release-settings), and you omit the patch value, we assume that you want versioning based on partial SemVer. This can technically be overridden if you make a [custom release](/using-tramline/release-management/new-release) with a proper SemVer version. The next release from there on out, will be **not** assume a partial SemVer strategy.
 
 #### Correcting Versions
 
