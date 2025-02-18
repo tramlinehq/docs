@@ -1,0 +1,12 @@
+{
+  "position": 1,
+  "collapsed": false,
+  "label": "🚀 Getting Started",
+  "link": {
+    "type": "generated-index",
+    "title": "Getting Started"
+  },
+  "customProps": {
+    "description": "Quick guide to getting started with Tramline"
+  }
+}

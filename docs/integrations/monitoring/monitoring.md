@@ -1,8 +1,9 @@
 ---
+id: monitoring
+title: Monitoring and Analytics
+sidebar_label: Monitoring and Analytics
 sidebar_position: 4
 ---
-
-# Monitoring and Analytics
 
 Tramline gathers release health metrics from your bug tracking and monitoring systems to give a cohesive picture of your release health.
 

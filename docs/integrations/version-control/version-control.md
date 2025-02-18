@@ -1,8 +1,9 @@
 ---
+id: version-control
+title: Version Control
+sidebar_label: Version Control
 sidebar_position: 0
 ---
-
-# Version Control
 
 ### Supported integrations
 

@@ -1,8 +1,9 @@
 ---
+id: bugsnag
+title: Bugsnag
+sidebar_label: Bugsnag
 sidebar_position: 1
 ---
-
-# Bugsnag
 
 Navigate to the integrations page for your app and select __Bugsnag__ under the __Monitoring and Analytics__ section on the page.
 
