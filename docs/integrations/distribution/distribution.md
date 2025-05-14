@@ -1,8 +1,9 @@
 ---
+id: distribution
+title: Build Distribution
+sidebar_label: Build Distribution
 sidebar_position: 2
 ---
-
-# Build Distribution
 
 Tramline distributes your app to the distribution channels you have configured. These channels can vary from a Slack channel to beta groups in app stores and production tracks.
 
@@ -12,9 +13,8 @@ For Android apps, Tramline keeps a copy your release build in its system. It upl
 
 ### Supported integrations
 
-- [Google Play Console](play_store)
+- [Google Play Console](play-store)
 - [Firebase App Distribution](firebase)
-- [Slack](slack)
 
 ## iOS
 
@@ -23,5 +23,5 @@ For iOS apps, Tramline currently expects the build to be present in App Store Co
 ### Supported integrations
 
 - [TestFlight](testflight)
-- [App Store](app_store)
+- [App Store](app-store)
 - [Firebase App Distribution](firebase)

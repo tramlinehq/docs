@@ -1,8 +1,9 @@
 ---
+id: testflight
+title: TestFlight
+sidebar_label: TestFlight
 sidebar_position: 1
 ---
-
-# TestFlight
 
 :::info
 For both TestFlight and App Store, you only need to add the integration once.
