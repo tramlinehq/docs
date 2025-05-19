@@ -15,7 +15,7 @@ authors:
 
 ### Release Health Monitoring – Firebase Crashlytics
 
-Tramline [continously monitors](/using-tramline/release-health-monitoring) the release health of an app by listening to signals and metrics from dedicated monitoring tools and condensing them down through a release lens. Along with Bugsnag, we now also support Firebase Crashlytics.
+Tramline [continously monitors](/using-tramline/quality-and-monitoring/release-health-monitoring) the release health of an app by listening to signals and metrics from dedicated monitoring tools and condensing them down through a release lens. Along with Bugsnag, we now also support Firebase Crashlytics.
 
 This integration works by internally [integrating](/integrations/monitoring/crashlytics) with two tools: Google Analytics and Crashlytics itself.
 
