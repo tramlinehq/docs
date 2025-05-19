@@ -1,8 +1,9 @@
 ---
+id: slack
+title: Slack
+sidebar_label: Slack
 sidebar_position: 0
 ---
-
-# Slack
 
 :::caution
 In order to connect this integration, you'll need to be logged in to Slack as an admin/owner of the workspace.

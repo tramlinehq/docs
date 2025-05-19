@@ -15,13 +15,31 @@
   --ifm-color-primary-lightest: #f6ffdb;
   --ifm-breadcrumb-item-background-active: #f4f4f4;
   --ifm-code-font-size: 90%;
-  --ifm-font-size-base: 16px;
-  --ifm-font-family-base: objektiv-mk1, sans-serif;
+  --ifm-font-size-base: 1rem;
+  --ifm-font-weight-base: 400;
+  --ifm-font-weight-bold: 600;
+  --ifm-font-family-base: sarvatrik-latin-variable, sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --changelog-item-bg: url("data:image/svg+xml,%3Csvg width='12' height='2' viewBox='0 0 14 1' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='0.5' x2='14' y2='0.5' stroke='%235E6AD2'/%3E%3C/svg%3E%0A");
+}
+
+p code,
+li code,
+td code {
+  padding: 0px 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.05rem solid rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--ifm-code-background);
+  border-radius: 0.2rem;
+  font-size: 0.875em;
+  line-height: calc(max(1.2em, 1.25rem));
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -94,7 +112,6 @@
 
 /* smaller screens */
 @media only screen and (max-width: 996px) {
-
   /* fix the navbar */
   .navbar .navbar__title {
     font-size: 12px;
@@ -123,7 +140,6 @@
 
 /* adjust overall spacing between things */
 @media screen and (min-width: 780px) {
-
   /* fix the navbar */
   .navbar .navbar__title {
     font-size: 15px;
@@ -136,8 +152,11 @@
   h1 {
     font-size: 2.6rem;
   }
-}
 
+  .theme-doc-sidebar-container {
+    margin-bottom: 2rem;
+  }
+}
 
 /* adjust overall spacing between things */
 @media screen and (min-width: 996px) {
@@ -152,7 +171,6 @@
 
 /* for large screens */
 @media (min-width: 1416px) {
-
   /* reduce container width */
   .main-wrapper {
     max-width: 1400px;
@@ -166,6 +184,7 @@
   }
 }
 
+/* changelog */
 .changelog-item-override {
   border-bottom: 1px dashed lightgrey;
   margin-top: 3rem;
@@ -183,7 +202,7 @@
 .changelog-item-override .markdown li {
   margin: 0px 0px 8px;
   list-style: none;
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='2' viewBox='0 0 14 1' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='0.5' x2='14' y2='0.5' stroke='%235E6AD2'/%3E%3C/svg%3E%0A");
+  background-image: var(--changelog-item-bg);
   background-repeat: no-repeat;
   background-position: 0px 0.8em;
   padding-left: 22px;
@@ -191,4 +210,22 @@
 
 [class^="sidebarItemList"] {
   text-align: right;
+}
+
+/* add borders to images, ignore the changelog images */
+.markdown img {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.docusaurus-content img {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.changelog-item-override img {
+  padding: 0px;
+  border: none;
 }

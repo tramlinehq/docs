@@ -1,13 +1,13 @@
 ---
+id: github
+title: GitHub
+sidebar_label: GitHub
 sidebar_position: 0
 ---
-
-# GitHub
 
 :::caution
 In order to connect this integration, you'll need to be logged in to GitHub as an admin/owner of the organization where your repository is located.
 :::
-
 
 Navigate to the integrations page for your app and select __GitHub__ under the __Version Control__ section on the page.
 
