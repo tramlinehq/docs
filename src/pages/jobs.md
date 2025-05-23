@@ -19,8 +19,6 @@ The previously listed **Founding Engineer** position is now closed. We're now lo
 
 You will be joining as a Lead Engineer at [Tramline](https://tramline.app), and be responsible for everything on the technical side of things. You will work with the founding team on a daily basis, discuss new features, changes and improvements, new hiring, and full financial transparency!
 
-This role can also be a path to a senior engineering role if that is something you desire.
-
 :::note
 
 This is a remote position and you'll be joining as a full-time contractor. We're primarily looking at candidates from India, but we're open to timezones within +/-4 hours of India.
