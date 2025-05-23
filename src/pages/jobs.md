@@ -60,8 +60,8 @@ The current architecture is a Ruby on Rails monolith that does all the lifting. 
 
 We’re looking for someone who →
 
-* has 3+ years of total experience
-* has 1+ years of experience writing Ruby & Rails
+* has 3-4+ years of total experience
+* has 1-2+ years of experience writing Ruby & Rails
 * understands Rails conventions and design principles (service objects, decorators, etc.)
 * understands ActiveRecord, indexes, and caching well
 * has launched and maintained production Rails apps
