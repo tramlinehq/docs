@@ -28,7 +28,7 @@ This is a remote position and you'll be joining as a full-time contractor. We're
 
 ## What is Tramline?
 
-Tramline is a DevOps platform for mobile apps that lets you codify, coordinate, and automate your entire app release process. Tramline is already used by industry-leading fintech mobile teams like [Groww](https://groww.in/), OTT platforms like [Stage](https://www.stage.in), and big banks in SEA to ship their apps.
+Tramline is a DevOps platform for mobile apps that lets you codify, coordinate, and automate your entire app release process. Tramline is already used by industry-leading fintech mobile teams like [Groww](https://groww.in/), OTT platforms like [Stage](https://www.stage.in), and fintech companies like [Kredivo](https://kredivocorp.com) to ship their apps.
 
 ### Who are we?
 
