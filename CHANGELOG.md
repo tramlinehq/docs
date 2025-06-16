@@ -1,6 +1,6 @@
 # Tramline Changelog
 
-## 0.0.25-2f5446 (2025-06-11)
+## 0.0.25-8da9be (2025-06-11)
 
 ![](../../static/img/changelog/version-bumps.png)
 
