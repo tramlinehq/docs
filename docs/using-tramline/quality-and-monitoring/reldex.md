@@ -31,9 +31,9 @@ Each component of the release is scored with the following score as per the tole
 
 | Component Value         | Component outcome | Component score |
 | ----------------------- | ----------------- | --------------- |
-| >= Acceptable Range     | Excellent         | 1               |
+| \>= Acceptable Range     | Excellent         | 1               |
 | Within Acceptable Range | Acceptable        | 0.5             |
-| <= Acceptable Range     | Mediocre          | 0               |
+| \<= Acceptable Range     | Mediocre          | 0               |
 
 Weightage for a component can be set to 0 to denote no contribution to the overall release score.
 
@@ -51,9 +51,9 @@ The reldex can then be defined as `Excellent`, `Acceptable`, or `Mediocre` as pe
 
 | Range              | Grade      |
 | ------------------ | ---------- |
-| reldex >= 0.8      | Excellent  |
-| 0.5 < reldex < 0.8 | Acceptable |
-| reldex <= 0.5      | Mediocre   |
+| reldex \>= 0.8      | Excellent  |
+| 0.5 \< reldex \< 0.8 | Acceptable |
+| reldex \<= 0.5      | Mediocre   |
 
 This is the final grading of the release.
 

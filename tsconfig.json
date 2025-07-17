@@ -1,0 +1,18 @@
+{
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@theme/*": ["src/theme/*"],
+      "@generated/*": [".docusaurus/*"],
+      "@docusaurus/*": ["node_modules/@docusaurus/*"],
+      "@site/*": ["*"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "docs/**/*",
+    "docusaurus.config.js",
+    "sidebars.js"
+  ]
+}

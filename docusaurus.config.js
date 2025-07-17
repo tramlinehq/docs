@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const {themes} = require('prism-react-renderer');
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -58,7 +59,7 @@ const config = {
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
     [
-      require.resolve("./src/plugins/changelog/index.js"),
+      require.resolve("./src/plugins/changelog/index.ts"),
       {
         blogTitle: "Changelog",
         blogDescription:
