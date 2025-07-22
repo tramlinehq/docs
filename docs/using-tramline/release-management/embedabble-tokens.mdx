@@ -1,0 +1,53 @@
+---
+id: embeddable-tokens
+title: Embeddable Tokens
+sidebar_label: Embeddable Tokens
+sidebar_position: 8
+---
+
+Tramline has pre-configured ‘tokens’ to allow for dynamic values in things like:&#x20;
+
+* [Branch names](branching-strategies)
+* [Tag names](/automations#create-vcs-tags)
+* **Issue filters (e.g. Jira fix versions or labels)**
+
+When configuring Tramline, in a variety of places, you'd be able to specify these tokens to dynamically inject values at different lifecycle points of a release (or even non-release situations). The tokens are wrapped between `~` and `~` to allow for easy identification and to not conflict with other known tokens or characters. The token name itself is always written in camelCase.
+
+## **Available token types**
+
+* **~releaseVersion~** three-segment SemVer or CalVer
+  * Example: `1.2.3`
+* **~releaseStartDate~** date when the release started formatted as `YYYY-MM-DD`
+  * Example: `2025-07-22`
+  * Example: `2025-02-28`
+* **~trainName~** parameterized / url-friendly name of the train
+  * Example: `production`
+  * Example: `release_ios`
+* **~buildNumber~** version code or build number of the current build
+  * Example: `1`
+  * Example: `214000`
+
+## Usage
+
+:::info
+Tokens are currently only supported in release branch names when configuring a train. They will be supported soon for all kinds of branches, tags and issue filters (eg. Jira release labels or fix versions).
+:::
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="branches" label="Branches" default>
+    <strong>Required: </strong>None, tramline has defaults<br/>
+    <strong>Allowed: </strong><code>~releaseVersion~</code>, <code>~releaseStartDate~</code>, <code>~trainName~</code><br/>
+    <strong>Not allowed: </strong><code>~buildNumber~</code>
+  </TabItem>
+
+  <TabItem value="tags" label="Tags">
+    🚧 This functionality is a work-in progress and will be available soon! 🚀
+  </TabItem>
+
+  <TabItem value="issue_filters" label="Issue Filters">
+    🚧 This functionality is a work-in progress and will be available soon! 🚀
+  </TabItem>
+</Tabs>
