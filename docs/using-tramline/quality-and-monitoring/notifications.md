@@ -59,7 +59,10 @@ If you feel that your team doesn't require any notifications, as everyone is alr
 This section is currently only relevant for [Slack](/integrations/notifications/slack) notifications.
 :::
 
-Tramline offers adding custom input to each notification, so you can extend it to add additional links, tags users, tag groups, notify the channel and generally tune it to be more personalized. The custom content is appended to the main notification message. You can also use the custom content to link and tag references in Slack
+Tramline offers adding custom input to each notification, so you can extend it to add additional links, tags users, tag groups, notify the channel and generally tune it to be more personalized. The custom content is appended to the main notification message.
+
+<img src="/img/slack-formatting-example-input.png" alt="Slack formatting input" width="400"/>
+<img src="/img/slack-formatting-example-output.png" alt="Slack formatting output" width="600"/>
 
 ### Tagging users
 
@@ -92,10 +95,10 @@ The following basic [text formatting](https://slack.com/intl/en-in/help/articles
 
 | Formatting | Description |
 |------------|-------------|
-| *bold*   | Bold text    |
-| _italics_  | Italics      |
-| ~strikethrough~ | Strike-through |
-| `code`     | Code block   |
-| ```text``` | Multi-line code block   |
+| \*bold\*   | Bold text    |
+| \_italics\_  | Italics      |
+| \~strikethrough\~ | Strikethrough |
+| \`code\`     | Code block   |
+| \`\`\`text\`\`\` | Multi-line code block   |
 
 Formatting bulleted lists and numbered lists is not supported.
