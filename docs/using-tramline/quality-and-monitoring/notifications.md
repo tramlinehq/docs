@@ -85,3 +85,17 @@ Linking channels don't have any limitations, you can type out the channel name l
 ### Adding hyperlinks
 
 Adding hyperlinks to notifications can also be normally inserted by just pasting the link in the custom content input. It will get hyperlinked in the notification message.
+
+### Text formatting
+
+The following basic [text formatting](https://slack.com/intl/en-in/help/articles/202288908-Format-your-messages) options are also directly supported:
+
+| Formatting | Description |
+|------------|-------------|
+| *bold*   | Bold text    |
+| _italics_  | Italics      |
+| ~strikethrough~ | Strike-through |
+| `code`     | Code block   |
+| ```text``` | Multi-line code block   |
+
+Formatting bulleted lists and numbered lists is not supported.
