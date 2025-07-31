@@ -11,7 +11,7 @@ Tramline currently exposes 3 API endpoints to fetch release information and to s
 
 Under the **Settings** tab, inside the **API** section, you will find the `Account ID` and the `API key` that will be used later for all API calls.
 
-<p><img src="/img/api-settings.png" width="400" height="400"/></p>
+<p><img src="/img/api-settings.png" width="400" /></p>
 
 :::info
 Only a user with owner or developer privileges can view these API settings.

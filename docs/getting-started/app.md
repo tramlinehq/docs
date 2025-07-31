@@ -7,7 +7,7 @@ sidebar_position: 0
 
 To kick things off, add your first app.
 
-<p><img height="500" src="/img/add-first-app.png" width="500"/></p>
+<p><img src="/img/add-first-app.png" width="500"/></p>
 
 You will need the following details to create your app.
 

@@ -26,14 +26,14 @@ The full setup involves the following steps:
 
 Once you've properly setup a service account with Firebase App Distribution Admin role, all that is left to be done is upload the service account JSON key file into Tramline.
 
-<img height="500" src="/img/firebase-connect.png" width="500"/>
+<img src="/img/firebase-connect.png" width="500"/>
 
 Along with the service account JSON key, you will also need to add Project Number and App ID for your app in Firebase. You can find them in your Firebase Console.
 
 Project Number:
-<img height="500" src="/img/firebase-project-number.png" width="500"/>
+<img src="/img/firebase-project-number.png" width="500"/>
 
 App ID:
-<img height="500" src="/img/firebase-app-id.png" width="500"/>
+<img src="/img/firebase-app-id.png" width="500"/>
 
 When you click *Create* after uploading the JSON key file, Tramline will verify that the integration is working correctly by connecting to your project and app on Firebase.

@@ -13,7 +13,7 @@ If you're a customer — in trial or paid — you can always drop us an email at
 
 Use the support chat inside Tramline itself. Check the bottom right corner of your screen, for the blue colored button. The chat bubble will show our typical response times.
 
-<p><img src="/img/support-location.png" width="200" height="200"/></p>
+<p><img src="/img/support-location.png" width="200" /></p>
 
 #### Shared Slack channel
 

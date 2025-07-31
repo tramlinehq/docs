@@ -78,6 +78,6 @@ These steps can only be done by the owner of the Play Console account. If you're
 
 Once you've properly setup things in both, Google Play Console and Google Cloud Console, all that is left to be done is upload the service account JSON key file into Tramline.
 
-<img height="500" src="/img/play-store-connect.png" width="500"/>
+<img src="/img/play-store-connect.png" width="500"/>
 
 When you click *Create* after uploading the JSON key file, Tramline will verify that the integration is working correctly by checking for any releases or bundles with the [bundle identifier that you would have specified](/getting-started/app) while adding the app.
