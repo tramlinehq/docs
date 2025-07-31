@@ -7,13 +7,13 @@ This documentation website is built using [Docusaurus 3](https://docusaurus.io/)
 ### Installation
 
 ```
-$ yarn
+$ npm install
 ```
 
 ### Local Development
 
 ```
-$ yarn start
+$ npm start
 ```
 
 This command starts a local development server (on port 3001) and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -21,7 +21,7 @@ This command starts a local development server (on port 3001) and opens up a bro
 ### Build
 
 ```
-$ yarn build
+$ npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
