@@ -5,21 +5,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, {useState} from 'react';
-import clsx from 'clsx';
-import {useBlogPost} from '@docusaurus/theme-common/internal';
-import ChangelogItemHeaderAuthor from '@theme/ChangelogItem/Header/Author';
-import IconExpand from '@theme/Icon/Expand';
-import type {Props} from '@theme/BlogPostItem/Header/Authors';
+import React, { useState } from "react";
+import clsx from "clsx";
+import { useBlogPost } from "@docusaurus/plugin-content-blog/client";
+import ChangelogItemHeaderAuthor from "@theme/ChangelogItem/Header/Author";
+import IconExpand from "@theme/Icon/Expand";
+import type { Props } from "@theme/BlogPostItem/Header/Authors";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 // Component responsible for the authors layout
 export default function BlogPostAuthors({
   className,
 }: Props): JSX.Element | null {
   const {
-    metadata: {authors},
+    metadata: { authors },
     assets,
   } = useBlogPost();
   const [expanded, setExpanded] = useState(false);
@@ -31,10 +31,11 @@ export default function BlogPostAuthors({
   return (
     <div
       className={clsx(
-        'margin-top--md margin-bottom--sm',
+        "margin-top--md margin-bottom--sm",
         styles.imageOnlyAuthorRow,
         className,
-      )}>
+      )}
+    >
       {filteredAuthors.map((author, idx) => (
         <div className={styles.imageOnlyAuthorCol} key={idx}>
           <ChangelogItemHeaderAuthor
@@ -48,10 +49,11 @@ export default function BlogPostAuthors({
       ))}
       {authors.length > 10 && (
         <button
-          className={clsx('clean-btn', styles.toggleButton)}
+          className={clsx("clean-btn", styles.toggleButton)}
           type="button"
           onClick={() => setExpanded((v) => !v)}
-          aria-label="expand">
+          aria-label="expand"
+        >
           <IconExpand expanded={expanded} />
         </button>
       )}

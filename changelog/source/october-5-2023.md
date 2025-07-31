@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2023-10-05T20:00
 authors:
   - 'kitallis'
@@ -52,4 +54,8 @@ If you feel that your team doesn't require any notifications, as everyone is alr
 - Fix the upcoming release flow to manage version bump correctly across the platforms when the ongoing release creates a new store version
 
 </details>
+
+
+
+<!-- truncate -->
 

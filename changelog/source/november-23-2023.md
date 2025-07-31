@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2023-11-23T20:00
 authors:
   - 'kitallis'
@@ -59,4 +61,8 @@ For [synchronized releases](/changelog/july-27-2023#synchronized-releases-for-cr
 - Show the commit application time for the release (along with the commit authoring time)
 
 </details>
+
+
+
+<!-- truncate -->
 

@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2023-11-01T20:00
 authors:
   - 'kitallis'
@@ -59,4 +61,8 @@ These can be set in the train **Settings** page.
 - Restrict uninvited signups from configured domains (enabled on request from customer)
 
 </details>
+
+
+
+<!-- truncate -->
 

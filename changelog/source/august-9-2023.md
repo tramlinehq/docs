@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2023-08-09T20:00
 authors:
   - 'kitallis'
@@ -27,4 +29,8 @@ Notifications now have deep links to both Firebase App Distribution and TestFlig
 - Release tags are now guaranteed to be unique. If a tag clashes with a previous one, we append the commit SHA to the tag!
 
 </details>
+
+
+
+<!-- truncate -->
 

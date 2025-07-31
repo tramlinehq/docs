@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2023-09-08T20:00
 authors:
   - 'kitallis'
@@ -44,4 +46,8 @@ This feature is available when you have a multi-step train (RC and production bo
 - Faster CI workflow triggers from Tramline
 
 </details>
+
+
+
+<!-- truncate -->
 

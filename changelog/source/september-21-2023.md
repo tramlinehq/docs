@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2023-09-21T20:00
 authors:
   - 'kitallis'
@@ -47,4 +49,8 @@ See API docs [here](https://docs.tramline.app/api).
 - Allow collapsing the entire pane that lists all commits in a release to reclaim space and focus on the current build
 
 </details>
+
+
+
+<!-- truncate -->
 

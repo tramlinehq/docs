@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2024-02-29T20:00
 authors:
   - 'kitallis'
@@ -53,4 +55,8 @@ Backed by popular demand, we now support [even more](https://docs.tramline.app/c
 - Bump version only when new changes have come since the last submission
 
 </details>
+
+
+
+<!-- truncate -->
 

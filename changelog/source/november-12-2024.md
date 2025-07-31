@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2024-11-12T20:00
 authors:
   - 'kitallis'
@@ -59,4 +61,8 @@ You can now re-use the same integration for multiple categories. This reduces th
 - Fix health metric jobs to stop fetching after the monitoring period
 
 </details>
+
+
+
+<!-- truncate -->
 

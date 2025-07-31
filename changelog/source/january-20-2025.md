@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2025-01-20T20:00
 authors:
   - 'kitallis'
@@ -98,4 +100,8 @@ For SSO users, removing a user does not revoke their SSO access from the IdP (id
 - Finalizing a release should only check for PRs created by Tramline
 
 </details>
+
+
+
+<!-- truncate -->
 

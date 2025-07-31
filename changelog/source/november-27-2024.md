@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2024-11-27T20:00
 authors:
   - 'kitallis'
@@ -54,4 +56,8 @@ Until now, Tramline allowed you to re-trigger workflows if there was a failure i
 - Optimize load times for the Release Activity page
 
 </details>
+
+
+
+<!-- truncate -->
 

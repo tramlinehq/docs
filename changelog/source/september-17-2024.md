@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2024-09-17T20:00
 authors:
   - 'kitallis'
@@ -41,4 +43,8 @@ That's it! The rest works precisely as Tramline is meant to work.
 - Allow hotfix for a cross-platform app when one platform has started rollout
 
 </details>
+
+
+
+<!-- truncate -->
 

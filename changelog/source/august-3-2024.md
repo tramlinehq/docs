@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2024-08-03T20:00
 authors:
   - 'kitallis'
@@ -54,4 +56,8 @@ The [upcoming release feature](/changelog/september-8-2023#prepare-an-upcoming-r
 - Handle double-quotes inside build notes when distributing
 
 </details>
+
+
+
+<!-- truncate -->
 

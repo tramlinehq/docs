@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2024-01-30T20:00
 authors:
   - 'kitallis'
@@ -47,4 +49,8 @@ Now, when setting up steps for train, you can select whether you want to generat
 - TestFlight releases auto-complete if they pass after a previous review failure
 
 </details>
+
+
+
+<!-- truncate -->
 

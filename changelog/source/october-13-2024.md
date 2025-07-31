@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2024-10-13T20:00
 authors:
   - 'kitallis'
@@ -116,4 +118,8 @@ App Variants still only support Firebase App Distribution at the moment. We will
 - Dockerize the entire dev setup
 
 </details>
+
+
+
+<!-- truncate -->
 

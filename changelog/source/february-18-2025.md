@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2025-02-18T20:00
 authors:
   - 'kitallis'
@@ -59,4 +61,8 @@ Ensure that you gracefully accept the custom workflow parameters in your workflo
 - Open up view-only access to configuration screens for viewers
 
 </details>
+
+
+
+<!-- truncate -->
 

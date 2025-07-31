@@ -104,10 +104,10 @@ Once you've properly set up a service account with the required roles, all that 
 
 Navigate to the Integrations tab in your App Settings from the gear icon on the right side of the app name in the header and select __Firebase Crashlytics__ under the __Monitoring and Analytics__ section on the page.
 
-<img height="500" src="/img/crashlytics-connect.png" width="800"/>
+<img src="/img/crashlytics-connect.png" width="800"/>
 
 Along with the service account JSON key, you will also need to add Project Number for your app in Firebase. You can find the project number in the Firebase console under the project settings.
 
-<img height="500" src="/img/crashlytics-configure.png" width="500"/>
+<img src="/img/crashlytics-configure.png" width="500"/>
 
 When you click *Create* after uploading the JSON key file, Tramline will verify that the integration is working correctly by connecting to the required BigQuery datasets.

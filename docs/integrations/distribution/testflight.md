@@ -15,7 +15,7 @@ Navigate to the integrations page for your app and select __App Store Connect & 
 
 To add your iOS app to beta groups in TestFlight using Tramline, you'll need to grant it access to your App Store Connect account by providing an API key, API issuer ID, and private key file.
 
-<img height="500" src="/img/app-store-connect.png" width="500"/>
+<img src="/img/app-store-connect.png" width="500"/>
 
 ## Generate an API key
 
@@ -23,4 +23,4 @@ Follow the instructions on the [App Store Connect documentation](https://develop
 
 Please ensure to add the role __Admin__ for the API key to allow Tramline to send builds to beta groups.
 
-<img height="500" src="/img/app-store-connect-api-key.png" width="500"/>
+<img src="/img/app-store-connect-api-key.png" width="500"/>

@@ -208,7 +208,8 @@ td code {
   padding-left: 22px;
 }
 
-[class^="sidebarItemList"] {
+[class^="sidebarItemList"],
+[class^="yearGroupHeading_"] {
   text-align: right;
 }
 

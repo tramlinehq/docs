@@ -1,4 +1,6 @@
 ---
+mdx:
+ format: md
 date: 2023-12-21T20:00
 authors:
   - 'kitallis'
@@ -79,4 +81,8 @@ The custom release version goes through the usual validations like correct the S
 - Change the external link in release health cards to the release-specific dashboard for Bugsnag integration
 
 </details>
+
+
+
+<!-- truncate -->
 
