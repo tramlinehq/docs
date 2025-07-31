@@ -29,7 +29,7 @@ This feature is in beta as we're still collecting feedback and data from our use
 
 ![](../../static/img/changelog/copy-approvals.png)
 
-We have extended our [stakeholder approvals](changelog/november-12-2024#approvals) feature to now automatically copy over approval items from the previous release to the next one. This cuts down work for teams who want a similar set of approval items in each release assigned to a bunch of different people.
+We have extended our [stakeholder approvals](/changelog/november-12-2024#approvals) feature to now automatically copy over approval items from the previous release to the next one. This cuts down work for teams who want a similar set of approval items in each release assigned to a bunch of different people.
 
 Even if you don't have the automatic setting on, you can still copy them over from a single click after the release starts.
 
