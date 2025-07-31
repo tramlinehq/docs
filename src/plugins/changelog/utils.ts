@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import fs from 'fs-extra';
-import path from 'path';
+import fs from "fs-extra";
+import path from "path";
 
 /**
  * Multiple versions may be published on the same day, causing the order to be
@@ -15,7 +15,7 @@ import path from 'path';
 // TODO may leak small amount of memory in multi-locale builds
 const publishTimes = new Set<string>();
 
-type Author = {name: string; url: string; alias: string; imageURL: string};
+type Author = { name: string; url: string; alias: string; imageURL: string };
 
 type AuthorsMap = Record<string, Author>;
 
@@ -28,7 +28,7 @@ type ChangelogEntry = {
 function parseAuthor(committerLine: string): Author {
   const groups = committerLine.match(
     /- (?:(?<name>.*?) \()?\[@(?<alias>.*)\]\((?<url>.*?)\)\)?/,
-  )!.groups as {name: string; alias: string; url: string};
+  )!.groups as { name: string; alias: string; url: string };
 
   return {
     ...groups,
@@ -66,14 +66,14 @@ function toChangelogEntry(sectionContent: string): ChangelogEntry | null {
   const title = sectionContent
     .match(/\n## .*/)?.[0]
     ?.trim()
-    .replace('## ', '');
+    .replace("## ", "");
   if (!title) {
     return null;
   }
   const content = sectionContent
-    .replace(/\n## .*/, '')
+    .replace(/\n## .*/, "")
     .trim()
-    .replace('running_woman', 'running');
+    .replace("running_woman", "running");
 
   const authors = parseAuthors(content);
 
@@ -82,7 +82,13 @@ function toChangelogEntry(sectionContent: string): ChangelogEntry | null {
   if (!date) {
     return null;
   }
-  
+  const parsedDate = new Date(date);
+  const formattedDate = parsedDate.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   while (publishTimes.has(`${date}T${hour}:00`)) {
     hour -= 1;
   }
@@ -90,7 +96,7 @@ function toChangelogEntry(sectionContent: string): ChangelogEntry | null {
 
   return {
     authors,
-    title: title.replace(/ \(.*\)/, ''),
+    title: formattedDate,
     content: `---
 mdx:
  format: md
@@ -98,16 +104,18 @@ date: ${`${date}T${hour}:00`}${
       authors.length > 0
         ? `
 authors:
-${authors.map((author) => `  - '${author.alias}'`).join('\n')}`
-        : ''
+${authors.map((author) => `  - '${author.alias}'`).join("\n")}`
+        : ""
     }
 ---
 
-# ${title.replace(/ \(.*\)/, '')}
+# ${formattedDate}
+
+${content.replace(/#### Committers: \d[\s\S]*?<endcommiters\/>/g, "")}
 
 <!-- truncate -->
 
-${content.replace(/####/g, '##')}`,
+`,
   };
 }
 
@@ -125,14 +133,20 @@ export async function createBlogFiles(
   await Promise.all(
     changelogEntries.map((changelogEntry) =>
       fs.outputFile(
-        path.join(generateDir, `${changelogEntry.title}.md`),
+        path.join(
+          generateDir,
+          `${changelogEntry.title
+            .toLowerCase()
+            .replace(/ /g, "-")
+            .replace(/[^\w-]/g, "")}.md`,
+        ),
         changelogEntry.content,
       ),
     ),
   );
 
   await fs.outputFile(
-    path.join(generateDir, 'authors.json'),
+    path.join(generateDir, "authors.json"),
     JSON.stringify(createAuthorsMap(changelogEntries), null, 2),
   );
 }
