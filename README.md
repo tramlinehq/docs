@@ -28,7 +28,7 @@ This command generates static content into the `build` directory and can be serv
 
 ### Search Index
 
-We use Algolia to power search. This is done using a Docusaurus plugin. Changelogs are explicitly excluded from the index so as to not bloat the search experience.
+We use Algolia to power search. This is done using a Docusaurus plugin. Changelogs are explicitly excluded from the index so as to not bloat the search experience with potentially conflicting information.
 
 ### Writing Changelogs
 
