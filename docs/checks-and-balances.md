@@ -44,7 +44,7 @@ Tramline checks if all your code in the release branch is merged back into the w
 ### Locking the release branch
 
 :::tip
-This does not apply to the [Parallel Working and Release Branch Strategy](/using-tramline/release-management/branching-strategies#parallel-working-and-release-branch-strategy).
+This does not apply to the [Parallel Working and Release Branch Strategy](/using-tramline/release-management/branching-strategies#parallel-working-and-release-branch).
 :::
 
 Once the release is completed, and if the release branch is not removed, we stop accepting any new commits to the branch. This ensures that the branch cannot be accidentally used to create a new release.

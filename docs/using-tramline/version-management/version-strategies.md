@@ -5,7 +5,7 @@ sidebar_label: Strategies
 sidebar_position: 1
 ---
 
-Since Tramline [automatically manages versions](automations#bumping-versions-and-build-numbers) for you, we categorize them into specific strategies so that the increments are predictable. There are 3 versioning strategies to choose from.
+Since Tramline [automatically manages versions](/automations#bumping-versions-and-build-numbers) for you, we categorize them into specific strategies so that the increments are predictable. There are 3 versioning strategies to choose from.
 
 :::info
 On iOS, the [property](https://developer.apple.com/documentation/bundleresources/information-property-list/cfbundleshortversionstring) `cfbundleshortversionstring` is what Tramline assumes when we're talking about version names. The same property is used to set the PreReleaseVersion or the AppStoreVersion when we'resubmitting to the App Store or TestFlight.
