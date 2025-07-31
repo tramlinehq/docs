@@ -5,38 +5,34 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import path from 'path';
-import fs from 'fs-extra';
-import pluginContentBlog from '@docusaurus/plugin-content-blog';
-import {
-  aliasedSitePath,
-  docuHash,
-  normalizeUrl,
-} from '@docusaurus/utils';
-import {createBlogFiles, toChangelogEntries} from './utils';
+import path from "path";
+import fs from "fs-extra";
+import pluginContentBlog from "@docusaurus/plugin-content-blog";
+import { aliasedSitePath, docuHash, normalizeUrl } from "@docusaurus/utils";
+import { createBlogFiles, toChangelogEntries } from "./utils";
 
-export {validateOptions} from '@docusaurus/plugin-content-blog';
+export { validateOptions } from "@docusaurus/plugin-content-blog";
 
 async function loadChangelogEntries(changelogPath: string) {
-  const fileContent = await fs.readFile(changelogPath, 'utf-8');
+  const fileContent = await fs.readFile(changelogPath, "utf-8");
   return toChangelogEntries([fileContent]);
 }
 
 const ChangelogPlugin: typeof pluginContentBlog =
   async function ChangelogPlugin(context, options) {
-    const generateDir = path.join(context.siteDir, 'changelog/source');
+    const generateDir = path.join(context.siteDir, "changelog/source");
     const blogPlugin = await pluginContentBlog(context, {
       ...options,
       path: generateDir,
-      id: 'changelog',
-      blogListComponent: '@theme/ChangelogList',
-      blogPostComponent: '@theme/ChangelogPage',
+      id: "changelog",
+      blogListComponent: "@theme/ChangelogList",
+      blogPostComponent: "@theme/ChangelogPage",
     });
-    const changelogPath = path.join(__dirname, '../../../CHANGELOG.md');
+    const changelogPath = path.join(__dirname, "../../../CHANGELOG.md");
 
     return {
       ...blogPlugin,
-      name: 'changelog-plugin',
+      name: "changelog-plugin",
 
       async loadContent() {
         const changelogEntries = await loadChangelogEntries(changelogPath);
@@ -56,7 +52,7 @@ const ChangelogPlugin: typeof pluginContentBlog =
           post.metadata.listPageLink = normalizeUrl([
             context.baseUrl,
             options.routeBasePath,
-            pageIndex === 0 ? '/' : `/page/${pageIndex + 1}`,
+            pageIndex === 0 ? "/" : `/page/${pageIndex + 1}`,
           ]);
         });
         return content;
@@ -65,13 +61,13 @@ const ChangelogPlugin: typeof pluginContentBlog =
       configureWebpack(...args) {
         const config = blogPlugin.configureWebpack?.(...args);
         if (!config) return {};
-        
+
         const pluginDataDirRoot = path.join(
           context.generatedFilesDir,
-          'changelog-plugin',
-          'default',
+          "changelog-plugin",
+          "default",
         );
-        
+
         // Redirect the metadata path to our folder
         try {
           // @ts-expect-error: unsafe but works
@@ -80,18 +76,24 @@ const ChangelogPlugin: typeof pluginContentBlog =
             // Note that metadataPath must be the same/in-sync as
             // the path from createData for each MDX.
             const aliasedPath = aliasedSitePath(mdxPath, context.siteDir);
-            return path.join(pluginDataDirRoot, `${docuHash(aliasedPath)}.json`);
+            return path.join(
+              pluginDataDirRoot,
+              `${docuHash(aliasedPath)}.json`,
+            );
           };
         } catch (error) {
           // If the structure is different, fall back to the original approach
-          console.warn('Could not configure MDX loader metadata path:', (error as Error).message);
+          console.warn(
+            "Could not configure MDX loader metadata path:",
+            (error as Error).message,
+          );
         }
-        
+
         return config;
       },
 
       getThemePath() {
-        return './theme';
+        return "./theme";
       },
 
       getPathsToWatch() {
