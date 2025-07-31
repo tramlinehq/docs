@@ -38,6 +38,10 @@ Builds a signed release AAB and uploads it to Play Store using Fastlane. Once Pl
 You can also take a look at the [Ueno Flutter App](https://gitlab.com/tramline/ueno-mirror/-/blob/main/.gitlab-ci.yml) for a complete example. This repository has a variety of different jobs that can be triggered from Tramline. They perform different variations of distributions and app build types.
 :::
 
+:::caution
+Jobs that are used with Tramline (the ones that generate builds) must be marked as `when: manual` so that Tramline can trigger them against its own lifecycle.
+:::
+
 ```yaml
 # .gitlab-ci.yml
 android-debug-apk:
@@ -107,10 +111,6 @@ android-release-aab-playstore:
     expire_in: 1 week
 
 ```
-
-:::tip
-It is recommended to have the jobs that are used with Tramline (the ones that generate builds); marked as `when: manual` so that Tramline can trigger them against its own lifecycle.
-:::
 
 :::tip
 If your GitLab pipeline gets triggered automatically on every commit to the release branch, Tramline will find the existing pipeline and trigger the specific jobs for Internal or RC builds.

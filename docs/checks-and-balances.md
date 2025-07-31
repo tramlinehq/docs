@@ -66,5 +66,5 @@ Our dashboard always shows the correct build associated with the correct version
 If your have [Internal Releases](/using-tramline/working-pane/stability) configured, Tramline always enforce that you must create them first, distribute the builds and only then do we allow promoting the appropriate commit/SHA to a Release Candidate build. This ensures that the process of Internal → RC is always followed and cannot be skipped.
 
 :::info
-The only exception to this rule is when you're creating a [hotfix release](/using-tramline/special-cases/hotfix).
+The only exception to this rule is when you're creating a [hotfix release](/using-tramline/special-cases/fix-releases#hotfix).
 :::

@@ -33,7 +33,7 @@ The major version bump is typically reserved for significant updates (often not 
 
 #### Patch
 
-Patch versions are managed automatically by Tramline. They get bumped either when you make a [patchfix](/using-tramline/special-cases/patchfix) or a new [hotfix](/using-tramline/special-cases/hotfix) release. You can't manually change this unless you specify an explicit custom version with a modified patch version.
+Patch versions are managed automatically by Tramline. They get bumped either when you make a [patchfix](/using-tramline/special-cases/fix-releases#patchfix) or a new [hotfix](/using-tramline/special-cases/fix-releases#hotfix) release. You can't manually change this unless you specify an explicit custom version with a modified patch version.
 
 :::tip
 For [CalVer](/using-tramline/version-management/version-strategies), you only get two options
