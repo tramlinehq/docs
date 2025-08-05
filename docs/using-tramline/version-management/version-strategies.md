@@ -15,7 +15,7 @@ On iOS, the [property](https://developer.apple.com/documentation/bundleresources
 On Android, this is the `versionName` [property](https://developer.android.com/studio/publish/versioning#versioningsettings). We use the same value when the release is promoted to a track on the Play Store and the release name is set to the `versionName`.
 :::
 
-### SemVer
+## SemVer
 
 Tramline supports a [SemVer](https://semver.org)-like versioning scheme that's designed to play well with both App Store and Google Play Store. It works like this:
 
@@ -45,7 +45,7 @@ PATCH = Non-Zero-padded sequence number
 To be more precise, the SemVer support is a subset of what the specification allows. This is to ensure that these versions work well with all major platforms.
 :::
 
-### CalVer
+## CalVer
 
 Like SemVer, Tramline supports an opinionated [Calendar-based versioning scheme](https://calver.org) that's designed to play well with both App Store and Google Play Store. It works like this:
 
