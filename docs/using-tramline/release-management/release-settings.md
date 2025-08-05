@@ -21,30 +21,91 @@ Most teams would typically have a maximum of two release cycles (although Tramli
 
 ## Basic settings
 
-1. **Name** - The name of the release train. This name will be used for creating the release branches (if needed) and for identifying the release cycle in Tramline dashboard.
-2. **Description** - A brief description of the release cycle. This is just for reference for you and your team.
-3. **Version Strategy** – The versioning strategy used for your app's releases. Tramline supports both `Semantic Versioning` and `Calendar Versioning`. In addition to choosing the relevant version strategy, you should provide the last version of the app that you have released. Tramline will use this seed version to calculate the next version for the release.
-4. **Branching Strategy** – The branching strategy that is used by your team to manage work for the release. The most common branching strategy is [Almost Trunk](branching-strategies#almost-trunk). Tramline supports a few other branching strategies, you can read more about them [here](branching-strategies).
-5. **Enable Notifications** – If you want to enable notifications for your release, you can do so here. A much more granular way to control notifications for different steps of the release is available in the [Notifications](/using-tramline/quality-and-monitoring/notifications) section. Please note that this option is only available if you have added a [notification integration](/integrations/notifications) for your app.
+### Name
+The name of the release train. This name will be used for creating the release branches (if needed) and for identifying the release cycle in Tramline dashboard.
+
+### Description
+A brief description of the release cycle. This is just for reference for you and your team.
+
+### Versioning Strategy
+The strategy used for your app's version name and version code / build number. Tramline supports [SemVer](https://semver.org/) and [CalVer](https://calver.org/), and you can read about how to configure them in [Versioning Strategies](/using-tramline/version-management/version-strategies).
+
+In addition to choosing the relevant version strategy, you must provide the last version of the app that you have released. Tramline will use the version you provide as the seed to automatically calculate what the version should be for the next release.
+
+By default, Tramline will send the version to your CI/CD pipeline while triggering builds so that they are created with the correct version information. The version changes are not committed to your code, but if you want to do that, read [Automatic Version Bumps](#automatic-version-bumps).
+
+### Notifications
+:::warning
+This option is only available if you have connected a [notification integration](/integrations/notifications) (for e.g. Slack) in your app settings.
+:::
+
+If you enable notifications, Tramline will send notifications for a variety of things that happen during a release to your notification integration.
+
+By default, notifications are only sent to the default channel and the core channels. If you enable release-specific channels, Tramline will create a new channel for every release, and archive it once the release is over. The name of the release-specific channel follows the format `release-{appName}-{platformName}-{versionName}`. Customizing the name pattern of the release-specific channel is not supported yet.
+
+Learn more about how to control notifications in a granular manner for different steps of the release, in the [Notifications](/using-tramline/quality-and-monitoring/notifications) section.
+
+### Branching Strategy
+The branching strategy that is used by your team to manage work for the release. The most common branching strategy is [Almost Trunk](branching-strategies#almost-trunk). Tramline supports a few other branching strategies, you can read more about them [here](branching-strategies).
+
 
 ## Advanced settings
 
-Tramline provides a lot of advanced settings to customize your release process. You can find them in the **Advanced Settings** section of the **Release Settings**.
+Click on the `+ Advanced Settings` button to expand the advanced settings list. These have a sane default value, but you can tweak them as per your team's needs.
 
-These settings have a sane default value, but you can always tweak them as per your team's needs.
+![](/img/advanced-settings.png)
 
-1. **Release Schedule** – If you run your release cycles on a strict schedule, you can set it here. Tramline will ensure that a release starts on the scheduled date and time on a periodic basis. More details on this can be found in the [Scheduled Releases](/using-tramline/release-management/scheduled-release) section.
-2. **Enable Approvals** – Some teams prefer to have a human in the loop before starting a release. Tramline allows you to enable approvals for your releases. This will notify the stakeholders who need to approve the release before it can be sent to production. More details on this can be found in the [Approvals](/using-tramline/working-pane/approvals) section.
-3. **Change queue** – Tramline allows you to control when changes landing on the release branch are applied to trigger new builds in your release. By default, commits on the release branch are auto-applied. Read more about this in the [Change Queue](/using-tramline/build-processing/build-queue) section.
-4. **Continuous Backmerge** – By default, Tramline merges changes made in the release branch back into your working branch towards the end of a release. You can override that by enabling the continuous backmerge option for Tramline to merge each change back into the working branch as soon as it lands. Read more about how backmerges are managed across different branching strategies and integrations in the [Backmerges](/automations#merging-fixes-back) section.
-5. **Patch Change Application** – By default, Tramline will apply new changes landing on the release branch by triggering the first step of the release (creation of internal or RC build). If you do not want to auto-apply the changes once a production rollout has begun, you can disable the patch change application flag. Once disabled, Tramline will wait for you to manually trigger the first step of the release for any patch changes.
-6. **Build Notes** – Tramline generates tester notes for all internal builds that are sent to the internal testing channels like Firebase App Distribution or TestFlight as well to the notification channels configured. These notes are a summary of all the changes that were made on the release branch since the last build generated. You can choose to compact these notes or leave them as detailed as the changes are.
-7. **Tags** – Tramline generates tags at the end of each release cycle to identify the final commit that was used for the release. The tag name is the last version generated for the release. You can choose to add **prefix** and/or **suffix** for the tag name to customize it. Eg: The default tag name is `v1.0.0`, but it can be customized to `v1.0.0-rc` or `in-v1.0.0-nightly`.
-8. **Version Change** – Tramline manages the versioning of your releases to ensure that there is no conflict or confusion between the versions of the app being tested and sent to the stores. It also ensures that the versions are incremented semantically correctly. You can, however, choose to freeze the version of the releases or ask Tramline to increment only the patch version.
+### Outgoing Webhooks
 
-:::caution
-If you are freezing the version of your releases, Tramline will no longer be able to ensure that the version is incremented correctly. You should only freeze the version for the release cycles where no builds are sent to the production tracks of the stores.
+Enable outgoing webhooks to receive real-time notifications about release events and updates. When enabled, Tramline will send HTTP POST requests to configured webhook endpoints with release data. Learn more in the [Outgoing Webhooks](/using-tramline/quality-and-monitoring/outgoing-webhooks) section.
+
+### Release Schedule
+If you run your release cycles on a strict schedule, you can set it here. Tramline will ensure that a release starts on the scheduled date and time on a periodic basis. More details on this can be found in the [Scheduled Releases](/using-tramline/release-management/scheduled-release) section.
+
+### Approvals before submissions
+Some teams prefer to have a human in the loop before starting a release. Tramline allows you to enable approvals for your releases. This will notify the stakeholders who need to approve the release before it can be sent to production. More details on this can be found in the [Approvals](/using-tramline/working-pane/approvals) section.
+
+### Build Queue
+Tramline allows you to control when changes landing on the release branch are applied to trigger new builds in your release. By default, commits on the release branch are auto-applied. Read more about this in the [Change Queue](/using-tramline/build-processing/build-queue) section.
+
+### Continuous Backmerge
+By default, Tramline merges changes made in the release branch back into your working branch towards the end of a release. You can override that by enabling the continuous backmerge option for Tramline to merge each change back into the working branch as soon as it lands. Read more about how backmerges are managed across different branching strategies and integrations in the [Backmerges](/automations#merging-fixes-back) section.
+
+### Auto-apply patch changes
+By default, Tramline will apply new changes landing on the release branch by triggering the first step of the release (creation of internal or RC build). If you do not want to auto-apply the changes once a production rollout has begun, you can disable the patch change application flag. Once disabled, Tramline will wait for you to manually trigger the first step of the release for any patch changes.
+
+### Compact Build Notes
+Tramline generates tester notes for all internal builds that are sent to the internal testing channels like Firebase App Distribution or TestFlight as well to the notification channels configured. These notes are a summary of all the changes that were made on the release branch since the last build generated. You can choose to compact these notes or leave them as detailed as the changes are.
+
+### Tags
+Tramline generates tags at the end of each release cycle to identify the final commit that was used for the release. The tag name is the last version generated for the release. You can choose to add **prefix** and/or **suffix** for the tag name to customize it. Eg: The default tag name is `v1.0.0`, but it can be customized to `v1.0.0-rc` or `in-v1.0.0-nightly`.
+
+### Freeze release version
+:::danger
+If you enable this, Tramline will not increment the app version across releases. You should only do this for release cycles where builds are not sent to production tracks of the app stores.
 :::
+
+Tramline manages the versioning of your releases to ensure that there is no conflict or confusion between the versions of the app being tested and sent to the stores. It also ensures that the versions are incremented semantically correctly. You can, however, change this behavior and choose to freeze the version of the releases.
+
+### Patch Version Change Only
+By default, the app's minor version is incremented after each successful release. You can override this behavior to increment only the patch version instead. This will ensure that the app’s major and minor versions remain unchanged across releases.
+
+### Automatic Version Bumps
+When enabled, Tramline will create and merge a Pull Request to update the version name directly in your build files, along with starting a new release or cutting a release branch.
+
+![](/img/automatic-version-bump-in-code.png)
+
+#### Strategies
+In *Current Version Before Release Branch Cuts*, Tramline will increment the version information in your code before cutting the release branch for a new release. For e.g. if the current version in code is 1.4.0 and you start a new release, Tramline will first increment the version in code to 1.5.0, wait for the version bump pull request to be merged, and then create a new release branch from the merge commit.
+
+In *Next Version After Release Branch Cuts*, Tramline will increment the version information in your code after a release branch has been cut and the release has started. For e.g. if the current version in code is 1.4.0 and you start a new release, Tramline will create a release branch and start the release with version 1.4.0. Once the release has started, Tramline will increment the version in code to 1.5.0 on the working branch, which will not affect the release that was just started.
+
+#### Build File Paths
+If you supply more than one file path, Tramline will update the version information in all of them.
+
+#### Branch Prefix
+By default, the branch created for the version bump code change has a `tramline` prefix. If you want, you can change the prefix to something else. This can be helpful for branch protection rules in your version control system.
+
 
 ## Submission settings
 
