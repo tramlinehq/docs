@@ -1,27 +1,21 @@
 {
-  "Animesh-Ghosh": {
-    "name": "Animesh Ghosh",
-    "alias": "Animesh-Ghosh",
-    "url": "https://github.com/Animesh-Ghosh",
-    "imageURL": "https://github.com/Animesh-Ghosh.png"
-  },
   "kitallis": {
     "name": "Akshay Gupta",
     "alias": "kitallis",
     "url": "https://github.com/kitallis",
     "imageURL": "https://github.com/kitallis.png"
   },
-  "sberrevoets": {
-    "name": "Scott Berrevoets",
-    "alias": "sberrevoets",
-    "url": "https://github.com/sberrevoets",
-    "imageURL": "https://github.com/sberrevoets.png"
-  },
   "nileshgr": {
     "name": "Nilesh GR",
     "alias": "nileshgr",
     "url": "https://github.com/nileshgr",
     "imageURL": "https://github.com/nileshgr.png"
+  },
+  "Animesh-Ghosh": {
+    "name": "Animesh Ghosh",
+    "alias": "Animesh-Ghosh",
+    "url": "https://github.com/Animesh-Ghosh",
+    "imageURL": "https://github.com/Animesh-Ghosh.png"
   },
   "bagedevimo": {
     "name": "Ben Anderson",
