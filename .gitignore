@@ -15,6 +15,7 @@
 .env.test.local
 .env.production.local
 .idea
+.claude
 cspell.json
 
 npm-debug.log*
