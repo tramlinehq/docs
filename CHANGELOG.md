@@ -1,5 +1,51 @@
 # Tramline Changelog
 
+## 0.0.30-5cc56b82 (2025-08-29)
+
+_[Add screenshots here for mobile view]_
+
+### Limited Mobile experience
+
+Tramline now includes dedicated mobile views, making it easier for teams to monitor and manage releases on mobile devices. The mobile experience includes:
+
+**Release List View**: Browse all releases with a mobile-optimized layout
+
+**Release Details**: View release summaries with essential information
+
+**Production Rollout Controls**: Manage rollout percentages and status directly from mobile
+
+This mobile support is particularly valuable for release managers who need to monitor or respond to release issues while away from their desktop. We will continue to add more desktop-like controls to this view in the future. Feel free to reach out if you have any suggestions!
+
+### Cleaner changelogs
+
+_[Add screenshots here for a Slack notification with whats new and diff for RC]_
+
+Changelogs sent in notifications are now much cleaner and more focused, with automatic filtering to remove noise from mid-release pull requests and irrelevant commits. This enhancement improves the readability of release notes by:
+
+- Excluding PRs and commits that were merged using continuous back-merge functionality from previous releases
+- Filtering out merge commits, co-authored-by lines and other distracting details
+- Removing emoji characters and standardizing commit message formatting
+- Compacting and deduplicating similar commit messages
+
+The result is cleaner, more scannable changelogs that focus on the meaningful changes shipped in each release, making it easier for teams and stakeholders to understand what's new.
+
+<details open>
+<summary>Improvements and Fixes</summary>
+
+- Enhanced search functionality with improved filtering and results display
+- Improved GitLab repository fetching to include all accessible repositories
+- Fixed navigation issues when using the back button from Account Settings
+
+</details>
+
+#### Committers: 4
+
+- Akshay Gupta ([@kitallis](https://github.com/kitallis))
+- Nilesh GR ([@nileshgr](https://github.com/nileshgr))
+- Animesh Ghosh ([@Animesh-Ghosh](https://github.com/Animesh-Ghosh))
+
+<endcommiters/>
+
 ## 0.0.29-43080b0c (2025-08-27)
 
 _[Add screenshots here for Bitrise pipeline]_
