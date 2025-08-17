@@ -1,5 +1,53 @@
 # Tramline Changelog
 
+## 0.0.27-fe612327 (2025-08-21)
+
+_[Add screenshots here Linear integration]_
+
+### Linear and Jira integrations for Project Management
+
+Tramline now supports [Linear](https://linear.app/) as a project management integration in addition to [Jira](https://www.atlassian.com/software/jira), expanding the platform's ability to connect with project management tools. This integration provides the foundation for tracking project tickets and linking them to releases.
+
+The project management integrations currently allow for configuration of workspace, issue statuses and release labels (or fix versions).
+
+_[Add screenshots here for Linear configuration panel]_
+
+While this initial implementation focuses on connection and configuration, future updates will expand Linear and Jira support to include automatic issue tracking and linking within releases.
+
+### Enhanced GitLab support
+
+GitLab integration has been significantly improved with added support for GitLab CI/CD and making the VCS integration up to date with the updated features. Key improvements include:
+
+**GitLab Pipelines Support**: Full integration with GitLab's CI/CD pipeline system
+
+**Artifact Processing**: Improved artifact downloading and filtering with optional pattern matching
+
+**Better Error Handling**: More granular error reporting for workflow triggers and pipeline failures
+
+**Cherry-pick PRs**: Ability to cherry-pick commits from the release branch to the working branch
+
+This brings GitLab integration to feature parity with other supported CI/CD platforms like GitHub Actions and Bitrise.
+
+Learn more about setting up GitLab integrations → [here](/integrations/ci-cd/gitlab).
+
+<details open>
+<summary>Improvements and Fixes</summary>
+
+- Improved workflow trigger failure handling across all CI/CD integrations
+- Added build number display to "Previous Releases" section for better version tracking
+- Fixed YAML formatting issue in invitation email templates
+- Improved Slack message formatting for publishing review notifications
+
+</details>
+
+#### Committers: 2
+
+- Akshay Gupta ([@kitallis](https://github.com/kitallis))
+- Ben Anderson ([@bagedevimo](https://github.com/bagedevimo))
+- Animesh Ghosh ([@Animesh-Ghosh](https://github.com/Animesh-Ghosh))
+
+<endcommiters/>
+
 ## 0.0.26-814969eb (2025-08-19)
 
 _[Add screenshots here about release specific notification channels]_
