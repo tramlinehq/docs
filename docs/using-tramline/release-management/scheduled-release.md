@@ -22,3 +22,11 @@ With the option of **Automatic stop on failure** under scheduled releases, Traml
 ![](/img/scheduled-release-auto-stop.png)
 
 Please note that only releases that in failure state will be stopped. If you have a running successful release, Tramline will start an [upcoming release](/using-tramline/release-management/upcoming-release) instead of stopping the ongoing one.
+
+### Skip the next scheduled release
+
+If you need to skip the next scheduled release, you can do so by clicking the **Skip this release** button on the calendar view of your release dashboard.
+
+![](/img/scheduled-release-skip.png)
+
+This will prevent the next scheduled release from running, but will not stop the current or future ones. This can be useful for when you need to delay a release by a day or two, or when you need to skip it all together that week.
