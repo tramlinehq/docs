@@ -39,7 +39,7 @@ The pre-requisite steps required for the workflows to work well with Tramline.
 3. They must output a valid build that can be shipped to the configured places.
 4. Lastly, your workflow must accept a `workflow_dispatch` trigger (GitHub Action only) to allow Tramline to trigger the workflow using the API.
 
-We have a [deploy-action](https://github.com/tramlinehq/deploy-action) tool for [GitHub Actions](/integrations/ci-cd/github) that use you can use to manage the inputs in your workflows. For [Bitrise](/integrations/ci-cd/bitrise), and [Bitbucket](/integrations/ci-cd/bitbucket), your workflow should accept the version name and code as input parameters explicitly.
+We have a [deploy-action](https://github.com/tramlinehq/deploy-action) tool for [GitHub Actions](/integrations/ci-cd/github) that use you can use to manage the inputs in your workflows. For [Bitrise](/integrations/ci-cd/bitrise), and Bitbucket, your workflow should accept the version name and code as input parameters explicitly.
 
 Sample changes required on GitHub Actions:
 ```yaml
