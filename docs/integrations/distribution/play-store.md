@@ -23,7 +23,7 @@ The full setup involves the following steps:
 4. Add appropriate permissions to the service account user in Google Play Console
 5. Upload service account JSON key to Tramline
 
-### Enable Google Play Developer APIs
+### 1. Enable Google Play Developer APIs
 
 :::caution
 These steps can only be done by a user who has write permissions to the Google Cloud Project associated with your Google Play Store app. If you only have read permissions, you will not be able to proceed.
@@ -36,7 +36,7 @@ These steps can only be done by a user who has write permissions to the Google C
 
 <img src="/img/enable-play-api.png" width="500" />
 
-### Create Service Account
+### 2. Create Service Account
 
 - Within Google Cloud Console, open the [Service Accounts page](https://console.cloud.google.com/iam-admin/serviceaccounts).
 - Select the project you want to use for Tramline.
@@ -54,7 +54,7 @@ These steps can only be done by a user who has write permissions to the Google C
 
 <img src="/img/play-store-api-json-key.png" width="300" />
 
-### Link the service account to Google Play
+### 3. + 4. Link the service account to Google Play
 
 :::caution
 These steps can only be done by the owner of the Play Console account. If you're not the owner, you will not be able to proceed.
@@ -74,7 +74,7 @@ These steps can only be done by the owner of the Play Console account. If you're
 
 <img src="/img/google-play-app-permissions.png" width="800" />
 
-### Upload JSON key in Tramline
+### 5. Upload JSON key in Tramline
 
 Once you've properly setup things in both, Google Play Console and Google Cloud Console, all that is left to be done is upload the service account JSON key file into Tramline.
 

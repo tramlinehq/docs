@@ -91,7 +91,7 @@ flutter build appbundle --release --build-number=${{ github.event.inputs.version
 
 Tramline requires that your configured workflow accepts the `versionCode` and `versionName` as environment variables and uses them to generate the build that will be uploaded to the distribution channels.
 
-If you have configured Tramline to distribute to TestFlight or App Store, your production workflow should upload the generated build with correct `versionCode` and `versionName` to be uploaded to App Store.
+If you have configured Tramline to distribute to TestFlight or App Store, your production workflow should upload the generated build with correct `versionCode` and `versionName` to App Store.
 
 Tramline will look for the build in App Store with the correct `versionCode` to be present in TestFlight to send to beta groups and prepare release to App Store.
 

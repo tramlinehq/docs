@@ -15,15 +15,15 @@ When configuring Tramline, in a variety of places, you'd be able to specify thes
 
 ## **Available token types**
 
-* **~releaseVersion~** three-segment SemVer or CalVer
+* **\~releaseVersion\~** three-segment SemVer or CalVer
   * Example: `1.2.3`
-* **~releaseStartDate~** date when the release started formatted as `YYYY-MM-DD`
+* **\~releaseStartDate\~** date when the release started formatted as `YYYY-MM-DD`
   * Example: `2025-07-22`
   * Example: `2025-02-28`
-* **~trainName~** parameterized / url-friendly name of the train
+* **\~trainName\~** parameterized / url-friendly name of the train
   * Example: `production`
   * Example: `release_ios`
-* **~buildNumber~** version code or build number of the current build
+* **\~buildNumber\~** version code or build number of the current build
   * Example: `1`
   * Example: `214000`
 
@@ -39,8 +39,8 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="branches" label="Branches" default>
     <strong>Required: </strong>None, tramline has defaults<br/>
-    <strong>Allowed: </strong><code>~releaseVersion~</code>, <code>~releaseStartDate~</code>, <code>~trainName~</code><br/>
-    <strong>Not allowed: </strong><code>~buildNumber~</code>
+    <strong>Allowed: </strong><code>\~releaseVersion\~</code>, <code>\~releaseStartDate\~</code>, <code>\~trainName\~</code><br/>
+    <strong>Not allowed: </strong><code>\~buildNumber\~</code>
   </TabItem>
 
   <TabItem value="tags" label="Tags">

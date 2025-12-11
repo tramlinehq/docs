@@ -28,6 +28,6 @@ Sign up [on our website](https://tramline.dev/email/sign_up) for free!
 
 **Want full control?**
 
-Tramline is open source under the Apache License! Read our guide on [getting started with self-hosting](https://github.com/tramlinehq/tramline#how-to-self-host-%EF%B8%8F).
+Tramline is open source under the Apache License! Read our guide on [getting started with self-hosting](https://github.com/tramlinehq/tramline#how-to-set-it-up-yourself-%EF%B8%8F).
 
 🚃

@@ -19,7 +19,7 @@ When you click the __Connect__ button, you'll be taken through a standard OAuth 
 
 ## Android Workflow
 
-Here is a sample Github Actions workflow which uses Tramline's [deploy-action](https://github.com/tramlinehq/deploy-action) to accept input parameters and generates a signed AAB for Play Store. It produces a signed AAB file as artifact which is then downloaded by Tramline and sent to the relevant tracks on Play Store.
+Here is a sample Github Actions workflow which uses Tramline's [deploy-action](https://github.com/tramlinehq/deploy-action) to accept input parameters and generates a signed AAB for Play Store. It produces a signed AAB file as an artifact which is then downloaded by Tramline and sent to the relevant tracks on Play Store.
 
 ```yaml
 name: Android Release Build
