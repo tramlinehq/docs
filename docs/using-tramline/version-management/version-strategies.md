@@ -58,10 +58,14 @@ YYYY = Full-year
 0N = Zero-padded sequence number
 ```
 
+The zero-padded sequence number is added from the first [patch build](/using-tramline/special-cases/fix-releases#patchfix) onwards. The very first CalVer version, at the start of the release, will be `YYYY.0M.0D`, and subsequently it'll be `YYYY.0M.0D0N`, where N starts from `1`. This is to ensure that the first build has a clean version name.
+
 ✅ Valid
 ```
 2025.01.20
 2022.02.01
+2022.02.0101
+2022.02.0102
 ```
 
 ❌ Invalid
