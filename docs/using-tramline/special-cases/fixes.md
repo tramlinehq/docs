@@ -25,7 +25,7 @@ Once that change is applied, you will see the patch version automatically increm
 
 ## Hotfix
 
-Hotfixes are a special case of a patchfix. They are independently triggered via the "Start hotfix" button on the dashboard. The button is available when there's at least one completed release and one ongoing release.
+Hotfixes are a special case of a patchfix. They are independently triggered via the "Start hotfix" button on the dashboard. The button is available when there's at least one completed release and **no ongoing rollout to the stores**.
 
 ![](/img/start-hotfix.png)
 
