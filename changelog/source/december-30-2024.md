@@ -1,7 +1,7 @@
 ---
 mdx:
  format: md
-date: 2024-12-30T20:00
+date: 2024-12-30
 authors:
   - 'gurupratap'
   - 'kitallis'
