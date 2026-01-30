@@ -8,12 +8,6 @@
 import fs from "fs-extra";
 import path from "path";
 
-/**
- * Multiple versions may be published on the same day, causing the order to be
- * the reverse. Therefore, our publish time has a "fake hour" to order them.
- */
-// TODO may leak small amount of memory in multi-locale builds
-const publishTimes = new Set<string>();
 
 type Author = { name: string; url: string; alias: string; imageURL: string };
 
@@ -62,6 +56,20 @@ export function createAuthorsMap(
   return authorsMap;
 }
 
+const MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+/**
+ * Format a YYYY-MM-DD date string without using Date objects,
+ * avoiding timezone-dependent shifts that cause file re-generation.
+ */
+function formatDateString(dateStr: string): string {
+  const [year, month, day] = dateStr.split("-");
+  return `${MONTHS[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
+}
+
 function toChangelogEntry(sectionContent: string): ChangelogEntry | null {
   const title = sectionContent
     .match(/\n## .*/)?.[0]
@@ -77,22 +85,11 @@ function toChangelogEntry(sectionContent: string): ChangelogEntry | null {
 
   const authors = parseAuthors(content);
 
-  let hour = 20;
   const date = title.match(/ \((?<date>.*)\)/)?.groups?.date;
   if (!date) {
     return null;
   }
-  const parsedDate = new Date(date);
-  const formattedDate = parsedDate.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
-  while (publishTimes.has(`${date}T${hour}:00`)) {
-    hour -= 1;
-  }
-  publishTimes.add(`${date}T${hour}:00`);
+  const formattedDate = formatDateString(date);
 
   return {
     authors,
@@ -100,7 +97,7 @@ function toChangelogEntry(sectionContent: string): ChangelogEntry | null {
     content: `---
 mdx:
  format: md
-date: ${`${date}T${hour}:00`}${
+date: ${date}${
       authors.length > 0
         ? `
 authors:

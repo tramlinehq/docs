@@ -1,7 +1,7 @@
 ---
 mdx:
  format: md
-date: 2025-09-02T17:00
+date: 2025-09-02
 authors:
   - 'Animesh-Ghosh'
   - 'kitallis'

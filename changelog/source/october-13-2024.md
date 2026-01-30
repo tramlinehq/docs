@@ -1,7 +1,7 @@
 ---
 mdx:
  format: md
-date: 2024-10-13T20:00
+date: 2024-10-13
 authors:
   - 'kitallis'
   - 'nid90'
