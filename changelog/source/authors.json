@@ -5,17 +5,23 @@
     "url": "https://github.com/Animesh-Ghosh",
     "imageURL": "https://github.com/Animesh-Ghosh.png"
   },
-  "deobald": {
-    "name": "Steven Deobald",
-    "alias": "deobald",
-    "url": "https://github.com/deobald",
-    "imageURL": "https://github.com/deobald.png"
-  },
   "kitallis": {
     "name": "Akshay Gupta",
     "alias": "kitallis",
     "url": "https://github.com/kitallis",
     "imageURL": "https://github.com/kitallis.png"
+  },
+  "nid90": {
+    "name": "Nivedita Priyadarshini",
+    "alias": "nid90",
+    "url": "https://github.com/nid90",
+    "imageURL": "https://github.com/nid90.png"
+  },
+  "deobald": {
+    "name": "Steven Deobald",
+    "alias": "deobald",
+    "url": "https://github.com/deobald",
+    "imageURL": "https://github.com/deobald.png"
   },
   "sberrevoets": {
     "name": "Scott Berrevoets",
@@ -40,12 +46,6 @@
     "alias": "samrat",
     "url": "https://github.com/samrat",
     "imageURL": "https://github.com/samrat.png"
-  },
-  "nid90": {
-    "name": "Nivedita Priyadarshini",
-    "alias": "nid90",
-    "url": "https://github.com/nid90",
-    "imageURL": "https://github.com/nid90.png"
   },
   "shhivam": {
     "name": "Shivam Singhal",
