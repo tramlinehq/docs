@@ -10,9 +10,9 @@ authors:
 
 # September 4, 2025
 
-### Outgoing Webhooks
-
 ![](../../static/img/changelog/outgoing-webhook-logs.png)
+
+### Outgoing Webhooks
 
 Tramline's outgoing webhooks notify you in real-time when certain events happen in your release. Webhooks are HTTPS POST requests made to an endpoint of your choice that you can then implement custom business logic for. For example, you can receive a webhook when the release first kicks off. Your endpoint that receives this webhook can then process the payload of the webhook to automate some internal process you have based on this event, such as triggering a different pipeline, creating a ticket, or sending a custom notification or email to your team.
 
