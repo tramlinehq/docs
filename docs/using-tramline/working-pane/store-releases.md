@@ -39,6 +39,12 @@ If you have production release with a phased release, you will be presented with
 
 Once the rollout is started, you can **pause** (and **resume**) the rollout, **halt** it, or, release to **all the users** right away if you confident about your release.
 
+If you have enabled [auto-start rollout after submission](/using-tramline/release-management/release-settings#auto-start-rollout-after-submission), the phased release begins automatically once Apple approves the review, without requiring a manual trigger from Tramline.
+
+:::info
+On iOS, automatic rollouts are the default. The App Store manages the daily progression of the phased release according to its [fixed schedule](/using-tramline/release-management/release-settings#production-release-settings). You can still pause and resume through Tramline.
+:::
+
 ### Android
 
 If your release step has a production channel, you are presented with:
@@ -58,3 +64,7 @@ If you have a production release with staged rollout, you will be presented with
 Once the rollout is started, you can **increase** the rollout, **halt** it, or, release to **all the users** right away if you confident about your release.
 
 <!-- ![](/img/android-staged-rollout-started.png) -->
+
+If you have enabled [auto-start rollout after submission](/using-tramline/release-management/release-settings#auto-start-rollout-after-submission), the staged rollout begins automatically once the submission preparation completes, without requiring a manual trigger.
+
+If you have enabled [automatic rollout](/using-tramline/release-management/release-settings#automatic-rollout), Tramline will automatically progress through the configured rollout stages once daily, as long as the release remains [healthy](/using-tramline/quality-and-monitoring/release-health-monitoring). You can pause or resume automatic progression, or switch back to manual control at any time.

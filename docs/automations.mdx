@@ -91,6 +91,22 @@ Enable this in your [submission settings](/using-tramline/release-management/rel
 
 When a workflow finishes and a build is found, Tramline can optionally auto-submit the build to the configured distribution channel.
 
+## Auto-start rollout after submission
+
+:::info
+Enable this in your [production release settings](/using-tramline/release-management/release-settings#auto-start-rollout-after-submission).
+:::
+
+When enabled, Tramline automatically starts the production rollout as soon as the submission is approved (iOS) or prepared (Android), removing the need for a manual trigger. Pre-production releases always auto-start regardless of this setting.
+
+## Automatic rollout
+
+:::info
+Enable this in your [production release settings](/using-tramline/release-management/release-settings#automatic-rollout).
+:::
+
+When enabled for Android, Tramline automatically progresses the staged rollout percentage once daily according to the configured sequence, as long as the release is [healthy](/using-tramline/quality-and-monitoring/release-health-monitoring). The rollout is automatically paused if health rules detect problems. On iOS, automatic rollouts are enabled by default for all phased releases.
+
 ## Cancel previous workflow run
 
 When a new commit lands, and if there's already a workflow running for a previous commit, Tramline will attempt to cancel the previous workflow run. We do this to avoid wasting compute minutes.

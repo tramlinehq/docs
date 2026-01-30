@@ -125,13 +125,17 @@ For **iOS**, make sure your CI workflow can push your builds to TestFlight.<br /
 
 ### Production Release Settings
 
-You can choose to disable the production release for your releases if your app is still in beta.
+You can choose to disable the production release for your releases if your app is still in beta. You can also choose to enable/disable staged rollout for your production release.
 
-You can also choose to enable/disable staged rollout for your production release.
+:::info
+It is necessary to have at least one submission channel configured in beta testing if you have turned production release off.
+:::
+
+#### iOS
 
 ![](/img/ios-staged-rollout.png)
 
-On **iOS**, phased releases are fixed and managed entirely by App Store.
+Phased releases on iOS are fixed and managed entirely by App Store.
 
 | day | percentage of users |
 |-----|---------------------|
@@ -145,12 +149,50 @@ On **iOS**, phased releases are fixed and managed entirely by App Store.
 
 Tramline gives you a way to **pause**, **resume**, or **halt** the rollout at any given point during the phased release.
 
+##### Auto-start rollout after submission
+
+By default, the production rollout requires a manual trigger after Apple approves the review. If you enable this setting, Tramline sets the release type to "After Approval" in App Store Connect. Once Apple approves the review, the release is initiated automatically by the App Store without any manual action in Tramline.
+
+![](/img/auto-start-rollout-ios.png)
+
+##### Automatic rollout
+
+Automatic rollouts are the default behavior for all phased releases on iOS. The App Store manages the daily progression according to the fixed schedule above. You can still pause and resume through Tramline.
+
+#### Android
+
 ![](/img/android-staged-rollout.png)
 
-On **Android**, staged rollouts are more flexible and can be configured in whatever increments you want. You can specify the stages of the rollout by comma separating the incremental values, like `1, 5, 10, 50, 100` - these will give you 5 stages of 1%, 5%, 10%, 50% and 100%
+Staged rollouts on Android are more flexible and can be configured in whatever increments you want. You can specify the stages of the rollout by comma separating the incremental values, like `1, 5, 10, 50, 100` - these will give you 5 stages of 1%, 5%, 10%, 50% and 100%.
+
+##### Auto-start rollout after submission
+
+By default, the production rollout requires a manual trigger after the submission is prepared. If you enable this setting, the rollout starts automatically as soon as the submission preparation completes and the draft release is created on the Play Store.
+
+![](/img/auto-start-rollout-android.png)
 
 :::info
-It is necessary to have at least one submission channel configured in beta testing if you have turned production release off.
+Pre-production releases (internal and beta testing) always auto-start regardless of this setting. This configuration only applies to production releases.
+:::
+
+##### Automatic rollout
+
+When this is enabled, Tramline automatically increases the store rollout percentage once daily according to the configured rollout sequence, as long as the release remains healthy.
+
+![](/img/automatic-rollout-android.png)
+
+Once enabled:
+
+- Tramline progresses the rollout to the next stage in your configured sequence once every 24 hours.
+- You can manually pause or resume automatic progression at any time during the rollout.
+- If [Release Health Rules](/using-tramline/quality-and-monitoring/release-health-monitoring) detect problems, the rollout is automatically paused until the release returns to a healthy state. If a health rule pauses the rollout, resuming again requires manual intervention.
+
+:::info
+When you pause and resume the automatic rollout, the daily clock restarts from the time of resumption, not from the original time-of-day or the time when it was paused. This behaviour mimics what App Store does for its phased releases.
+:::
+
+:::tip
+Automatic rollouts work best when combined with [Release Health Rules](/using-tramline/quality-and-monitoring/release-health-monitoring). Configure health thresholds to ensure Tramline only progresses the rollout when your release metrics are within acceptable ranges.
 :::
 
 ### Beta Testing Configuration
