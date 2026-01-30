@@ -12,4 +12,8 @@ You can update release-related metadata prior to initiating your production stor
 
 Tramline will add some sensible defaults for these for your benefit.
 
-<!-- ![](/img/release-metadata.png) -->
+![](/img/release-metadata-view.png)
+
+### Draft notes
+
+If your release notes or other text updates (such as iOS promo text) don’t meet the validation requirements (like length or formatting), they’ll be saved as a draft instead. You can re-apply the draft, edit and save them needed, but only the most recent invalid draft is kept.
