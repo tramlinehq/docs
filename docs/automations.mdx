@@ -107,6 +107,14 @@ Enable this in your [production release settings](/using-tramline/release-manage
 
 When enabled for Android, Tramline automatically progresses the staged rollout percentage once daily according to the configured sequence, as long as the release is [healthy](/using-tramline/quality-and-monitoring/release-health-monitoring). The rollout is automatically paused if health rules detect problems. On iOS, automatic rollouts are enabled by default for all phased releases.
 
+## Unblock upcoming releases
+
+:::info
+See [Suspending Releases](/using-tramline/release-management/suspending-releases#locking-platforms) for details.
+:::
+
+In [synchronized releases](/using-tramline/release-management/synchronized-release), locking a platform automatically unblocks upcoming releases for that platform, allowing them to proceed to production independently. This avoids one platform holding up the entire release pipeline.
+
 ## Cancel previous workflow run
 
 When a new commit lands, and if there's already a workflow running for a previous commit, Tramline will attempt to cancel the previous workflow run. We do this to avoid wasting compute minutes.
