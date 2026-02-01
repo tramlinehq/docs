@@ -29,7 +29,7 @@ You can now target Android releases to specific device form factors — Wear OS,
   <img src="/img/changelog/wear-os-submission.png" width="400"/>
 </p>
 
-Note that we currently don't support a hybrid release of separate form-factor tracks to **production** from the same release train. We recommend creating separate trains or apps for this. Separate tracks for Internal/Beta submissions are however supported in a hybrid way.
+Note that we currently don't support a hybrid release of separate form-factor tracks to **production** from the same release train. We recommend creating separate trains or apps for this. Separate tracks for Internal/Beta submissions are, however, supported in a hybrid way.
 
 ### Auto-update inflight release with latest RC
 
@@ -45,7 +45,7 @@ Read more about locking platforms → [here](/using-tramline/release-management/
 
 ### Draft release notes
 
-Release notes and other text metadata (like iOS promo text) that don't meet store validation requirements are now saved as a draft. You can re-apply, edit and save them as needed.
+Release notes and other text metadata (like iOS promo text) that don't meet store validation requirements are now saved as a draft. You can re-apply, edit, and save them as needed.
 
 ![](../../static/img/changelog/draft-metadata.png)
 
@@ -54,7 +54,7 @@ Release notes and other text metadata (like iOS promo text) that don't meet stor
 
 - Don't create version bump PRs for hotfix releases
 - Make scheduled releases DST-insensitive (rely on time-of-day)
-- Review-rejected builds can now be resbumitted
+- Review-rejected builds can now be resubmitted
 - Limit production blocking checks to active releases only
 - If git tagging fails, do not block further operations
 
