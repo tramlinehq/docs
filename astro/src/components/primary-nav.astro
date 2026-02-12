@@ -1,0 +1,186 @@
+---
+// Type definitions for navigation items
+type NavItem = {
+  label: string;
+  type: "slug" | "category";
+  slug?: string;
+  children?: NavItem[];
+};
+
+interface Props {
+  navigation: NavItem[];
+  basePath: string;
+}
+
+const { navigation, basePath } = Astro.props;
+---
+
+<nav class="primary-nav">
+  {
+    navigation.map((item) => {
+      if (item.type === "slug" && item.slug) {
+        return (
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href={`${basePath}/${item.slug}`} class="nav-link">
+                {item.label}
+              </a>
+            </li>
+          </ul>
+        );
+      }
+
+      if (item.type === "category" && item.children) {
+        return (
+          <div class="nav-category">
+            <div class="category-label">{item.label}</div>
+            <ul class="nav-list">
+              {item.children.map((child) => {
+                if (child.type === "slug" && child.slug) {
+                  return (
+                    <li class="nav-item">
+                      <a href={`${basePath}/${child.slug}`} class="nav-link">
+                        {child.label}
+                      </a>
+                    </li>
+                  );
+                }
+
+                if (child.type === "category" && child.children) {
+                  return (
+                    <li class="nav-subcategory">
+                      <div class="subcategory-label">{child.label}</div>
+                      <ul class="nav-list">
+                        {child.children.map((grandchild) => {
+                          if (grandchild.type === "slug" && grandchild.slug) {
+                            return (
+                              <li class="nav-item">
+                                <a
+                                  href={`${basePath}/${grandchild.slug}`}
+                                  class="nav-link"
+                                >
+                                  {grandchild.label}
+                                </a>
+                              </li>
+                            );
+                          }
+                          return null;
+                        })}
+                      </ul>
+                    </li>
+                  );
+                }
+
+                return null;
+              })}
+            </ul>
+          </div>
+        );
+      }
+
+      return null;
+    })
+  }
+</nav>
+
+<style>
+  .primary-nav {
+    position: sticky;
+    top: 75px;
+    width: 300px;
+    padding-block: var(--spacing-1);
+    padding-inline: 0 var(--spacing-1);
+    margin-left: calc(-1 * var(--spacing-2));
+    overflow-y: auto;
+    height: calc(100vh - 75px);
+    border-right: 1px solid var(--palette-gray-800);
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item {
+    margin: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: var(--spacing-1) var(--spacing-2);
+    color: var(--color-text, #333);
+    text-decoration: none;
+    border-radius: 16px;
+    transition: background-color 0.2s ease;
+    font-size: 0.9375rem;
+  }
+
+  .nav-link:hover {
+    background-color: var(--palette-gray-800);
+  }
+
+  .nav-link:active,
+  .nav-link[aria-current="page"] {
+    background-color: var(--color-bg-active, #d0d0d0);
+    font-weight: 600;
+  }
+
+  .nav-category {
+    margin-top: 1.5rem;
+  }
+
+  .nav-category:first-child {
+    margin-top: 0;
+  }
+
+  .category-label {
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted, #666);
+    padding: var(--spacing-1) var(--spacing-2);
+    margin-bottom: 0.25rem;
+  }
+
+  .nav-subcategory {
+    margin: 0;
+  }
+
+  .subcategory-label {
+    font-weight: 600;
+    font-size: 0.8125rem;
+    color: var(--color-text, #333);
+    padding: 0.5rem 0.75rem 0.25rem 0;
+    margin-top: 0.5rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .primary-nav {
+      background-color: var(--color-bg-nav, #1a1a1a);
+      border-right-color: var(--color-border, #333);
+    }
+
+    .nav-link {
+      color: var(--color-text, #e0e0e0);
+    }
+
+    .nav-link:hover {
+      background-color: var(--color-bg-hover, #2a2a2a);
+    }
+
+    .nav-link:active,
+    .nav-link[aria-current="page"] {
+      background-color: var(--color-bg-active, #3a3a3a);
+    }
+
+    .category-label {
+      color: var(--color-text-muted, #999);
+    }
+
+    .subcategory-label {
+      color: var(--color-text, #e0e0e0);
+    }
+  }
+</style>

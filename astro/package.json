@@ -1,0 +1,22 @@
+{
+  "name": "astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "terrazzo:watch": "npx tz build --watch"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "astro": "^5.17.2",
+    "playwright": "^1.58.2",
+    "rehype-mermaid": "^3.0.0"
+  },
+  "devDependencies": {
+    "@terrazzo/cli": "^0.10.5",
+    "@terrazzo/plugin-css": "^0.10.4"
+  }
+}

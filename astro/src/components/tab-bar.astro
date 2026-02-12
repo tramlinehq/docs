@@ -1,0 +1,97 @@
+---
+/**
+ * TabBar Component
+ *
+ * A flexible navigation tab bar that automatically highlights the active tab.
+ *
+ * @example
+ * ```astro
+ * ---
+ * import TabBar from "@components/tab-bar.astro";
+ *
+ * const tabs = [
+ *   { id: "docs", label: "Docs", href: "/" },
+ *   { id: "changelog", label: "Changelog", href: "/changelog" },
+ *   { id: "api", label: "API", href: "/api" },
+ * ];
+ * ---
+ *
+ * <TabBar tabs={tabs} />
+ *
+ * // Or with explicit active tab:
+ * <TabBar tabs={tabs} activeTab="changelog" />
+ * ```
+ */
+
+interface Tab {
+  label: string;
+  href: string;
+  id: string;
+}
+
+interface Props {
+  tabs: Tab[];
+  activeTab?: string;
+}
+
+const { tabs, activeTab } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+// Determine active tab based on current path if not explicitly provided
+const getActiveTab = () => {
+  if (activeTab) return activeTab;
+
+  // Find the tab whose href best matches the current path
+  const matchingTab = tabs.find((tab) => {
+    if (tab.href === "/" && currentPath === "/") return true;
+    if (tab.href !== "/" && currentPath.startsWith(tab.href)) return true;
+    return false;
+  });
+
+  return matchingTab?.id || tabs[0]?.id;
+};
+
+const active = getActiveTab();
+---
+
+<nav class="tab-bar">
+  {
+    tabs.map((tab) => (
+      <a
+        href={tab.href}
+        class:list={["tab", { active: active === tab.id }]}
+        aria-current={active === tab.id ? "page" : undefined}
+      >
+        {tab.label}
+      </a>
+    ))
+  }
+</nav>
+
+<style>
+  .tab-bar {
+    display: flex;
+    gap: var(--spacing-2);
+    align-items: center;
+  }
+
+  .tab {
+    padding-block: var(--spacing-1);
+    text-decoration: none;
+    color: var(--palette-gray-500);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    border-bottom: 1px solid transparent;
+  }
+
+  .tab:hover {
+    border-bottom: 1px solid var(--palette-blue-500);
+  }
+
+  .tab.active {
+    color: var(--palette-gray-0);
+    border-bottom: 1px solid orange;
+  }
+</style>

@@ -1,0 +1,102 @@
+---
+import Head from "@components/head.astro";
+import Header from "@components/header.astro";
+import PrimaryNav from "@components/primary-nav.astro";
+import TableOfContents from "@components/table-of-contents.astro";
+import "@tokens/tokens.css";
+
+import docsNavigation from "../content/docs/_navigation.json";
+import changelogNavigation from "../content/changelog/_navigation.json";
+import integrationsNavigation from "../content/integrations/_navigation.json";
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  headings?: Heading[];
+}
+
+const { title, description, headings } = Astro.props;
+
+// Determine which navigation to show based on the current path
+const currentPath = Astro.url.pathname;
+const isChangelogPage = currentPath.startsWith("/changelog");
+const isIntegrationsPage = currentPath.startsWith("/integrations");
+
+let navigation;
+let basePath;
+
+if (isChangelogPage) {
+  navigation = changelogNavigation;
+  basePath = "/changelog";
+} else if (isIntegrationsPage) {
+  navigation = integrationsNavigation;
+  basePath = "/integrations";
+} else {
+  navigation = docsNavigation;
+  basePath = "/docs";
+}
+---
+
+<html lang="en">
+  <Head title={title} description={description} />
+  <body>
+    <Header />
+    <div class="layout-container">
+      <PrimaryNav navigation={navigation} basePath={basePath} />
+      <main class="content">
+        <slot />
+      </main>
+      <TableOfContents headings={headings} />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-inter), sans-serif;
+    background-color: var(--color-bg);
+    overflow-y: auto;
+  }
+</style>
+
+<style>
+  .layout-container {
+    display: grid;
+    grid-template-columns: 350px 1fr 250px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 2rem;
+    height: 100%;
+  }
+
+  .content {
+    flex-grow: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    /*overflow-y: auto;*/
+    min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    .layout-container {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      position: static;
+      height: auto;
+      max-height: 50vh;
+      border-bottom: 1px solid var(--color-border, #e0e0e0);
+    }
+  }
+</style>

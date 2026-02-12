@@ -1,0 +1,68 @@
+---
+import Logo from "@components/logo.astro";
+import TabBar from "@components/tab-bar.astro";
+
+const tabs = [
+  { id: "docs", label: "Docs", href: "/docs" },
+  { id: "integrations", label: "Integrations", href: "/integrations" },
+  { id: "changelog", label: "Changelog", href: "/changelog" },
+];
+---
+
+<div class="header">
+  <div class="content">
+    <div class="top">
+      <div class="left">
+        <Logo />
+        <div>TRAMLINE</div>
+      </div>
+      <div class="right">
+        <a href="https://tramline.dev">Dashboard</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <TabBar tabs={tabs} />
+    </div>
+  </div>
+</div>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid var(--palette-gray-800);
+    background-color: var(--palette-gray-1000);
+    padding: var(--spacing-1) 0 0;
+    z-index: 9;
+  }
+
+  .header .content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+  }
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+  }
+</style>
