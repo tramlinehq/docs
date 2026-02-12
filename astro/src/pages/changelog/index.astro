@@ -1,18 +1,28 @@
 ---
 import { getCollection } from "astro:content";
 import DocumentLayout from "@layouts/document-layout.astro";
+import Img from "@components/img.mdx.astro";
+import Message from "@components/message.mdx.astro";
 
 const changelog = await getCollection("changelog");
 const sortedChangelog = changelog.sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
+
+// Custom components to override default HTML elements in MDX
+const components = {
+  img: Img,
+  message: Message,
+};
 ---
 
 <DocumentLayout title="Changelog">
   <article class="changelog">
     <header class="changelog-header">
       <h1>Changelog</h1>
-      <p class="subtitle">Stay up to date with the latest features and improvements</p>
+      <p class="subtitle">
+        Stay up to date with the latest features and improvements
+      </p>
     </header>
 
     <div class="changelog-list">
@@ -28,7 +38,10 @@ const sortedChangelog = changelog.sort(
           return (
             <article class="changelog-entry">
               <div class="entry-header">
-                <time datetime={entry.data.date.toISOString()} class="entry-date">
+                <time
+                  datetime={entry.data.date.toISOString()}
+                  class="entry-date"
+                >
                   {formattedDate}
                 </time>
                 {entry.data.authors && entry.data.authors.length > 0 && (
@@ -38,7 +51,7 @@ const sortedChangelog = changelog.sort(
                 )}
               </div>
               <div class="entry-content">
-                <Content />
+                <Content components={components} />
               </div>
             </article>
           );

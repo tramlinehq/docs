@@ -11,7 +11,7 @@ For example, if you have 100 users, and your rollout sequence is 10%, 50% and 10
 
 Tramline natively supports this process; you can set your rollouts to be cascading, which will only rollout to 99.9% (or your final rollout value of choice) and prevent you from starting the rollout of the next release until the previous one is moved from 99.9% to a 100%.
 
-![Cascading Rollout](/img/cascading-rollout-config.png)
+![Cascading Rollout](@assets/img/cascading-rollout-config.png)
 
 You can configure this in the **Submission Settings** tab of the **Release Settings** under the **Production Release** section.
 
@@ -21,6 +21,6 @@ This entire flow is managed and prompted through appropriate callouts and action
 
 Before you start the rollout of your new release, Tramline will prompt you complete the rollout of the previous release before starting the current one.
 
-![Cascading Rollout Prompt](/img/cascading-rollout-prompt.png)
+![Cascading Rollout Prompt](@assets/img/cascading-rollout-prompt.png)
 
 Only when the previous release is complete, can you start the staged rollout of the ongoing release.

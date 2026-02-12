@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  caption?: string;
+  loading?: "lazy" | "eager";
+  class?: string;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  caption,
+  loading = "lazy",
+  class: className,
+} = Astro.props;
+
+// Build props conditionally for the Image component
+const imageProps: any = {
+  src,
+  alt,
+  loading,
+  class: "mdx-image",
+};
+
+if (width !== undefined) {
+  imageProps.width = width;
+}
+
+if (height !== undefined) {
+  imageProps.height = height;
+}
+---
+
+<figure class:list={["mdx-image-figure", className]}>
+  <Image {...imageProps} />
+  {caption && <figcaption class="mdx-image-caption">{caption}</figcaption>}
+</figure>
+
+<style>
+  .mdx-image-figure {
+    margin: var(--spacing-4, 2rem) 0;
+    text-align: center;
+  }
+
+  .mdx-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--palette-gray-800);
+    padding: var(--spacing-1);
+    display: block;
+  }
+
+  .mdx-image-caption {
+    margin-top: var(--spacing-2, 1rem);
+    font-size: 0.875rem;
+    color: var(--color-text-muted, #666);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .mdx-image-caption {
+      color: var(--color-text-muted, #999);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .mdx-image-figure {
+      margin: var(--spacing-3, 1.5rem) 0;
+    }
+
+    .mdx-image-caption {
+      font-size: 0.8125rem;
+      padding: 0 var(--spacing-2, 1rem);
+    }
+  }
+</style>

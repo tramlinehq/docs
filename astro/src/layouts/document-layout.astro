@@ -49,10 +49,10 @@ if (isChangelogPage) {
     <Header />
     <div class="layout-container">
       <PrimaryNav navigation={navigation} basePath={basePath} />
-      <main class="content">
-        <slot />
+      <main>
+        <div class="content"><slot /></div>
+        <TableOfContents headings={headings} />
       </main>
-      <TableOfContents headings={headings} />
     </div>
   </body>
 </html>
@@ -72,19 +72,22 @@ if (isChangelogPage) {
 <style>
   .layout-container {
     display: grid;
-    grid-template-columns: 350px 1fr 250px;
+    grid-template-columns: 300px 1fr;
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    gap: 2rem;
+    gap: 0;
     height: 100%;
   }
 
+  main {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: var(--spacing-2);
+  }
+
   .content {
-    flex-grow: 1;
-    padding: 2rem;
-    max-width: 1200px;
-    /*overflow-y: auto;*/
-    min-width: 0;
+    padding: var(--spacing-4);
   }
 
   @media (max-width: 768px) {

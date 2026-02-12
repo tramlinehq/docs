@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import DocumentLayout from "@layouts/document-layout.astro";
+import Img from "@components/img.mdx.astro";
+import Message from "@components/message.mdx.astro";
 
 export async function getStaticPaths() {
   try {
@@ -32,6 +34,12 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
+
+// Custom components to override default HTML elements in MDX
+const components = {
+  img: Img,
+  message: Message,
+};
 ---
 
 <DocumentLayout title={entry.data.title} headings={headings}>
@@ -40,7 +48,7 @@ const { Content, headings } = await entry.render();
       <h1>{entry.data.title}</h1>
     </header>
     <div class="document-content">
-      <Content />
+      <Content components={components} />
     </div>
   </article>
 </DocumentLayout>

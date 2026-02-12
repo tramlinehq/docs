@@ -13,6 +13,9 @@ interface Props {
 }
 
 const { navigation, basePath } = Astro.props;
+
+// Get the current URL path for active state comparison
+const currentPath = Astro.url.pathname;
 ---
 
 <nav class="primary-nav">
@@ -22,7 +25,15 @@ const { navigation, basePath } = Astro.props;
         return (
           <ul class="nav-list">
             <li class="nav-item">
-              <a href={`${basePath}/${item.slug}`} class="nav-link">
+              <a
+                href={`${basePath}/${item.slug}`}
+                class="nav-link"
+                aria-current={
+                  currentPath === `${basePath}/${item.slug}`
+                    ? "page"
+                    : undefined
+                }
+              >
                 {item.label}
               </a>
             </li>
@@ -39,7 +50,15 @@ const { navigation, basePath } = Astro.props;
                 if (child.type === "slug" && child.slug) {
                   return (
                     <li class="nav-item">
-                      <a href={`${basePath}/${child.slug}`} class="nav-link">
+                      <a
+                        href={`${basePath}/${child.slug}`}
+                        class="nav-link"
+                        aria-current={
+                          currentPath === `${basePath}/${child.slug}`
+                            ? "page"
+                            : undefined
+                        }
+                      >
                         {child.label}
                       </a>
                     </li>
@@ -58,6 +77,12 @@ const { navigation, basePath } = Astro.props;
                                 <a
                                   href={`${basePath}/${grandchild.slug}`}
                                   class="nav-link"
+                                  aria-current={
+                                    currentPath ===
+                                    `${basePath}/${grandchild.slug}`
+                                      ? "page"
+                                      : undefined
+                                  }
                                 >
                                   {grandchild.label}
                                 </a>
@@ -83,6 +108,25 @@ const { navigation, basePath } = Astro.props;
   }
 </nav>
 
+<script>
+  // Persist and restore scroll position on navigation
+  const nav = document.querySelector(".primary-nav");
+  const SCROLL_KEY = "primary-nav-scroll";
+
+  if (nav) {
+    // Restore scroll position on page load
+    const savedScroll = sessionStorage.getItem(SCROLL_KEY);
+    if (savedScroll) {
+      nav.scrollTop = parseInt(savedScroll, 10);
+    }
+
+    // Save scroll position before navigation
+    nav.addEventListener("scroll", () => {
+      sessionStorage.setItem(SCROLL_KEY, nav.scrollTop.toString());
+    });
+  }
+</script>
+
 <style>
   .primary-nav {
     position: sticky;
@@ -92,7 +136,7 @@ const { navigation, basePath } = Astro.props;
     padding-inline: 0 var(--spacing-1);
     margin-left: calc(-1 * var(--spacing-2));
     overflow-y: auto;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 93px);
     border-right: 1px solid var(--palette-gray-800);
   }
 

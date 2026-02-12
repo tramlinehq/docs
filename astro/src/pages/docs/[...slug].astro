@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import DocumentLayout from "@layouts/document-layout.astro";
+import Img from "@components/img.mdx.astro";
+import Message from "@components/message.mdx.astro";
 
 export async function getStaticPaths() {
   try {
@@ -15,23 +17,14 @@ export async function getStaticPaths() {
   }
 }
 
-// export async function getStaticPaths() {
-//   const documents = await getCollection("document");
-
-//   return documents.map((doc) => {
-//     // Use custom slug from frontmatter if available, otherwise use the id
-//     let slug = doc.data.slug ? doc.data.slug.replace(/^\//, "") : doc.id;
-//     // Remove .md or .mdx extension from the slug
-//     slug = slug.replace(/\.(md|mdx)$/, "");
-//     return {
-//       params: { slug: slug || undefined },
-//       props: { doc },
-//     };
-//   });
-// }
-
 const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
+
+// Custom components to override default HTML elements in MDX
+const components = {
+  img: Img,
+  message: Message,
+};
 ---
 
 <DocumentLayout title={entry.data.title} headings={headings}>
@@ -40,16 +33,12 @@ const { Content, headings } = await entry.render();
       <h1>{entry.data.title}</h1>
     </header>
     <div class="document-content">
-      <Content />
+      <Content components={components} />
     </div>
   </article>
 </DocumentLayout>
 
 <style>
-  .document {
-    max-width: 100%;
-  }
-
   .document-header {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
