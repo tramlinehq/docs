@@ -152,6 +152,22 @@ if (isChangelogPage) {
     font-style: italic;
   }
 
+  table {
+    width: 100%;
+    border: 1px solid var(--palette-gray-800);
+    padding: var(--spacing-1);
+    border-radius: 6px;
+  }
+
+  thead {
+    font-weight: 200;
+    text-align: left;
+  }
+
+  tbody {
+    text-align: left;
+  }
+
   @media (prefers-color-scheme: dark) {
     .document-header h1 {
       color: var(--color-text, #e0e0e0);

@@ -5,7 +5,7 @@ sidebar_label: GitLab CI/CD
 sidebar_position: 1
 ---
 
-:::caution
+:::warning
 In order to connect this integration, you'll need to be logged in to GitLab as an owner or maintainer of the project where your repository is located.
 :::
 
@@ -38,7 +38,7 @@ Builds a signed release AAB and uploads it to Play Store using Fastlane. Once Pl
 You can also take a look at the [Ueno Flutter App](https://gitlab.com/tramline/ueno-mirror/-/blob/main/.gitlab-ci.yml) for a complete example. This repository has a variety of different jobs that can be triggered from Tramline. They perform different variations of distributions and app build types.
 :::
 
-:::caution
+:::warning
 Jobs that are used with Tramline (the ones that generate builds) must be marked as `when: manual` so that Tramline can trigger them against its own lifecycle.
 :::
 
