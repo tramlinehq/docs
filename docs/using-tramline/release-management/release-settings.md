@@ -107,6 +107,7 @@ The following file types are currently supported:
 
 - `build.gradle` (Gradle)
 - `build.gradle.kts` (Gradle with Kotlin)
+- `version.properties` (for Android)
 - `plist` (for iOS)
 - `pbxproj` (for iOS)
 - `pubspec.yaml` (for Flutter)
