@@ -103,6 +103,14 @@ In *Next Version After Release Branch Cuts*, Tramline will increment the version
 #### Build File Paths
 If you supply more than one file path, Tramline will update the version information in all of them.
 
+The following file types are currently supported:
+
+- `build.gradle` (Gradle)
+- `build.gradle.kts` (Gradle with Kotlin)
+- `plist` (for iOS)
+- `pbxproj` (for iOS)
+- `pubspec.yaml` (for Flutter)
+
 #### Branch Prefix
 By default, the branch created for the version bump code change has a `tramline` prefix. If you want, you can change the prefix to something else. This can be helpful for branch protection rules in your version control system.
 
