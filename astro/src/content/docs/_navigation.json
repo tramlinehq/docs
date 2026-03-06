@@ -1,0 +1,234 @@
+[
+  {
+    "label": "Getting Started",
+    "type": "category",
+    "children": [
+      {
+        "label": "Overview",
+        "type": "slug",
+        "slug": "/"
+      },
+      {
+        "label": "Add your app",
+        "type": "slug",
+        "slug": "getting-started/add-your-app"
+      },
+      {
+        "label": "Set up integrations",
+        "type": "slug",
+        "slug": "getting-started/setup-integrations"
+      },
+      {
+        "label": "Prepare for release",
+        "type": "slug",
+        "slug": "getting-started/prepare-release"
+      },
+      {
+        "label": "Start the release",
+        "type": "slug",
+        "slug": "getting-started/start-release"
+      },
+      {
+        "label": "Invite your team",
+        "type": "slug",
+        "slug": "getting-started/invite-team"
+      }
+    ]
+  },
+  {
+    "label": "Release Management",
+    "type": "category",
+    "children": [
+      {
+        "label": "Prepare new release",
+        "type": "slug",
+        "slug": "using-tramline/release-management/new-release"
+      },
+      {
+        "label": "Upcoming Release",
+        "type": "slug",
+        "slug": "using-tramline/release-management/upcoming-release"
+      },
+      {
+        "label": "Scheduled Release",
+        "type": "slug",
+        "slug": "using-tramline/release-management/scheduled-release"
+      },
+      {
+        "label": "Synchronized Release",
+        "type": "slug",
+        "slug": "using-tramline/release-management/synchronized-release"
+      },
+      {
+        "label": "Branching Strategies",
+        "type": "slug",
+        "slug": "using-tramline/release-management/branching-strategies"
+      },
+      {
+        "label": "Release Settings",
+        "type": "slug",
+        "slug": "using-tramline/release-management/release-settings"
+      },
+      {
+        "label": "Embeddable Tokens",
+        "type": "slug",
+        "slug": "using-tramline/release-management/embedabble-tokens"
+      }
+    ]
+  },
+  {
+    "label": "Working Pane",
+    "type": "category",
+    "children": [
+      {
+        "label": "Overview",
+        "type": "slug",
+        "slug": "using-tramline/working-pane/overview"
+      },
+      {
+        "label": "Changeset Tracking",
+        "type": "slug",
+        "slug": "using-tramline/working-pane/changeset-tracking"
+      },
+      {
+        "label": "Approvals",
+        "type": "slug",
+        "slug": "using-tramline/working-pane/approvals"
+      },
+      {
+        "label": "Notes and Metadata",
+        "type": "slug",
+        "slug": "using-tramline/working-pane/metadata"
+      },
+      {
+        "label": "Screenshots",
+        "type": "slug",
+        "slug": "using-tramline/working-pane/screenshots"
+      },
+      {
+        "label": "Stability",
+        "type": "slug",
+        "slug": "using-tramline/working-pane/stability"
+      },
+      {
+        "label": "Store Releases",
+        "type": "slug",
+        "slug": "using-tramline/working-pane/store-releases"
+      },
+      {
+        "label": "Finalizing the Release",
+        "type": "slug",
+        "slug": "using-tramline/working-pane/finalization"
+      }
+    ]
+  },
+  {
+    "label": "Build Processing",
+    "type": "category",
+    "children": [
+      {
+        "label": "Change Queue",
+        "type": "slug",
+        "slug": "using-tramline/build-processing/build-queue"
+      }
+    ]
+  },
+  {
+    "label": "Version Management",
+    "type": "category",
+    "children": [
+      {
+        "label": "Version Strategies",
+        "type": "slug",
+        "slug": "using-tramline/version-management/version-strategies"
+      },
+      {
+        "label": "Build Numbers",
+        "type": "slug",
+        "slug": "using-tramline/version-management/build-number-management"
+      }
+    ]
+  },
+  {
+    "label": "Quality and Monitoring",
+    "type": "category",
+    "children": [
+      {
+        "label": "Release Activity",
+        "type": "slug",
+        "slug": "using-tramline/quality-and-monitoring/event-timeline"
+      },
+      {
+        "label": "Release Health Monitoring",
+        "type": "slug",
+        "slug": "using-tramline/quality-and-monitoring/release-health-monitoring"
+      },
+      {
+        "label": "Reldex (Release Score)",
+        "type": "slug",
+        "slug": "using-tramline/quality-and-monitoring/reldex"
+      },
+      {
+        "label": "Notifications",
+        "type": "slug",
+        "slug": "using-tramline/quality-and-monitoring/notifications"
+      },
+      {
+        "label": "Outgoing Webhooks",
+        "type": "slug",
+        "slug": "using-tramline/quality-and-monitoring/outgoing-webhooks"
+      }
+    ]
+  },
+  {
+    "label": "Special Cases",
+    "type": "category",
+    "children": [
+      {
+        "label": "Fix Releases",
+        "type": "slug",
+        "slug": "using-tramline/special-cases/fixes"
+      },
+      {
+        "label": "App Variants",
+        "type": "slug",
+        "slug": "using-tramline/special-cases/app-variants"
+      },
+      {
+        "label": "Cascading Rollout",
+        "type": "slug",
+        "slug": "using-tramline/special-cases/cascading-rollout"
+      },
+      {
+        "label": "App Draft Mode",
+        "type": "slug",
+        "slug": "using-tramline/special-cases/draft-mode"
+      }
+    ]
+  },
+  {
+    "label": "Automations",
+    "type": "slug",
+    "slug": "automations"
+  },
+  {
+    "label": "Checks & Balances",
+    "type": "slug",
+    "slug": "checks-and-balances"
+  },
+  {
+    "label": "Team & Membership",
+    "type": "slug",
+    "slug": "inviting-team"
+  },
+  {
+    "label": "Tramline API",
+    "type": "slug",
+    "slug": "api"
+  },
+  {
+    "label": "Getting Support",
+    "type": "slug",
+    "slug": "getting-support"
+  }
+]

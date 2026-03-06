@@ -1,0 +1,235 @@
+---
+import { getCollection } from "astro:content";
+import DocumentLayout from "@layouts/document-layout.astro";
+import Img from "@components/img.mdx.astro";
+import Message from "@components/message.mdx.astro";
+
+const changelog = await getCollection("changelog");
+const sortedChangelog = changelog.sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+// Custom components to override default HTML elements in MDX
+const components = {
+  img: Img,
+  message: Message,
+};
+---
+
+<DocumentLayout title="Changelog">
+  <article class="changelog">
+    <header class="changelog-header">
+      <h1>Changelog</h1>
+      <p class="subtitle">
+        Stay up to date with the latest features and improvements
+      </p>
+    </header>
+
+    <div class="changelog-list">
+      {
+        sortedChangelog.map(async (entry) => {
+          const { Content } = await entry.render();
+          const formattedDate = entry.data.date.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+
+          return (
+            <article class="changelog-entry">
+              <div class="entry-header">
+                <time
+                  datetime={entry.data.date.toISOString()}
+                  class="entry-date"
+                >
+                  {formattedDate}
+                </time>
+                {entry.data.authors && entry.data.authors.length > 0 && (
+                  <div class="entry-authors">
+                    by {entry.data.authors.join(", ")}
+                  </div>
+                )}
+              </div>
+              <div class="entry-content">
+                <Content components={components} />
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </article>
+</DocumentLayout>
+
+<style>
+  .changelog {
+    max-width: 100%;
+  }
+
+  .changelog-header {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border, #e0e0e0);
+  }
+
+  .changelog-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text, #333);
+  }
+
+  .subtitle {
+    margin: 0;
+    font-size: 1.125rem;
+    color: var(--color-text-secondary, #666);
+  }
+
+  .changelog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .changelog-entry {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border, #e0e0e0);
+  }
+
+  .changelog-entry:last-child {
+    border-bottom: none;
+  }
+
+  .entry-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .entry-date {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary, #0066cc);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .entry-authors {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary, #666);
+  }
+
+  .entry-content {
+    line-height: 1.6;
+    color: var(--color-text, #333);
+  }
+
+  .entry-content :global(h1),
+  .entry-content :global(h2),
+  .entry-content :global(h3) {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .entry-content :global(h1) {
+    font-size: 1.75rem;
+  }
+
+  .entry-content :global(h2) {
+    font-size: 1.5rem;
+  }
+
+  .entry-content :global(h3) {
+    font-size: 1.25rem;
+  }
+
+  .entry-content :global(p) {
+    margin-bottom: 1rem;
+  }
+
+  .entry-content :global(a) {
+    color: var(--color-link, #0066cc);
+    text-decoration: none;
+  }
+
+  .entry-content :global(a:hover) {
+    text-decoration: underline;
+  }
+
+  .entry-content :global(ul),
+  .entry-content :global(ol) {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+  }
+
+  .entry-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .entry-content :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1rem 0;
+  }
+
+  .entry-content :global(code) {
+    background-color: var(--color-code-bg, #f5f5f5);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.9em;
+  }
+
+  .entry-content :global(pre) {
+    background-color: var(--color-code-bg, #f5f5f5);
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+
+  .entry-content :global(pre code) {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .entry-content :global(details) {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: var(--color-bg-secondary, #f9f9f9);
+    border-radius: 6px;
+    border: 1px solid var(--color-border, #e0e0e0);
+  }
+
+  .entry-content :global(summary) {
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .changelog-header h1,
+    .entry-content {
+      color: var(--color-text, #e0e0e0);
+    }
+
+    .subtitle {
+      color: var(--color-text-secondary, #999);
+    }
+
+    .entry-content :global(code) {
+      background-color: var(--color-code-bg, #2a2a2a);
+    }
+
+    .entry-content :global(pre) {
+      background-color: var(--color-code-bg, #2a2a2a);
+    }
+
+    .entry-content :global(details) {
+      background-color: var(--palette-gray-900, rgba(255, 255, 255, 0.05));
+    }
+  }
+</style>

@@ -1,0 +1,227 @@
+---
+import Head from "@components/head.astro";
+import Header from "@components/header.astro";
+import PrimaryNav from "@components/primary-nav.astro";
+import TableOfContents from "@components/table-of-contents.astro";
+import "@tokens/tokens.css";
+
+import docsNavigation from "../content/docs/_navigation.json";
+import changelogNavigation from "../content/changelog/_navigation.json";
+import integrationsNavigation from "../content/integrations/_navigation.json";
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  headings?: Heading[];
+}
+
+const { title, description, headings } = Astro.props;
+
+// Determine which navigation to show based on the current path
+const currentPath = Astro.url.pathname;
+const isChangelogPage = currentPath.startsWith("/changelog");
+const isIntegrationsPage = currentPath.startsWith("/integrations");
+
+let navigation;
+let basePath;
+
+if (isChangelogPage) {
+  navigation = changelogNavigation;
+  basePath = "/changelog";
+} else if (isIntegrationsPage) {
+  navigation = integrationsNavigation;
+  basePath = "/integrations";
+} else {
+  navigation = docsNavigation;
+  basePath = "/docs";
+}
+---
+
+<html lang="en">
+  <Head title={title} description={description} />
+  <body>
+    <Header />
+    <div class="layout-container">
+      <PrimaryNav navigation={navigation} basePath={basePath} />
+      <main>
+        <div class="content"><slot /></div>
+        <TableOfContents headings={headings} />
+      </main>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-inter), sans-serif;
+    background-color: var(--color-bg);
+    overflow-y: auto;
+  }
+
+  /* Document content styles */
+  .document-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .document-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text, #333);
+  }
+
+  .document-content {
+    line-height: 1.6;
+    color: var(--color-text, #333);
+  }
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--color-link, #0066cc);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  code {
+    background-color: var(--color-code-bg, #f5f5f5);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.9em;
+  }
+
+  pre {
+    background-color: var(--color-code-bg, #f5f5f5);
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+
+  pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  blockquote {
+    border-left: 4px solid var(--color-border, #e0e0e0);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: var(--color-text-muted, #666);
+    font-style: italic;
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid var(--palette-gray-800);
+    padding: var(--spacing-1);
+    border-radius: 6px;
+  }
+
+  thead {
+    font-weight: 200;
+    text-align: left;
+  }
+
+  tbody {
+    text-align: left;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .document-header h1 {
+      color: var(--color-text, #e0e0e0);
+    }
+
+    .document-content {
+      color: var(--color-text, #e0e0e0);
+    }
+
+    code {
+      background-color: var(--color-code-bg, #2a2a2a);
+    }
+
+    pre {
+      background-color: var(--color-code-bg, #2a2a2a);
+    }
+
+    blockquote {
+      color: var(--color-text-muted, #999);
+    }
+  }
+</style>
+
+<style>
+  .layout-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 0;
+    height: 100%;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: var(--spacing-2);
+  }
+
+  .content {
+    padding: var(--spacing-4);
+  }
+
+  @media (max-width: 768px) {
+    .layout-container {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      position: static;
+      height: auto;
+      max-height: 50vh;
+      border-bottom: 1px solid var(--color-border, #e0e0e0);
+    }
+  }
+</style>

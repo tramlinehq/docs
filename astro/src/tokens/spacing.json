@@ -1,0 +1,20 @@
+{
+  "spacing": {
+    "$type": "dimension",
+    "0": {
+      "$value": "0px"
+    },
+    "1": {
+      "$value": "8px"
+    },
+    "2": {
+      "$value": "16px"
+    },
+    "3": {
+      "$value": "24px"
+    },
+    "4": {
+      "$value": "32px"
+    }
+  }
+}

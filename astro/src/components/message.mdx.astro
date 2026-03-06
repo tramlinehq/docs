@@ -1,0 +1,139 @@
+---
+import InfoCircled from "@assets/icons/info-circled.svg?raw";
+import ExclamationTriangle from "@assets/icons/exclamation-triangle.svg?raw";
+
+interface Props {
+  type?: "note" | "tip" | "info" | "warning" | "critical";
+}
+
+const { type = "info" } = Astro.props;
+
+// Determine which icon to use
+const isWarningType = type === "warning" || type === "critical";
+const iconSvg = isWarningType ? ExclamationTriangle : InfoCircled;
+
+// Map types to color classes
+const typeConfig = {
+  note: "message-note",
+  tip: "message-tip",
+  info: "message-info",
+  warning: "message-warning",
+  critical: "message-critical",
+};
+
+const colorClass = typeConfig[type];
+---
+
+<aside class:list={["message", colorClass]} role="note">
+  <div class="message-icon" set:html={iconSvg} />
+  <div class="message-content">
+    <slot />
+  </div>
+</aside>
+
+<style>
+  .message {
+    display: flex;
+    gap: var(--spacing-2, 0.75rem);
+    align-items: flex-start;
+    padding: var(--spacing-2, 0.75rem) var(--spacing-3, 1rem);
+    border-radius: 6px;
+    margin: var(--spacing-3, 1.5rem) 0;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  .message-icon {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+  }
+
+  .message-icon :global(svg) {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  .message-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .message-content :global(p) {
+    margin: 0;
+  }
+
+  .message-content :global(p + p) {
+    margin-top: var(--spacing-2, 0.75rem);
+  }
+
+  .message-content :global(a) {
+    text-decoration: underline;
+  }
+
+  .message-content :global(code) {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.125em 0.375em;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+
+  /* Note - Blue/Gray subtle */
+  .message-note {
+    background-color: rgba(142, 142, 160, 0.14);
+    color: var(--palette-gray-100, #3e3e43);
+  }
+
+  .message-note .message-icon :global(svg) {
+    color: var(--palette-gray-300, #8e8ea0);
+  }
+
+  /* Tip - Green subtle */
+  .message-tip {
+    background-color: rgba(34, 197, 94, 0.1);
+    color: #166534;
+  }
+
+  .message-tip .message-icon :global(svg) {
+    color: #22c55e;
+  }
+
+  /* Info - Blue subtle */
+  .message-info {
+    background-color: var(--palette-blue-900);
+    color: var(--palette-blue-200);
+  }
+
+  .message-info .message-icon :global(svg) {
+    color: var(--palette-blue-500);
+  }
+
+  /* Warning - Orange subtle */
+  .message-warning {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #92400e;
+  }
+
+  .message-warning .message-icon :global(svg) {
+    color: #f59e0b;
+  }
+
+  /* Critical - Red subtle */
+  .message-critical {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #991b1b;
+  }
+
+  .message-critical .message-icon :global(svg) {
+    color: #ef4444;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .message {
+      padding: var(--spacing-2, 0.75rem);
+      margin: var(--spacing-2, 1rem) 0;
+      font-size: 0.875rem;
+    }
+  }
+</style>

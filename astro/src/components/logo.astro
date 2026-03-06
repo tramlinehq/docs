@@ -1,0 +1,24 @@
+---
+import LogoDark from "@assets/tramline-logo-dark-mode.png";
+import LogoLight from "@assets/tramline-logo-light-mode.png";
+---
+
+<div class="logo">
+  <picture>
+    <source srcset={LogoDark.src} media="(prefers-color-scheme: dark)" />
+    <img src={LogoLight.src} alt="Tramline" />
+  </picture>
+</div>
+
+<style>
+  .logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+</style>

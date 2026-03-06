@@ -1,0 +1,11 @@
+---
+const { title = "Error" } = Astro.props;
+import { Font } from "astro:assets";
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title + " – Tramline Documentation"}</title>
+  <Font cssVariable="--font-inter" preload />
+</head>
