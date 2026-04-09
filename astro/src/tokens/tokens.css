@@ -16,10 +16,11 @@
   --palette-gray-800: oklch(0.9491 0 0);
   --palette-gray-1000: oklch(1 0 0);
   --spacing-0: 0;
-  --spacing-1: 8px;
-  --spacing-2: 16px;
-  --spacing-3: 24px;
-  --spacing-4: 32px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+  --spacing-5: 32px;
 }
 
 @media (color-gamut: p3) {

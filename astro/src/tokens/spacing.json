@@ -5,15 +5,18 @@
       "$value": "0px"
     },
     "1": {
-      "$value": "8px"
+      "$value": "4px"
     },
     "2": {
-      "$value": "16px"
+      "$value": "8px"
     },
     "3": {
-      "$value": "24px"
+      "$value": "16px"
     },
     "4": {
+      "$value": "24px"
+    },
+    "5": {
       "$value": "32px"
     }
   }

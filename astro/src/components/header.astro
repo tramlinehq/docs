@@ -1,6 +1,7 @@
 ---
 import Logo from "@components/logo.astro";
 import TabBar from "@components/tab-bar.astro";
+import Button from "@components/button.astro";
 
 const tabs = [
   { id: "docs", label: "Docs", href: "/docs" },
@@ -14,10 +15,14 @@ const tabs = [
     <div class="top">
       <div class="left">
         <Logo />
-        <div>TRAMLINE</div>
+        <div>Tramline</div>
       </div>
       <div class="right">
-        <a href="https://tramline.dev">Dashboard</a>
+        <Button
+          label="Dashboard"
+          href="https://tramline.dev"
+          variant="secondary"
+        />
       </div>
     </div>
     <div class="bottom">
@@ -32,7 +37,7 @@ const tabs = [
     top: 0;
     border-bottom: 1px solid var(--palette-gray-800);
     background-color: var(--palette-gray-1000);
-    padding: var(--spacing-1) 0 0;
+    padding: var(--spacing-2) 0 0;
     z-index: 9;
   }
 
@@ -41,7 +46,7 @@ const tabs = [
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-1);
+    gap: var(--spacing-2);
   }
 
   .top {
@@ -53,7 +58,7 @@ const tabs = [
   .left {
     display: flex;
     align-items: center;
-    gap: var(--spacing-1);
+    gap: var(--spacing-2);
   }
 
   .right {

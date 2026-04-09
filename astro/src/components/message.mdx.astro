@@ -34,11 +34,11 @@ const colorClass = typeConfig[type];
 <style>
   .message {
     display: flex;
-    gap: var(--spacing-2, 0.75rem);
+    gap: var(--spacing-3, 0.75rem);
     align-items: flex-start;
-    padding: var(--spacing-2, 0.75rem) var(--spacing-3, 1rem);
+    padding: var(--spacing-3, 0.75rem) var(--spacing-4, 1rem);
     border-radius: 6px;
-    margin: var(--spacing-3, 1.5rem) 0;
+    margin: var(--spacing-4, 1.5rem) 0;
     font-size: 0.9375rem;
     line-height: 1.6;
   }
@@ -64,7 +64,7 @@ const colorClass = typeConfig[type];
   }
 
   .message-content :global(p + p) {
-    margin-top: var(--spacing-2, 0.75rem);
+    margin-top: var(--spacing-3, 0.75rem);
   }
 
   .message-content :global(a) {
@@ -131,8 +131,8 @@ const colorClass = typeConfig[type];
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .message {
-      padding: var(--spacing-2, 0.75rem);
-      margin: var(--spacing-2, 1rem) 0;
+      padding: var(--spacing-3, 0.75rem);
+      margin: var(--spacing-3, 1rem) 0;
       font-size: 0.875rem;
     }
   }

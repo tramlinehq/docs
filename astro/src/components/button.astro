@@ -1,0 +1,127 @@
+---
+interface Props {
+  label: string;
+  variant?: "primary" | "secondary";
+  icon?: string;
+  href?: string;
+  type?: "button" | "submit" | "reset";
+  class?: string;
+}
+
+const {
+  label,
+  variant = "primary",
+  icon,
+  href,
+  type = "button",
+  class: className = "",
+} = Astro.props;
+
+const Element = href ? "a" : "button";
+const elementProps = href ? { href } : { type };
+---
+
+<Element
+  class:list={["button", `button-${variant}`, className]}
+  {...elementProps}
+>
+  {icon && <span class="button-icon" set:html={icon} />}
+  <span class="button-label">{label}</span>
+</Element>
+
+<style>
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-3, 0.5rem);
+    padding: var(--spacing-1) var(--spacing-2);
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+  }
+
+  .button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .button-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .button-icon :global(svg) {
+    width: 18px;
+    height: 18px;
+    display: block;
+  }
+
+  .button-label {
+    display: inline-block;
+  }
+
+  /* Primary variant */
+  .button-primary {
+    background-color: var(--palette-blue-500, #3b82f6);
+    color: white;
+  }
+
+  .button-primary:hover:not(:disabled) {
+    background-color: var(--palette-blue-600, #2563eb);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+
+  .button-primary:active:not(:disabled) {
+    background-color: var(--palette-blue-700, #1d4ed8);
+    transform: translateY(0);
+  }
+
+  .button-primary:focus-visible {
+    outline: 2px solid var(--palette-blue-500, #3b82f6);
+    outline-offset: 2px;
+  }
+
+  /* Secondary variant */
+  .button-secondary {
+    background-color: transparent;
+    color: var(--palette-gray-100, #3e3e43);
+    border: 1.5px solid var(--palette-gray-300, #d1d5db);
+  }
+
+  .button-secondary:hover:not(:disabled) {
+    background-color: var(--palette-gray-800, rgba(0, 0, 0, 0.05));
+    border-color: var(--palette-gray-200, #9ca3af);
+  }
+
+  .button-secondary:active:not(:disabled) {
+    background-color: var(--palette-gray-700, rgba(0, 0, 0, 0.1));
+  }
+
+  .button-secondary:focus-visible {
+    outline: 2px solid var(--palette-gray-300, #d1d5db);
+    outline-offset: 2px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .button {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    .button-icon :global(svg) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+</style>
