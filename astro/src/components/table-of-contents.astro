@@ -17,6 +17,7 @@ const { headings = [] } = Astro.props;
   headings.length > 0 && (
     <aside class="toc">
       <nav class="toc-nav">
+        <div class="toc-title">On this page</div>
         <ul class="toc-list">
           {headings.map((heading) => (
             <li class={`toc-item toc-h${heading.depth}`}>
@@ -92,7 +93,6 @@ const { headings = [] } = Astro.props;
 
 <style>
   .toc {
-    /*background-color: orange;*/
     position: sticky;
     top: 86px;
     width: 200px;
@@ -115,6 +115,7 @@ const { headings = [] } = Astro.props;
     list-style: none;
     padding: 0;
     margin: 0;
+    border-left: 1px solid var(--palette-gray-800);
   }
 
   .toc-item {
@@ -129,7 +130,6 @@ const { headings = [] } = Astro.props;
     line-height: 1.4;
     transition: color 0.2s ease;
     border-left: 2px solid transparent;
-    padding-left: 0.75rem;
   }
 
   .toc-link:hover {

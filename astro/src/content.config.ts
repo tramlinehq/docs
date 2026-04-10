@@ -1,7 +1,9 @@
-import { z, defineCollection, reference } from "astro:content";
-import { file } from "astro/loaders";
+import { z } from "astro/zod";
+import { defineCollection, reference } from "astro:content";
+import { glob, file } from "astro/loaders";
 
 const docs = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/docs" }),
   schema: z.object({
     title: z.string(),
     slug: z.string().optional(),
@@ -10,6 +12,10 @@ const docs = defineCollection({
 });
 
 const integrations = defineCollection({
+  loader: glob({
+    pattern: "**/*.{md,mdx}",
+    base: "./src/content/integrations",
+  }),
   schema: z.object({
     title: z.string(),
     slug: z.string().optional(),
@@ -18,6 +24,7 @@ const integrations = defineCollection({
 });
 
 const changelog = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/changelog" }),
   schema: z.object({
     date: z.date(),
     authors: z.array(reference("author")),
