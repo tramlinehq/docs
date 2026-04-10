@@ -92,12 +92,13 @@ const { headings = [] } = Astro.props;
 
 <style>
   .toc {
+    /*background-color: orange;*/
     position: sticky;
-    top: 75px;
+    top: 86px;
     width: 200px;
-    max-height: calc(100vh - 4rem);
+    max-height: calc(100vh - 86px - 2 * var(--spacing-3));
     overflow-y: auto;
-    padding: 1rem;
+    padding: var(--spacing-3);
     flex-shrink: 0;
   }
 
