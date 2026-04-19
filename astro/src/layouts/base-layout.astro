@@ -1,0 +1,36 @@
+---
+import Head from "@components/head.astro";
+import Header from "@components/header.astro";
+import "@tokens/tokens.css";
+---
+
+<html lang="en">
+  <Head />
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  /*:root {
+    --color-bg: #fff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: #121212;
+    }
+  }*/
+
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--color-bg);
+  }
+</style>

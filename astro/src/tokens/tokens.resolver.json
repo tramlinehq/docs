@@ -1,0 +1,13 @@
+{
+  "name": "tokens",
+  "version": "2025.10",
+  "sets": {
+    "colors": {
+      "sources": [
+        { "$ref": "./palette.colors.json" },
+        { "$ref": "./semantic.colors.json" }
+      ]
+    }
+  },
+  "resolutionOrder": [{ "$ref": "#/sets/colors" }]
+}

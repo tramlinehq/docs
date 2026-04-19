@@ -1,0 +1,92 @@
+[
+  {
+    "label": "CI/CD",
+    "type": "category",
+    "children": [
+      {
+        "label": "GitHub Actions",
+        "type": "slug",
+        "slug": "ci-cd/github-actions"
+      },
+      {
+        "label": "GitLab CI/CD",
+        "type": "slug",
+        "slug": "ci-cd/gitlab-cicd"
+      },
+      {
+        "label": "Bitrise",
+        "type": "slug",
+        "slug": "ci-cd/bitrise"
+      }
+    ]
+  },
+  {
+    "label": "Distribution",
+    "type": "category",
+    "children": [
+      {
+        "label": "App Store",
+        "type": "slug",
+        "slug": "distribution/app-store"
+      },
+      {
+        "label": "Google Play Store",
+        "type": "slug",
+        "slug": "distribution/play-store"
+      },
+      {
+        "label": "TestFlight",
+        "type": "slug",
+        "slug": "distribution/testflight"
+      },
+      {
+        "label": "Firebase App Distribution",
+        "type": "slug",
+        "slug": "distribution/firebase"
+      }
+    ]
+  },
+  {
+    "label": "Monitoring",
+    "type": "category",
+    "children": [
+      {
+        "label": "Bugsnag",
+        "type": "slug",
+        "slug": "monitoring/bugsnag"
+      },
+      {
+        "label": "Firebase Crashlytics",
+        "type": "slug",
+        "slug": "monitoring/crashlytics"
+      }
+    ]
+  },
+  {
+    "label": "Notifications",
+    "type": "category",
+    "children": [
+      {
+        "label": "Slack",
+        "type": "slug",
+        "slug": "notifications/slack"
+      }
+    ]
+  },
+  {
+    "label": "Version Control",
+    "type": "category",
+    "children": [
+      {
+        "label": "GitHub",
+        "type": "slug",
+        "slug": "version-control/github"
+      },
+      {
+        "label": "GitLab",
+        "type": "slug",
+        "slug": "version-control/gitlab"
+      }
+    ]
+  }
+]
